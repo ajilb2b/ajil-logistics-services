@@ -2,7 +2,20 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const products = [
+type Product = {
+  num: string;
+  name: string;
+  tag: string;
+  status: "live" | "soon";
+  href: string | null;
+  ctaLabel: string | null;
+  headline: string;
+  desc: string;
+  features: string[];
+  ctas?: { label: string; href: string; style: string; note?: string }[];
+};
+
+const products: Product[] = [
   {
     num: "01",
     name: "Ajil Dispatch",
