@@ -144,7 +144,7 @@ export default function HomePage() {
                   Talk to a logistics architect
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                 </a>
-                <a href="#dispatch" className="hp-btn-hero2">How dispatch works</a>
+                <a href="/dispatch" className="hp-btn-hero2">How dispatch works</a>
               </div>
               <div className="hp-hero-signal">
                 {signals.map((s) => (

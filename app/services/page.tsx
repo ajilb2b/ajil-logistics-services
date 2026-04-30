@@ -1,170 +1,93 @@
+"use client";
+import { useEffect } from "react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 
-const serviceRows = [
+const layers = [
   {
-    no: "01 / Software",
-    href: "/services",
-    title: "Logistics Delivery",
-    titleItalic: " Management Software",
-    desc: "License the full Ajil platform — TMS, WMS, dispatch console, driver and rider apps, branded customer tracking. Multi-tenant, white-label, API-first. Run with your own teams.",
-    pills: ["TMS / WMS", "Driver App", "Branded Tracking", "API-First", "Multi-Tenant"],
-    details: [
-      "Full transport and warehouse management suite",
-      "Dispatch console with real-time routing",
-      "White-label customer tracking pages",
-      "Multi-tenant architecture for enterprise deployments",
-      "REST API with full webhook support",
-    ],
+    grad: "linear-gradient(180deg,#0F1A3D,#1F1E9C)",
+    num: "01", tag: "SOFTWARE",
+    title: "Logistics Delivery Management Software",
+    desc: "License the Ajil platform — TMS, WMS, dispatch, driver and rider apps, customer tracking and a unified control tower. Run with your own fleet, your own warehouses, your own people. Multi-tenant, white-label and API-first.",
+    chips: ["TMS", "WMS", "Dispatch", "Driver App", "Control Tower"],
+    cta: "License The Platform →", href: "/contact",
   },
   {
-    no: "02 / On-Demand",
-    href: "/services",
-    title: "On-Demand",
-    titleItalic: " Logistics Network",
-    desc: "Tap into our existing rider, vehicle and warehouse network on a pay-per-delivery basis. A ready-made GCC capacity layer, available the day you onboard. Software included.",
-    pills: ["Same-Day", "Pay Per Drop", "Surge Capacity", "GCC Coverage"],
-    details: [
-      "Access to 2,800+ active riders across the GCC",
-      "Pay-per-delivery pricing — no minimum contract",
-      "Same-day and scheduled window delivery",
-      "Built-in surge capacity for peak periods",
-      "All software tools included at no extra cost",
-    ],
+    grad: "linear-gradient(180deg,#1F1E9C,#2D2BE0)",
+    num: "02", tag: "ON-DEMAND",
+    title: "On-Demand Logistics",
+    desc: "Tap into Ajil's existing rider, vehicle and warehouse network on a pay-per-delivery basis — flex up during peaks, scale down on quiet days. A ready-made network across the GCC, available the day you onboard. Software is included.",
+    chips: ["Pay Per Delivery", "Same-Day", "Scheduled", "Surge Capacity", "Software Included"],
+    cta: "Use On-Demand →", href: "/contact",
   },
   {
-    no: "03 / Dedicated",
-    href: "/services/dedicated",
-    title: "",
-    titleItalic: "Dedicated",
-    titleAfter: " Logistics",
-    desc: "Capacity that operates exclusively for your business — branded fleet, ringfenced warehouse footprint, dark-store hubs in your catchments. The platform wears your colours.",
-    pills: ["Branded Fleet", "Dark Stores", "Custom KPIs", "Ringfenced"],
-    details: [
-      "Fleet branded in your colours, operating only for you",
-      "Dark-store hubs positioned in your delivery catchments",
-      "Custom SLAs and performance KPI dashboards",
-      "Dedicated dispatch and exception management team",
-      "Ringfenced warehouse footprint with ambient/chilled/frozen zones",
-    ],
+    grad: "linear-gradient(180deg,#2D2BE0,#5A4BFF)",
+    num: "03", tag: "DEDICATED",
+    title: "Dedicated Logistics",
+    desc: "Capacity that operates exclusively for your business — branded riders, ringfenced fleet, dedicated warehouse footprint, dark store hubs in your target catchments. The same operating platform, but the operation wears your colours.",
+    chips: ["Branded Fleet", "Dedicated Warehouse", "Dark Stores", "SLA-Bound", "Custom KPIs"],
+    cta: "Build Dedicated →", href: "/dedicated",
   },
   {
-    no: "04 / Managed",
-    href: "/services",
-    title: "Fully Managed",
-    titleItalic: " Operations",
-    desc: "We take ownership of your entire logistics function. Network design, hiring, warehouses, dark stores, fleet, dispatch — and a single accountable leadership team reporting to your KPIs.",
-    pills: ["End-to-End", "Single Contract", "Named GM", "Full Accountability"],
-    details: [
-      "End-to-end logistics outsourcing under a single contract",
-      "Named General Manager accountable to your board",
-      "Ajil designs, hires, and operates the entire function",
-      "Monthly operating reports against agreed KPIs",
-      "Transparent cost pass-through on all third-party spend",
-    ],
+    grad: "linear-gradient(180deg,#5A4BFF,#8775FF)",
+    num: "04", tag: "MANAGED",
+    title: "Fully Managed Operations",
+    desc: "We take ownership of your entire logistics function. Network design, hiring, warehouse leasing, dark store operations, fleet management — and a single accountable leadership team reporting against the KPIs you set.",
+    chips: ["End-To-End", "Outsourced", "Single Contract", "Custom SLAs", "Quarterly Reviews"],
+    cta: "Outsource To Ajil →", href: "/contact",
   },
 ];
 
 export default function ServicesPage() {
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <>
       <Nav />
 
-      {/* Breadcrumb */}
-      <div style={{ padding: "24px 0", borderBottom: "1px solid var(--ink-line)", fontFamily: "var(--font-jetbrains),monospace", fontSize: 11, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.12em" }}>
-        <div className="ajil-container">
-          <Link href="/" style={{ color: "var(--text-muted)", transition: "color .2s" }} className="bc-link">Home</Link>
-          <span style={{ margin: "0 10px", color: "var(--text-faint)" }}>/</span>
-          <span style={{ color: "var(--text)" }}>Services</span>
-        </div>
-      </div>
-
-      {/* Page Header */}
-      <header style={{ padding: "80px 0", borderBottom: "1px solid var(--ink-line)" }}>
-        <div className="ajil-container">
-          <div className="page-header-grid">
-            <div>
-              <div className="page-eyebrow">Services · Four Models</div>
-              <h1 className="display-xl" style={{ fontSize: "clamp(40px,6.5vw,96px)" }}>
-                How we<br /><span className="it">work together</span>.
-              </h1>
-            </div>
-            <div>
-              <p className="lede">
-                Four engagement models — from software licence to fully outsourced operations. Each one is a complete solution. All four share the same platform, the same network, and the same team.
-              </p>
-            </div>
-          </div>
+      <header className="sv-hero">
+        <div className="hp-container">
+          <span className="hp-section-tag">02 · Service Models</span>
+          <h1 className="sv-h1">Four Ways To <em>Partner With Us</em>.</h1>
+          <p className="sv-lead">Every business runs logistics differently. Pick the model that fits today — and scale the partnership as your operation grows. One contract spans all four.</p>
         </div>
       </header>
 
-      {/* Service Rows */}
-      <section style={{ padding: "120px 0" }}>
-        <div className="ajil-container">
-          {serviceRows.map((row, i) => (
-            <div key={row.no}>
-              <Link href={row.href} className="service-row-link">
-                <div className="service-row-inner">
-                  <div className="service-row-left">
-                    <div style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 11, color: "var(--violet)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 20 }}>
-                      {row.no}
-                    </div>
-                    <h2 style={{ fontFamily: "var(--font-fraunces),Georgia,serif", fontWeight: 400, fontVariationSettings: '"opsz" 72,"SOFT" 40', fontSize: "clamp(28px,3.4vw,44px)", lineHeight: 1.05, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 20 }}>
-                      {row.titleItalic && (
-                        <span style={{ fontStyle: "italic", fontVariationSettings: '"opsz" 96,"SOFT" 80', color: "var(--indigo-2)" }}>
-                          {row.titleItalic}
-                        </span>
-                      )}
-                      {row.title}
-                      {row.titleAfter}
-                    </h2>
-                    <p style={{ fontSize: 16, lineHeight: 1.65, color: "var(--text-soft)", marginBottom: 24 }}>{row.desc}</p>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                      {row.pills.map((pill) => (
-                        <span key={pill} style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.12em", padding: "6px 12px", borderRadius: 999, border: "1px solid var(--ink-line-strong)", background: "var(--paper-2)" }}>
-                          {pill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="service-row-right">
-                    <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: 14 }}>
-                      {row.details.map((d) => (
-                        <li key={d} style={{ display: "flex", alignItems: "flex-start", gap: 12, fontSize: 15, color: "var(--text-soft)", lineHeight: 1.5 }}>
-                          <span style={{ color: "var(--violet)", flexShrink: 0, marginTop: 2 }}>→</span>
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                    <div style={{ marginTop: 32, display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-jetbrains),monospace", fontSize: 11, color: "var(--violet)", textTransform: "uppercase", letterSpacing: "0.12em" }}>
-                      Learn more ↗
-                    </div>
+      <section className="sv-section">
+        <div className="hp-container">
+          <p className="sv-intro reveal">Most providers force you into a single shape. Ajil meets you where you are — license our software, tap our on-demand network, ringfence dedicated capacity, or hand us the entire function.</p>
+          <div className="hp-layer-stack reveal">
+            {layers.map((layer) => (
+              <a href={layer.href} key={layer.num} className="hp-layer-row" style={{ "--hp-gradient": layer.grad } as React.CSSProperties}>
+                <div className="hp-layer-num">
+                  {layer.num}
+                  <small>{layer.tag}</small>
+                </div>
+                <div className="hp-layer-content">
+                  <h3>{layer.title}</h3>
+                  <p>{layer.desc}</p>
+                  <div className="hp-layer-tags">
+                    {layer.chips.map((c) => <span key={c}>{c}</span>)}
                   </div>
                 </div>
-              </Link>
-              {i < serviceRows.length - 1 && <div className="rule" style={{ margin: 0 }} />}
-            </div>
-          ))}
-        </div>
-      </section>
+                <span className="hp-layer-cta">{layer.cta}</span>
+              </a>
+            ))}
+          </div>
 
-      {/* CTA */}
-      <section style={{ padding: "140px 0", textAlign: "center", borderTop: "1px solid var(--ink-line)", borderBottom: "1px solid var(--ink-line)" }}>
-        <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 40px" }}>
-          <div className="meta-rule" style={{ justifyContent: "center" }}>Working session</div>
-          <h2 className="display-l" style={{ marginTop: 18 }}>
-            Not sure which model <span className="it">fits</span>?
-          </h2>
-          <p className="lede" style={{ margin: "24px auto 36px", textAlign: "center" }}>
-            In a 30-minute working session, we will look at your real numbers and recommend the
-            model that fits today — and the path to scale into the next one.
-          </p>
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact" className="ajil-btn-primary-lg">
+          <div className="sv-cta-row reveal">
+            <a href="/contact" className="sv-btn-primary">
               Book a working session
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-            </Link>
+            </a>
+            <a href="/dedicated" className="sv-btn-ghost">See Dedicated Logistics →</a>
           </div>
         </div>
       </section>
@@ -172,29 +95,39 @@ export default function ServicesPage() {
       <Footer />
 
       <style>{`
-        .ajil-container { max-width: 1380px; margin: 0 auto; padding: 0 40px; }
-        .page-header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
-        .service-row-link { display: block; padding: 64px 0; transition: background .2s; }
-        .service-row-link:hover { background: transparent; }
-        .service-row-inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: start; }
-        .service-row-right { padding-top: 8px; }
-        .bc-link:hover { color: var(--text) !important; }
-        .ajil-btn-primary-lg {
-          display: inline-flex; align-items: center; gap: 8px;
-          padding: 14px 22px; border-radius: 999px; font-size: 14.5px; font-weight: 600;
-          background: var(--ink); color: var(--paper);
-          box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 8px 24px -8px rgba(10,14,31,.4);
-          transition: all .25s ease;
-        }
-        .ajil-btn-primary-lg:hover { transform: translateY(-1px); background: #0A1838; }
-        @media (max-width: 880px) {
-          .page-header-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-          .service-row-inner { grid-template-columns: 1fr !important; gap: 36px !important; }
-        }
-        @media (max-width: 760px) {
-          .ajil-container { padding: 0 22px !important; }
-          .service-row-link { padding: 48px 0 !important; }
-        }
+        .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
+        @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
+        .hp-section-tag { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--indigo); text-transform: uppercase; letter-spacing: .18em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
+        .hp-section-tag::before { content: ""; width: 24px; height: 1px; background: var(--indigo); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+
+        .sv-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
+        .sv-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 500; color: var(--ink); margin: 0 0 28px; }
+        .sv-h1 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .sv-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 58ch; line-height: 1.7; }
+
+        .sv-section { padding: 100px 0 140px; background: var(--paper); }
+        .sv-intro { font-size: 18px; color: var(--muted); line-height: 1.6; max-width: 760px; margin: 0 auto 64px; text-align: center; }
+        .hp-layer-stack { display: flex; flex-direction: column; gap: 16px; max-width: 1100px; margin: 0 auto; }
+        .hp-layer-row { position: relative; display: grid; grid-template-columns: 120px 1fr auto; gap: 32px; padding: 32px; border: 1px solid var(--line); border-radius: 20px; background: var(--paper); transition: all .35s ease; overflow: hidden; align-items: center; text-decoration: none; color: inherit; }
+        @media (max-width: 780px) { .hp-layer-row { grid-template-columns: 1fr; gap: 18px; padding: 24px; } }
+        .hp-layer-row::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 4px; background: var(--hp-gradient, linear-gradient(180deg,#1A2654,#2D2BE0)); }
+        .hp-layer-row:hover { border-color: var(--line-strong); background: linear-gradient(110deg, rgba(238,240,255,.55), #fff); transform: translateX(4px); box-shadow: 0 12px 32px -16px rgba(45,43,224,.18); }
+        .hp-layer-num { font-family: var(--font-instrument), serif; font-style: italic; font-size: 64px; line-height: 1; background: var(--hp-gradient, linear-gradient(180deg,#1A2654,#2D2BE0)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hp-layer-num small { font-size: 14px; font-family: var(--font-geist-mono), monospace; font-style: normal; color: var(--muted-2); letter-spacing: .1em; display: block; margin-top: -4px; -webkit-text-fill-color: var(--muted-2); }
+        .hp-layer-content h3 { font-size: 24px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 8px; color: var(--ink); }
+        .hp-layer-content p { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; max-width: 60ch; }
+        .hp-layer-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .hp-layer-tags span { font-family: var(--font-geist-mono), monospace; font-size: 10px; padding: 4px 10px; border-radius: 999px; background: var(--paper-3); border: 1px solid var(--line); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+        .hp-layer-cta { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--paper); font-family: var(--font-geist-mono), monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--ink); transition: all .2s ease; white-space: nowrap; font-weight: 500; }
+        .hp-layer-cta:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+        @media (max-width: 780px) { .hp-layer-cta { align-self: flex-start; } }
+        .sv-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--line); }
+        .sv-btn-primary { background: #1B1A68; color: #fff; font-weight: 600; padding: 14px 26px; border-radius: 999px; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: all .25s ease; box-shadow: 0 10px 28px -10px rgba(27,26,104,.5); }
+        .sv-btn-primary:hover { background: var(--indigo); transform: translateY(-1px); }
+        .sv-btn-ghost { color: var(--indigo); font-weight: 500; font-size: 15px; }
+        .sv-btn-ghost:hover { text-decoration: underline; }
       `}</style>
     </>
   );

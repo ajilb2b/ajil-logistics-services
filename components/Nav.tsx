@@ -16,12 +16,12 @@ export default function Nav() {
 
           {/* Center nav links */}
           <div className="ajil-nav-links">
-            <a href="/#dispatch">Dispatch</a>
+            <a href="/dispatch">Dispatch</a>
             <a href="/products">Products</a>
-            <a href="/#services">Service Models</a>
-            <a href="/#dedicated">Dedicated Logistics</a>
-            <a href="/#join">Join Us</a>
-            <a href="/#why">Why Ajil</a>
+            <a href="/services">Service Models</a>
+            <a href="/dedicated">Dedicated Logistics</a>
+            <a href="/join">Join Us</a>
+            <a href="/why">Why Ajil</a>
           </div>
 
           {/* CTA */}
@@ -53,12 +53,12 @@ export default function Nav() {
             </div>
             <div className="ajil-mobile-links">
               {[
-                { href: '/#dispatch', label: 'Dispatch' },
+                { href: '/dispatch', label: 'Dispatch' },
                 { href: '/products', label: 'Products' },
-                { href: '/#services', label: 'Service Models' },
-                { href: '/#dedicated', label: 'Dedicated Logistics' },
-                { href: '/#join', label: 'Join Us' },
-                { href: '/#why', label: 'Why Ajil' },
+                { href: '/services', label: 'Service Models' },
+                { href: '/dedicated', label: 'Dedicated Logistics' },
+                { href: '/join', label: 'Join Us' },
+                { href: '/why', label: 'Why Ajil' },
               ].map((item) => (
                 <a key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="ajil-mobile-link">
                   {item.label}
