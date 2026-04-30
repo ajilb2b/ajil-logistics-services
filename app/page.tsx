@@ -819,12 +819,12 @@ export default function HomePage() {
         .hp-join-btn span { display: flex; flex-direction: column; text-align: left; }
         .hp-join-btn span small { font-size: 11px; font-family: var(--font-geist-mono), monospace; opacity: .8; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 1px; }
         .hp-join-btn span strong { font-weight: 600; }
-        .hp-btn-wa { background: #25D366; color: #0A2118; box-shadow: 0 1px 0 rgba(255,255,255,.18) inset, 0 8px 22px -10px rgba(37,211,102,.45); }
-        .hp-btn-wa:hover { background: #1EBE5A; transform: translateY(-2px); box-shadow: 0 14px 30px -10px rgba(37,211,102,.55); }
-        .hp-btn-form { background: rgba(255,255,255,.7); border: 1px solid rgba(214,118,32,.35); color: var(--ink); }
-        .hp-btn-form:hover { background: rgba(255,159,67,.12); border-color: rgba(214,118,32,.55); }
-        .hp-btn-form-alt { background: rgba(255,255,255,.7); border: 1px solid var(--violet-line); color: var(--ink); }
-        .hp-btn-form-alt:hover { background: var(--violet-soft); border-color: rgba(90,75,255,.45); }
+        .hp-btn-wa { background: #1B1A68; color: #fff; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 10px 28px -10px rgba(27,26,104,.5); }
+        .hp-btn-wa:hover { background: var(--indigo); transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.12) inset, 0 18px 36px -10px rgba(45,43,224,.55); }
+        .hp-btn-form { background: rgba(255,255,255,.7); border: 1px solid var(--line-strong); color: var(--ink); }
+        .hp-btn-form:hover { background: var(--paper-3); border-color: var(--line-dark); }
+        .hp-btn-form-alt { background: rgba(255,255,255,.7); border: 1px solid var(--line-strong); color: var(--ink); }
+        .hp-btn-form-alt:hover { background: var(--paper-3); border-color: var(--line-dark); }
         .hp-join-foot { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .1em; font-weight: 500; padding-top: 18px; border-top: 1px solid var(--line); margin-top: auto; }
 
         /* ── TESTIMONIALS ── */
