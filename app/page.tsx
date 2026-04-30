@@ -618,7 +618,7 @@ export default function HomePage() {
         /* ── HERO ── */
         .hp-hero { position: relative; min-height: 100svh; background: #fff; overflow: hidden; border-bottom: 1px solid var(--line); }
         .hp-hero-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: 100svh; width: 100%; }
-        .hp-hero-text { padding: 160px 40px 100px clamp(28px, 7vw, 100px); }
+        .hp-hero-text { padding: 160px 40px 100px clamp(28px, 8vw, 140px); }
 
         .hp-hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 40px; animation: fadeUp .6s both; }
         .hp-live-dot { width: 7px; height: 7px; border-radius: 50%; background: #0E9D6E; box-shadow: 0 0 12px rgba(14,157,110,.75); animation: pulse 2.5s infinite; flex-shrink: 0; }
@@ -641,7 +641,7 @@ export default function HomePage() {
         .hp-signal-lbl { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .12em; margin-top: 6px; }
 
         /* Right visual — same white canvas, no panel */
-        .hp-hero-visual { position: relative; height: 100%; display: flex; align-items: center; padding: 100px clamp(20px, 5vw, 64px) 60px 0; }
+        .hp-hero-visual { position: relative; height: 100%; display: flex; align-items: center; padding: 100px clamp(20px, 7vw, 120px) 60px 0; }
         .hp-map-svg { width: 100%; height: auto; display: block; }
         .hp-intel-card { position: absolute; z-index: 4; background: #fff; border: 1px solid rgba(27,26,104,.1); border-radius: 12px; padding: 14px 20px; min-width: 148px; animation: fadeUp .8s both; box-shadow: 0 2px 12px -2px rgba(27,26,104,.1), 0 8px 32px -8px rgba(27,26,104,.12); }
         .hp-icard-label { font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(27,26,104,.42); margin-bottom: 6px; }
