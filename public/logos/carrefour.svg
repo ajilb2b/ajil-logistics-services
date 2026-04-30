@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" fill="none">
+  <path d="M28 30 C28 18 36 10 48 10 C56 10 62 14 66 20 L58 24 C56 20 52 18 48 18 C40 18 36 23 36 30 C36 37 40 42 48 42 C52 42 56 40 58 36 L66 40 C62 46 56 50 48 50 C36 50 28 42 28 30Z" fill="#003DA5"/>
+  <path d="M66 10 L80 10 L66 30 L80 50 L66 50 L52 30 Z" fill="#E4002B"/>
+  <text x="86" y="38" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#003DA5" letter-spacing="-0.5">carrefour</text>
+</svg>

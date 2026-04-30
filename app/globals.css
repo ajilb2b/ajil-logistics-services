@@ -1,26 +1,342 @@
 @import "tailwindcss";
 
+@theme {
+  --color-paper: #FFFFFF;
+  --color-paper-2: #FAFBFD;
+  --color-paper-3: #F2F5FB;
+  --color-paper-4: #E8EDF6;
+
+  --color-ink: #1B1A68;
+  --color-ink-2: #25248A;
+  --color-ink-3: #3230A8;
+
+  --color-text-base: #1B1A68;
+  --color-text-soft: #546078;
+  --color-text-muted: #8592AA;
+  --color-text-faint: #A8B4C8;
+
+  --color-brand-violet: #5A4BFF;
+  --color-brand-indigo: #2D2BE0;
+  --color-brand-indigo-2: #1A18B8;
+
+  --color-d-text: #FFFFFF;
+  --color-live: #0E9D6E;
+  --color-beta: #B5841A;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+}
+
+/* ============================================================
+   CSS Custom Properties — full design token system
+   Matches ajil-logistics-light.html exactly
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Ink — brand indigo */
+  --ink: #1B1A68;
+  --ink-2: #25248A;
+  --ink-3: #3230A8;
+
+  /* Paper — pure white */
+  --paper: #FFFFFF;
+  --paper-2: #FAFBFD;
+  --paper-3: #F2F5FB;
+  --paper-4: #E8EDF6;
+
+  /* Accents */
+  --indigo: #2D2BE0;
+  --indigo-2: #1A18B8;
+  --violet: #5A4BFF;
+  --violet-soft: #EEF0FF;
+  --violet-line: rgba(90,75,255,.22);
+
+  /* Lines and muted text */
+  --line: rgba(27,26,104,.08);
+  --line-strong: rgba(27,26,104,.14);
+  --line-dark: rgba(27,26,104,.22);
+  --muted: rgba(27,26,104,.62);
+  --muted-2: rgba(27,26,104,.42);
+
+  /* Status */
+  --up: #0E9D6E;
+  --dn: #C2342A;
+
+  /* Gradient — single dark CTA moment */
+  --grad: linear-gradient(120deg,#0A1233 0%,#10184A 28%,#1F1E9C 60%,#3A2EE0 88%,#5A4BFF 100%);
+
+  /* ── Backward-compatible aliases for existing sub-pages ── */
+  --text: #1B1A68;
+  --text-soft: rgba(27,26,104,.62);
+  --text-muted: rgba(27,26,104,.48);
+  --text-faint: rgba(27,26,104,.32);
+  --ink-line: rgba(27,26,104,.08);
+  --ink-line-strong: rgba(27,26,104,.14);
+  --ink-line-bold: rgba(27,26,104,.22);
+  --ink-soft: #3230A8;
+  --paper-line: rgba(27,26,104,.14);
+  --d-text: #FFFFFF;
+  --d-text-soft: rgba(255,255,255,.72);
+  --d-text-muted: rgba(255,255,255,.52);
+  --d-line: rgba(255,255,255,.10);
+  --d-line-strong: rgba(255,255,255,.18);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   Base Reset
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist), system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.55;
+  font-feature-settings: "ss01", "cv11";
 }
+
+/* Subtle paper grain */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: .035;
+}
+@media (max-width: 780px) {
+  body::before { display: none; }
+}
+
+::selection {
+  background: var(--indigo);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes dashflow {
+  to { stroke-dashoffset: -50; }
+}
+
+/* ============================================================
+   Typography — shared utility classes
+   ============================================================ */
+.display-xl {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+  font-size: clamp(48px, 7.5vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--text);
+}
+
+.display-xl .it {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  color: var(--indigo);
+}
+
+.display-xl .light {
+  color: var(--text-soft);
+  font-weight: 200;
+}
+
+.display-l {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 40;
+  font-size: clamp(38px, 4.8vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.display-l .it {
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 80;
+  color: var(--indigo);
+}
+
+.display-m {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: "opsz" 96, "SOFT" 40;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+.display-m .it {
+  font-style: italic;
+  font-variation-settings: "opsz" 96, "SOFT" 70;
+  color: var(--indigo);
+}
+
+.display-s {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 400;
+  font-variation-settings: "opsz" 72, "SOFT" 40;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.lede {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  max-width: 60ch;
+  font-weight: 400;
+}
+
+.lede strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.meta {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.meta-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--violet);
+}
+
+.meta-rule::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--violet);
+  flex-shrink: 0;
+}
+
+.page-eyebrow {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--violet);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.page-eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--violet);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Reveal animation
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Rule decorators
+   ============================================================ */
+.rule {
+  height: 1px;
+  background: var(--ink-line);
+  position: relative;
+  margin: 0;
+}
+
+.rule::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: var(--violet);
+}
+
+.rule-d {
+  height: 1px;
+  background: var(--d-line);
+  position: relative;
+}
+
+.rule-d::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: var(--violet);
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--paper-2); }
+::-webkit-scrollbar-thumb { background: var(--paper-4); border-radius: 4px; }

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" fill="none">
+  <text x="8" y="36" font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="#1A1A1A" letter-spacing="-1">noon</text>
+  <text x="8" y="54" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#F5C518" letter-spacing="1">food</text>
+  <circle cx="79" cy="8" r="5" fill="#F5C518"/>
+</svg>
