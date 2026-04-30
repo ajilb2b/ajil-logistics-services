@@ -12,22 +12,21 @@ const signals = [
 ];
 
 const clients = [
-  { name: "Carrefour",        logo: "/logos/carrefour.svg" },
-  { name: "noon",             logo: "/logos/noon.svg" },
-  { name: "Jarir",            logo: "/logos/jarir.svg" },
-  { name: "Talabat",          logo: "/logos/talabat.svg" },
-  { name: "Kitopi",           logo: "/logos/kitopi.svg" },
-  { name: "Tamimi Markets",   logo: "/logos/tamimi.svg" },
-  { name: "IFFCO",            logo: "/logos/iffco.svg" },
-  { name: "Panda Retail",     logo: "/logos/panda.svg" },
-  { name: "Landmark Group",   logo: "/logos/landmark.svg" },
-  { name: "LuLu Hypermarket", logo: "/logos/lulu.svg" },
-  { name: "Deliveroo",        logo: "/logos/deliveroo.svg" },
-  { name: "noon food",        logo: "/logos/noonfood.svg" },
-  { name: "Spinneys",         logo: "/logos/spinneys.svg" },
-  { name: "Alshaya Group",    logo: "/logos/alshaya.svg" },
-  { name: "Chalhoub",         logo: "/logos/chalhoub.svg" },
-  { name: "Amazon.ae",        logo: "/logos/amazon.svg" },
+  { name: "KeeTa",            logo: "/logos/keeta.webp" },
+  { name: "Careem",           logo: "/logos/careem.png" },
+  { name: "noon",             logo: "/logos/noon.jpg" },
+  { name: "W Pharmacy",       logo: "/logos/w-pharmacy.jpg" },
+  { name: "Amazon",           logo: "/logos/amazon.webp" },
+  { name: "Papa Johns",       logo: "/logos/papa-johns.jpg" },
+  { name: "Temu",             logo: "/logos/temu.png" },
+  { name: "iMile",            logo: "/logos/imile.png" },
+  { name: "Diet Delights",    logo: "/logos/diet-delights.png" },
+  { name: "Rare Group",       logo: "/logos/rare-group.webp" },
+  { name: "LuLu Hypermarket", logo: "/logos/lulu-hypermarket.png" },
+  { name: "Carrefour",        logo: "/logos/carrefour.webp" },
+  { name: "Pizza Hut",        logo: "/logos/pizza-hut.png" },
+  { name: "McDonald's",       logo: "/logos/mcdonald-s.png" },
+  { name: "Ninja",            logo: "/logos/ninja.png" },
 ];
 
 const routeCaps = [
@@ -97,8 +96,7 @@ const testimonials = [
   { industry: "Grocery", q: `We replaced three logistics vendors with a single Ajil contract — software, network and a dedicated dark-store layer. Cost per drop fell 27% and our COO finally has <em>one number to look at</em>.`, initials: "FA", name: "Fatima Al Sayed", role: "VP Operations · Regional Grocery Group" },
   { industry: "Quick Commerce", q: `Ajil's stacking logic took our cost-per-drop down by 31% in the first quarter. The dispatch team flagged exceptions before our own ops noticed them. <em>It just runs</em>.`, initials: "RM", name: "Rashid Mansoori", role: "Head Of Logistics · Quick Commerce Platform" },
   { industry: "QSR", q: `We onboarded across 47 outlets in 14 days. Branded riders, our packaging, our SLA. The customer never knows it's outsourced — they just know <em>their food is on time</em>.`, initials: "SK", name: "Sara Khoury", role: "COO · Multi-Brand Restaurant Group" },
-  { industry: "Pharmacy", q: `Cold-chain compliance, signature capture and live driver tracking — all working out of the box. We cut RTO incidents by 42% and our pharmacists trust the platform. <em>Audit-ready by default</em>.`, initials: "MA", name: "Dr. Mariam Al-Thani", role: "Operations Director · Pharmacy Chain" },
-  { industry: "Retail", q: `We needed scheduled, branded last-mile across three GCC markets. Ajil delivered the software, the riders and the warehouse footprint. <em>One partner, one contract, one team to call</em>.`, initials: "YH", name: "Yousef Habib", role: "Head Of E-Commerce · Fashion Retailer" },
+{ industry: "Retail", q: `We needed scheduled, branded last-mile across three GCC markets. Ajil delivered the software, the riders and the warehouse footprint. <em>One partner, one contract, one team to call</em>.`, initials: "YH", name: "Yousef Habib", role: "Head Of E-Commerce · Fashion Retailer" },
   { industry: "B2B Distribution", q: `Route optimization that actually understands GCC roads — prayer windows, gated compounds, the lot. Our drivers complete 23% more drops per shift and they're <em>happier doing it</em>.`, initials: "AB", name: "Abdullah Bilal", role: "Logistics Manager · F&B Distributor" },
 ];
 
@@ -591,9 +589,8 @@ export default function HomePage() {
             <a href="#" className="hp-cta-btn-ghost">Download capability deck</a>
           </div>
           <div className="hp-big-wordmark">
-            <svg height="90" viewBox="0 0 300 90" fill="none">
-              <text x="0" y="82" fontFamily="Georgia, serif" fontSize="90" fontWeight="700" fill="white" style={{ letterSpacing: "-0.04em" }}>ajil</text>
-            </svg>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/ajil-logo-transparent.png" alt="Ajil" className="hp-cta-logo" />
           </div>
           <div className="hp-big-tagline">— Efficiency in Motion —</div>
         </div>
@@ -843,17 +840,18 @@ export default function HomePage() {
         .hp-cta { background: var(--grad); position: relative; overflow: hidden; padding: 140px 0; color: var(--paper); }
         .hp-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 100%, rgba(123,107,255,.55), transparent 60%), radial-gradient(ellipse 90% 60% at 80% 0%, rgba(155,139,255,.18), transparent 60%); }
         .hp-cta::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000, transparent 90%); -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000, transparent 90%); pointer-events: none; }
-        .hp-cta-inner { position: relative; z-index: 1; text-align: center; max-width: 920px; margin: 0 auto; }
-        .hp-cta-h { font-size: clamp(40px,6vw,84px); line-height: 1; letter-spacing: -.04em; font-weight: 500; margin-bottom: 24px; color: var(--paper); }
+        .hp-cta-inner { position: relative; z-index: 1; text-align: center; max-width: 920px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
+        .hp-cta-h { font-size: clamp(40px,6vw,84px); line-height: 1; letter-spacing: -.04em; font-weight: 500; margin-bottom: 28px; color: var(--paper); }
         .hp-cta-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; background: linear-gradient(110deg,#fff,#9B8BFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .hp-cta-p { font-size: 18px; color: rgba(255,255,255,.78); max-width: 50ch; margin: 0 auto 40px; line-height: 1.55; }
-        .hp-cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .hp-cta-p { font-size: 18px; color: rgba(255,255,255,.78); max-width: 50ch; margin: 0 auto 48px; line-height: 1.55; }
+        .hp-cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 0; }
         .hp-cta-btn-primary { background: #fff; color: var(--ink); font-weight: 600; padding: 14px 24px; border-radius: 999px; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: all .25s ease; box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 14px 36px -10px rgba(0,0,0,.45); }
         .hp-cta-btn-primary:hover { background: #F1F4FA; }
         .hp-cta-btn-ghost { background: transparent; color: #fff; font-weight: 500; padding: 14px 24px; border-radius: 999px; font-size: 15px; border: 1px solid rgba(255,255,255,.25); display: inline-flex; align-items: center; gap: 10px; transition: all .25s ease; }
         .hp-cta-btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
-        .hp-big-wordmark { display: flex; justify-content: center; align-items: center; margin-top: 80px; user-select: none; opacity: .18; }
-        .hp-big-tagline { font-family: var(--font-instrument), serif; font-style: italic; font-size: clamp(22px,2.4vw,36px); color: rgba(255,255,255,.55); text-align: center; margin-top: -20px; letter-spacing: -.01em; }
+        .hp-big-wordmark { display: flex; justify-content: center; align-items: center; margin-top: 96px; user-select: none; }
+        .hp-cta-logo { width: min(280px, 60vw); height: auto; opacity: .18; filter: brightness(0) invert(1); }
+        .hp-big-tagline { font-family: var(--font-instrument), serif; font-style: italic; font-size: clamp(18px,2vw,28px); color: rgba(255,255,255,.45); text-align: center; margin-top: 16px; letter-spacing: -.01em; }
       `}</style>
     </>
   );

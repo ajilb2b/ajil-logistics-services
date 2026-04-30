@@ -23,22 +23,20 @@ const channels = [
       </svg>
     ),
     label: "Sales line · GCC",
-    value: "+974 4400 0000",
-    href: "tel:+97444000000",
+    value: "+974 77058594",
+    href: "tel:+97477058594",
   },
 ];
 
 const specialistLines = [
   { label: "Existing customer support", email: "support@ajilb2b.com" },
   { label: "Driver enquiries", email: "drivers@ajilb2b.com" },
-  { label: "Press & media", email: "press@ajilb2b.com" },
   { label: "Careers", email: "careers@ajilb2b.com" },
 ];
 
 const serviceInterests = ["Logistics Software", "On-Demand Network", "Dedicated Capacity", "Fully Managed", "Product demo", "Partnership"];
 
 export default function ContactPage() {
-  const [activeTab, setActiveTab] = useState<"new" | "existing">("new");
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [form, setForm] = useState({ firstName: "", lastName: "", company: "", email: "", phone: "", volume: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
@@ -92,8 +90,7 @@ export default function ContactPage() {
                   Ajil Logistics HQ
                 </div>
                 <p style={{ fontSize: 14, color: "var(--text-soft)", lineHeight: 1.65 }}>
-                  West Bay, Tower 2, Floor 14<br />
-                  Diplomatic Street<br />
+                  Almuntazah Trading Center<br />
                   Doha, Qatar
                 </p>
                 <p style={{ marginTop: 10 }}>
@@ -142,9 +139,7 @@ export default function ContactPage() {
                   Regional Offices
                 </h4>
                 <p style={{ fontSize: 13.5, color: "var(--text-soft)", lineHeight: 1.7 }}>
-                  <strong style={{ color: "var(--text)" }}>UAE</strong> · Dubai, JLT — Cluster Y<br />
-                  <strong style={{ color: "var(--text)" }}>KSA</strong> · Riyadh, King Fahad District<br />
-                  <strong style={{ color: "var(--text)" }}>Kuwait</strong> · Kuwait City, Sharq
+                  <strong style={{ color: "var(--text)" }}>Qatar</strong> · Doha, Almuntazah Trading Center
                 </p>
               </div>
             </div>
@@ -172,27 +167,6 @@ export default function ContactPage() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit}>
-                      {/* Tabs */}
-                      <div style={{ display: "flex", gap: 4, padding: 4, background: "var(--paper-2)", borderRadius: 12, marginBottom: 32 }}>
-                        {(["new", "existing"] as const).map((tab) => (
-                          <button
-                            key={tab}
-                            type="button"
-                            onClick={() => setActiveTab(tab)}
-                            style={{
-                              flex: 1, padding: "10px 14px", borderRadius: 8,
-                              fontSize: 13, fontWeight: 500,
-                              color: activeTab === tab ? "var(--text)" : "var(--text-muted)",
-                              background: activeTab === tab ? "var(--paper)" : "transparent",
-                              border: "none", cursor: "pointer",
-                              boxShadow: activeTab === tab ? "0 1px 3px rgba(10,14,31,.08)" : "none",
-                              transition: "all .25s ease",
-                            }}
-                          >
-                            {tab === "new" ? "New enquiry" : "Existing customer"}
-                          </button>
-                        ))}
-                      </div>
 
                       {/* Name row */}
                       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 18 }} className="ct-row-resp">

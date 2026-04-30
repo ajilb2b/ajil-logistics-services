@@ -58,11 +58,12 @@ export default function Footer() {
             <h5 className="foot-col-head">Service Models</h5>
             <ul className="foot-col-list">
               {[
-                { label: '01 · Logistics Delivery Management Software', href: '/services' },
-                { label: '02 · On-Demand Logistics', href: '/services' },
-                { label: '03 · Dedicated Logistics', href: '/services/dedicated' },
-                { label: '04 · Fully Managed', href: '/services' },
-                { label: 'Dispatch & Routing', href: '/#dispatch' },
+                { label: 'Logistics Delivery Management Software', href: '/services' },
+                { label: 'On-Demand Logistics', href: '/services' },
+                { label: 'Dedicated Logistics', href: '/dedicated' },
+                { label: 'Fully Managed Operations', href: '/services' },
+                { label: 'Dispatch', href: '/dispatch' },
+                { label: 'Route Optimization', href: '/dispatch' },
               ].map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className="foot-link">{item.label}</a>
@@ -76,10 +77,10 @@ export default function Footer() {
             <h5 className="foot-col-head">Join Us</h5>
             <ul className="foot-col-list">
               {[
-                { label: 'Drive With Ajil', href: '/#join' },
-                { label: 'Become A Client', href: '/#join' },
-                { label: 'Careers', href: '#' },
-                { label: 'Partner Programme', href: '#' },
+                { label: 'Drive With Ajil', href: '/join' },
+                { label: 'Become A Client', href: '/join' },
+                { label: 'Careers', href: '/careers' },
+                { label: 'Partner Programme', href: '/partner-programme' },
                 { label: 'Contact', href: '/contact' },
               ].map((item) => (
                 <li key={item.label}>
@@ -95,10 +96,9 @@ export default function Footer() {
             <ul className="foot-col-list">
               {[
                 { label: 'About', href: '/about' },
-                { label: 'Careers', href: '#' },
-                { label: 'Press kit', href: '#' },
-                { label: 'Trust & security', href: '#' },
-                { label: 'Contact', href: '/contact' },
+                { label: 'Why Ajil', href: '/why' },
+                { label: 'Careers', href: '/careers' },
+                { label: 'Trust & Security', href: '/trust-security' },
               ].map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className="foot-link">{item.label}</a>
