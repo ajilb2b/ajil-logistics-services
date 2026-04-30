@@ -40,6 +40,8 @@ export default function ContactPage() {
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
   const [form, setForm] = useState({ firstName: "", lastName: "", company: "", email: "", phone: "", volume: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function toggleInterest(interest: string) {
     setSelectedInterests((prev) =>
@@ -47,9 +49,26 @@ export default function ContactPage() {
     );
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, interests: selectedInterests }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error ?? 'Something went wrong');
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -253,24 +272,34 @@ export default function ContactPage() {
                       </div>
 
                       {/* Submit */}
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap", paddingTop: 24, borderTop: "1px solid var(--ink-line)" }}>
-                        <p style={{ fontSize: 12, color: "var(--text-muted)", maxWidth: "38ch", lineHeight: 1.5 }}>
-                          By submitting you agree to our{" "}
-                          <a href="#" style={{ color: "var(--indigo-2)", borderBottom: "1px solid currentColor" }}>Privacy Policy</a>.
-                        </p>
-                        <button
-                          type="submit"
-                          style={{
-                            display: "inline-flex", alignItems: "center", gap: 8,
-                            padding: "14px 24px", borderRadius: 999, fontSize: 14, fontWeight: 600,
-                            background: "var(--ink)", color: "var(--paper)", border: "none", cursor: "pointer",
-                            boxShadow: "0 1px 0 rgba(255,255,255,.05) inset, 0 8px 24px -8px rgba(10,14,31,.4)",
-                            transition: "all .25s ease",
-                          }}
-                        >
-                          Send message
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-                        </button>
+                      <div style={{ paddingTop: 24, borderTop: "1px solid var(--ink-line)" }}>
+                        {submitError && (
+                          <p style={{ fontSize: 13, color: "#C0392B", marginBottom: 14, padding: "10px 14px", background: "rgba(192,57,43,.06)", borderRadius: 8, border: "1px solid rgba(192,57,43,.18)" }}>
+                            {submitError}
+                          </p>
+                        )}
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+                          <p style={{ fontSize: 12, color: "var(--text-muted)", maxWidth: "38ch", lineHeight: 1.5 }}>
+                            By submitting you agree to our{" "}
+                            <a href="#" style={{ color: "var(--indigo-2)", borderBottom: "1px solid currentColor" }}>Privacy Policy</a>.
+                          </p>
+                          <button
+                            type="submit"
+                            disabled={submitting}
+                            style={{
+                              display: "inline-flex", alignItems: "center", gap: 8,
+                              padding: "14px 24px", borderRadius: 999, fontSize: 14, fontWeight: 600,
+                              background: submitting ? "var(--muted)" : "var(--ink)", color: "var(--paper)", border: "none",
+                              cursor: submitting ? "not-allowed" : "pointer",
+                              boxShadow: "0 1px 0 rgba(255,255,255,.05) inset, 0 8px 24px -8px rgba(10,14,31,.4)",
+                              transition: "all .25s ease",
+                              opacity: submitting ? 0.7 : 1,
+                            }}
+                          >
+                            {submitting ? "Sending…" : "Send message"}
+                            {!submitting && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>}
+                          </button>
+                        </div>
                       </div>
                     </form>
                   )}
