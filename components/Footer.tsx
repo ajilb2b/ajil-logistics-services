@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer style={{ background: 'var(--paper-2)', padding: '80px 0 40px', borderTop: '1px solid var(--line)', color: 'var(--ink)' }}>
@@ -8,11 +10,8 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-              <svg height="28" viewBox="0 0 90 28" fill="none">
-                <text x="0" y="24" fontFamily="var(--font-fraunces), Georgia, serif" fontSize="28" fontWeight="700" fill="var(--ink)" style={{ letterSpacing: '-0.04em' }}>ajil</text>
-              </svg>
-              <span style={{ fontFamily: 'var(--font-geist-mono), monospace', fontSize: 10, color: 'var(--muted-2)', letterSpacing: '.1em', textTransform: 'uppercase', paddingLeft: 10, borderLeft: '1px solid var(--line-strong)' }}>Logistics</span>
+            <div style={{ marginBottom: 18 }}>
+              <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
             </div>
             <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 18, maxWidth: '34ch' }}>
               End-to-end logistics infrastructure for modern commerce. Efficiency in Motion. Built in Doha, deployed across the GCC.

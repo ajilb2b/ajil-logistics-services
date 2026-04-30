@@ -131,10 +131,6 @@ export default function HomePage() {
 
             {/* LEFT: text */}
             <div className="hp-hero-text">
-              <div className="hp-hero-eyebrow">
-                <span className="hp-live-dot" />
-                <span>GCC Logistics Network · Live</span>
-              </div>
               <h1 className="hp-hero-h">
                 The intelligence<br />
                 layer for{" "}<em>everything<br />that moves</em>.

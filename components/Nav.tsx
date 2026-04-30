@@ -11,7 +11,7 @@ export default function Nav() {
         <div className="ajil-nav-inner">
           {/* Logo */}
           <a href="/" className="ajil-logo">
-            <Image src="/ajil-logo.png" alt="Ajil" height={50} width={150} style={{ objectFit: 'contain' }} priority />
+            <Image src="/ajil-logo-transparent.png" alt="Ajil" height={50} width={150} style={{ objectFit: 'contain' }} priority />
           </a>
 
           {/* Center nav links */}
@@ -25,8 +25,7 @@ export default function Nav() {
 
           {/* CTA */}
           <div className="ajil-nav-cta">
-            <a href="#" className="ajil-btn-ghost">Sign in</a>
-            <a href="/#cta" className="ajil-btn-primary">
+<a href="/#cta" className="ajil-btn-primary">
               Talk to us
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
             </a>
@@ -65,8 +64,7 @@ export default function Nav() {
               ))}
             </div>
             <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <a href="#" style={{ display: 'block', padding: '13px 20px', borderRadius: 999, border: '1px solid var(--line-strong)', fontSize: 14, fontWeight: 500, textAlign: 'center', color: 'var(--ink)' }}>Sign in</a>
-              <a href="/#cta" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '13px 20px', borderRadius: 999, background: 'var(--ink)', fontSize: 14, fontWeight: 600, textAlign: 'center', color: 'var(--paper)' }}>Talk to us</a>
+<a href="/#cta" onClick={() => setMobileOpen(false)} style={{ display: 'block', padding: '13px 20px', borderRadius: 999, background: 'var(--ink)', fontSize: 14, fontWeight: 600, textAlign: 'center', color: 'var(--paper)' }}>Talk to us</a>
             </div>
           </div>
         </div>
@@ -75,11 +73,11 @@ export default function Nav() {
       <style>{`
         .ajil-nav {
           position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-          padding: clamp(10px, 1.4vh, 16px) clamp(32px, 5vw, 80px);
+          padding: clamp(8px, 1.4vh, 18px) clamp(32px, 5vw, 80px);
         }
         .ajil-nav-inner {
           display: flex; align-items: center; justify-content: space-between;
-          padding: clamp(10px, 1.2vh, 14px) clamp(14px, 1.5vw, 20px) clamp(10px, 1.2vh, 14px) clamp(10px, 1.2vw, 16px);
+          padding: clamp(1px, 0.2vh, 4px) clamp(14px, 1.5vw, 20px) clamp(1px, 0.2vh, 4px) clamp(10px, 1.2vw, 16px);
           max-width: 1440px; margin: 0 auto;
           gap: clamp(14px, 2vw, 24px);
           background: rgba(255,255,255,.95);
@@ -95,7 +93,7 @@ export default function Nav() {
         }
         .ajil-logo {
           display: inline-flex; align-items: center;
-          flex-shrink: 0; mix-blend-mode: multiply;
+          flex-shrink: 0;
         }
         .ajil-nav-links {
           display: flex; gap: clamp(18px, 2.4vw, 32px); align-items: center;
@@ -104,14 +102,6 @@ export default function Nav() {
         .ajil-nav-links a { transition: opacity .2s ease; opacity: .65; }
         .ajil-nav-links a:hover { opacity: 1; }
         .ajil-nav-cta { display: flex; gap: clamp(7px, 0.8vw, 10px); align-items: center; flex-shrink: 0; }
-        .ajil-btn-ghost {
-          display: inline-flex; align-items: center;
-          padding: clamp(7px, 0.9vh, 10px) clamp(12px, 1.4vw, 18px);
-          border-radius: 999px; font-size: clamp(13px, 1vw, 14px); font-weight: 500;
-          border: 1px solid var(--line-strong); color: var(--ink);
-          transition: all .25s cubic-bezier(.2,.7,.2,1); white-space: nowrap;
-        }
-        .ajil-btn-ghost:hover { background: var(--paper-3); border-color: var(--line-dark); }
         .ajil-btn-primary {
           display: inline-flex; align-items: center; gap: 7px;
           padding: clamp(7px, 0.9vh, 10px) clamp(14px, 1.5vw, 20px);
@@ -157,9 +147,6 @@ export default function Nav() {
         @media (max-width: 980px) {
           .ajil-nav-links { display: none !important; }
           .ajil-menu-btn { display: inline-flex !important; }
-        }
-        @media (max-width: 560px) {
-          .ajil-btn-ghost { display: none !important; }
         }
       `}</style>
     </>
