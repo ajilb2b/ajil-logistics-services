@@ -608,7 +608,7 @@ export default function HomePage() {
       {/* ====== ALL STYLES ====== */}
       <style>{`
         /* Container */
-        .hp-container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
         /* Section framework */
         .hp-section-head { display: grid; grid-template-columns: auto 1fr; gap: 48px; margin-bottom: 72px; align-items: end; }

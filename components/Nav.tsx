@@ -75,13 +75,13 @@ export default function Nav() {
       <style>{`
         .ajil-nav {
           position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-          padding: 16px 24px;
+          padding: clamp(10px, 1.4vh, 16px) clamp(32px, 5vw, 80px);
         }
         .ajil-nav-inner {
           display: flex; align-items: center; justify-content: space-between;
-          padding: 10px 20px 10px 16px;
-          max-width: 1280px; margin: 0 auto;
-          gap: 24px;
+          padding: clamp(10px, 1.2vh, 14px) clamp(14px, 1.5vw, 20px) clamp(10px, 1.2vh, 14px) clamp(10px, 1.2vw, 16px);
+          max-width: 1440px; margin: 0 auto;
+          gap: clamp(14px, 2vw, 24px);
           background: rgba(255,255,255,.95);
           backdrop-filter: blur(20px) saturate(180%);
           -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -98,22 +98,24 @@ export default function Nav() {
           flex-shrink: 0; mix-blend-mode: multiply;
         }
         .ajil-nav-links {
-          display: flex; gap: 32px; align-items: center;
-          font-size: 14px; font-weight: 500; color: var(--ink);
+          display: flex; gap: clamp(18px, 2.4vw, 32px); align-items: center;
+          font-size: clamp(13px, 1vw, 14px); font-weight: 500; color: var(--ink);
         }
         .ajil-nav-links a { transition: opacity .2s ease; opacity: .65; }
         .ajil-nav-links a:hover { opacity: 1; }
-        .ajil-nav-cta { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+        .ajil-nav-cta { display: flex; gap: clamp(7px, 0.8vw, 10px); align-items: center; flex-shrink: 0; }
         .ajil-btn-ghost {
           display: inline-flex; align-items: center;
-          padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500;
+          padding: clamp(7px, 0.9vh, 10px) clamp(12px, 1.4vw, 18px);
+          border-radius: 999px; font-size: clamp(13px, 1vw, 14px); font-weight: 500;
           border: 1px solid var(--line-strong); color: var(--ink);
           transition: all .25s cubic-bezier(.2,.7,.2,1); white-space: nowrap;
         }
         .ajil-btn-ghost:hover { background: var(--paper-3); border-color: var(--line-dark); }
         .ajil-btn-primary {
-          display: inline-flex; align-items: center; gap: 8px;
-          padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;
+          display: inline-flex; align-items: center; gap: 7px;
+          padding: clamp(7px, 0.9vh, 10px) clamp(14px, 1.5vw, 20px);
+          border-radius: 999px; font-size: clamp(13px, 1vw, 14px); font-weight: 600;
           background: #1B1A68; color: #fff;
           box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 6px 20px -8px rgba(27,26,104,.55);
           transition: all .25s cubic-bezier(.2,.7,.2,1); white-space: nowrap;
@@ -126,7 +128,8 @@ export default function Nav() {
         .ajil-btn-primary svg { transition: transform .25s ease; }
         .ajil-btn-primary:hover svg { transform: translateX(3px); }
         .ajil-menu-btn {
-          display: none; width: 36px; height: 36px;
+          display: none;
+          width: clamp(30px, 3vw, 36px); height: clamp(30px, 3vw, 36px);
           border-radius: 999px; border: 1px solid var(--line-strong);
           background: transparent; cursor: pointer; color: var(--ink);
           align-items: center; justify-content: center;
@@ -157,7 +160,6 @@ export default function Nav() {
         }
         @media (max-width: 560px) {
           .ajil-btn-ghost { display: none !important; }
-          .ajil-nav { padding: 12px 16px !important; }
         }
       `}</style>
     </>
