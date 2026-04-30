@@ -36,6 +36,13 @@ export const metadata: Metadata = {
   title: "Ajil Logistics — Efficiency in Motion | End-to-End Logistics Infrastructure",
   description:
     "Ajil Logistics is the end-to-end logistics partner for modern commerce. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    apple: { url: "/icon.svg", type: "image/svg+xml" },
+  },
 };
 
 export default function RootLayout({
