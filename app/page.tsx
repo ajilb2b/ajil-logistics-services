@@ -499,8 +499,8 @@ export default function HomePage() {
                 <div className="hp-join-icon hp-join-icon-driver">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-9 4 4h4M14 6l4 11"/></svg>
                 </div>
-                <span className="hp-join-eyebrow" style={{ color: "#C56A14" }}>For Riders &amp; Drivers</span>
-                <h3 className="hp-join-title">Drive With Ajil.<br /><em style={{ fontFamily: "var(--font-instrument),serif", fontStyle: "italic", background: "linear-gradient(110deg,#C56A14,#D03A2C)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Earn Every Day.</em></h3>
+                <span className="hp-join-eyebrow" style={{ color: "var(--indigo)" }}>For Riders &amp; Drivers</span>
+                <h3 className="hp-join-title">Drive With Ajil.<br /><em style={{ fontFamily: "var(--font-instrument),serif", fontStyle: "italic", background: "linear-gradient(110deg,#1B1A68,#5A4BFF)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Earn Every Day.</em></h3>
                 <p className="hp-join-desc">Bikes, cars and vans — owned or rented. Daily routes, weekly payouts, performance bonuses, and a network big enough to keep you moving every shift.</p>
                 <ul className="hp-join-perks">
                   {["Weekly Payouts In QAR / AED / SAR", "Daily Stacked Routes — Earn More Per Hour", "Bike, Vehicle & Fuel Support", "Health Insurance & Visa Support", "Performance Bonuses Every Month"].map((perk) => (
@@ -798,21 +798,21 @@ export default function HomePage() {
         .hp-join-card { position: relative; border-radius: 32px; overflow: hidden; border: 1px solid var(--line-strong); min-height: 600px; transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; box-shadow: 0 1px 2px rgba(15,26,61,.03); }
         .hp-join-card:hover { transform: translateY(-6px); border-color: var(--violet-line); box-shadow: 0 30px 60px -24px rgba(45,43,224,.2), 0 4px 14px -6px rgba(15,26,61,.06); }
         .hp-join-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
-        .hp-join-bg-driver { background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(255,159,67,.16), transparent 65%), radial-gradient(ellipse 60% 80% at 0% 100%, rgba(244,114,99,.10), transparent 65%), linear-gradient(150deg,#FFFCF7 0%,#FFF6EC 50%,#FCEBDC 100%); }
-        .hp-join-bg-driver::after { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(115deg, transparent 0 32px, rgba(212,128,42,.04) 32px 33px); }
+        .hp-join-bg-driver { background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(90,75,255,.1), transparent 65%), radial-gradient(ellipse 60% 80% at 0% 100%, rgba(27,26,104,.07), transparent 65%), linear-gradient(150deg,#FAFBFF 0%,#F4F5FF 50%,#ECEFFE 100%); }
+        .hp-join-bg-driver::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(27,26,104,.06) 1px, transparent 1px); background-size: 28px 28px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000, transparent 95%); -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000, transparent 95%); }
         .hp-join-bg-client { background: radial-gradient(ellipse 80% 60% at 20% 20%, rgba(45,43,224,.12), transparent 65%), radial-gradient(ellipse 60% 80% at 100% 100%, rgba(123,107,255,.10), transparent 65%), linear-gradient(150deg,#FAFBFF 0%,#F0F2FE 50%,#E5E7FB 100%); }
         .hp-join-bg-client::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(15,26,61,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,26,61,.04) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000, transparent 95%); -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000, transparent 95%); }
         .hp-join-inner { position: relative; z-index: 1; padding: 48px 44px; display: flex; flex-direction: column; height: 100%; min-height: 600px; color: var(--ink); }
         @media (max-width: 680px) { .hp-join-inner { padding: 36px 28px; min-height: auto; } }
         .hp-join-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-        .hp-join-icon-driver { background: linear-gradient(135deg, rgba(255,159,67,.22), rgba(244,114,99,.10)); border: 1px solid rgba(214,118,32,.32); color: #C56A14; }
+        .hp-join-icon-driver { background: linear-gradient(135deg, rgba(90,75,255,.15), rgba(27,26,104,.06)); border: 1px solid var(--violet-line); color: var(--indigo); }
         .hp-join-icon-client { background: linear-gradient(135deg, rgba(123,107,255,.22), rgba(45,43,224,.08)); border: 1px solid var(--violet-line); color: var(--indigo); }
         .hp-join-eyebrow { font-family: var(--font-geist-mono), monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .18em; display: block; margin-bottom: 14px; font-weight: 500; }
         .hp-join-title { font-size: clamp(32px,3.6vw,46px); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; margin-bottom: 18px; color: var(--ink); }
         .hp-join-desc { font-size: 16px; color: var(--muted); line-height: 1.6; margin-bottom: 28px; }
         .hp-join-perks { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; flex: 1; }
         .hp-join-perks li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--ink); }
-        .hp-perk-dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg,#FF9F43,#F47263); box-shadow: 0 0 8px rgba(255,159,67,.4); display: inline-block; }
+        .hp-perk-dot { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg,#5A4BFF,#2D2BE0); box-shadow: 0 0 8px rgba(90,75,255,.35); display: inline-block; }
         .hp-perk-dot-client { background: linear-gradient(135deg,#9B8BFF,#5A4BFF) !important; box-shadow: 0 0 8px rgba(123,107,255,.4) !important; }
         .hp-join-actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
         .hp-join-btn { display: flex; align-items: center; gap: 14px; padding: 14px 20px; border-radius: 14px; font-size: 15px; font-weight: 500; transition: all .25s ease; text-decoration: none; }
