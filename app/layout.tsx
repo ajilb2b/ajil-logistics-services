@@ -33,7 +33,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ajil Logistics — Efficiency in Motion | End-to-End Logistics Infrastructure",
+  title: "Ajil Logistics",
   description:
     "Ajil Logistics is the end-to-end logistics partner for modern commerce. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management.",
   icons: {
