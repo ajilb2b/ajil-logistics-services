@@ -36,12 +36,24 @@ export const metadata: Metadata = {
   title: "Ajil Logistics",
   description:
     "Ajil Logistics is the end-to-end logistics partner for modern commerce. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management.",
+  metadataBase: new URL("https://ajilb2b.com"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "32x32" },
     ],
     apple: { url: "/icon.svg", type: "image/svg+xml" },
+  },
+  openGraph: {
+    title: "Ajil Logistics — Efficiency in Motion",
+    description: "End-to-end logistics infrastructure for modern commerce. Built in Doha, deployed across the GCC.",
+    url: "https://ajilb2b.com",
+    siteName: "Ajil Logistics",
+    locale: "en_US",
+    type: "website",
   },
 };
 
