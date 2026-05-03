@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export { default } from "./JoinClient";
+import JoinClient from "./JoinClient";
 
 export const metadata: Metadata = {
   title: "Drive With Ajil — Rider & Driver Jobs Across the GCC",
@@ -13,3 +13,24 @@ export const metadata: Metadata = {
     url: "https://ajilb2b.com/join",
   },
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
+    { "@type": "ListItem", "position": 2, "name": "Join Us", "item": "https://ajilb2b.com/join" },
+  ],
+};
+
+export default function Page() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <JoinClient />
+    </>
+  );
+}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export { default } from "./TrustClient";
+import TrustClient from "./TrustClient";
 
 export const metadata: Metadata = {
   title: "Security & Trust — Ajil Logistics Platform",
@@ -13,3 +13,24 @@ export const metadata: Metadata = {
     url: "https://ajilb2b.com/trust-security",
   },
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
+    { "@type": "ListItem", "position": 2, "name": "Trust & Security", "item": "https://ajilb2b.com/trust-security" },
+  ],
+};
+
+export default function Page() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <TrustClient />
+    </>
+  );
+}

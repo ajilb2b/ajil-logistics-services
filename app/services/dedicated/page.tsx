@@ -16,6 +16,35 @@ export const metadata: Metadata = {
   },
 };
 
+const dedicatedServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://ajilb2b.com/services/dedicated",
+  "name": "Dedicated Logistics Service",
+  "serviceType": "Dedicated Last-Mile Delivery",
+  "description":
+    "A complete logistics apparatus built exclusively for your brand. Branded fleet, ringfenced warehouses, dark-store hubs, a named General Manager and 24/7 operations cover.",
+  "provider": { "@id": "https://ajilb2b.com/#organization" },
+  "areaServed": [
+    { "@type": "Country", "name": "Qatar" },
+    { "@type": "Country", "name": "United Arab Emirates" },
+    { "@type": "Country", "name": "Saudi Arabia" },
+    { "@type": "Country", "name": "Kuwait" },
+    { "@type": "Country", "name": "Bahrain" },
+    { "@type": "Country", "name": "Oman" },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ajilb2b.com/services" },
+    { "@type": "ListItem", "position": 3, "name": "Dedicated Logistics", "item": "https://ajilb2b.com/services/dedicated" },
+  ],
+};
+
 const included = [
   { title: "Branded Fleet", desc: "Riders and vehicles in your livery, operating exclusively on your routes. No shared pool, no brand dilution." },
   { title: "Ringfenced Warehouses", desc: "Dedicated ambient, chilled and frozen zones in our hubs — or custom dark-store builds in your catchments." },
@@ -42,6 +71,14 @@ const fitProfiles = [
 export default function DedicatedServicePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dedicatedServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Nav />
 
       {/* Breadcrumb */}

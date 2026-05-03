@@ -64,6 +64,41 @@ export const metadata: Metadata = {
   },
 };
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://ajilb2b.com/#organization",
+  "name": "Ajil Logistics Services",
+  "alternateName": "Ajil",
+  "url": "https://ajilb2b.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://ajilb2b.com/ajil-logo-transparent.png",
+    "width": 140,
+    "height": 46,
+  },
+  "description": "End-to-end logistics infrastructure for modern commerce across 6 GCC markets. Four service models: software, on-demand network, dedicated, and fully managed operations. Headquartered in Doha, Qatar.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Almuntazah Trading Center",
+    "addressLocality": "Doha",
+    "addressCountry": "QA",
+  },
+  "telephone": "+97477058594",
+  "email": "hello@ajilb2b.com",
+  "foundingDate": "2019",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2800 },
+  "areaServed": [
+    { "@type": "Country", "name": "Qatar" },
+    { "@type": "Country", "name": "United Arab Emirates" },
+    { "@type": "Country", "name": "Saudi Arabia" },
+    { "@type": "Country", "name": "Kuwait" },
+    { "@type": "Country", "name": "Bahrain" },
+    { "@type": "Country", "name": "Oman" },
+  ],
+  "sameAs": ["https://www.linkedin.com/company/ajilb2b"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,7 +109,13 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

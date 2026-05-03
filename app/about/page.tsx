@@ -16,6 +16,23 @@ export const metadata: Metadata = {
   },
 };
 
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Ajil Logistics Services",
+  "url": "https://ajilb2b.com/about",
+  "description":
+    "Ajil Logistics Services was founded in Doha in 2019 as the in-house logistics arm of a holding group. Now serving 6 GCC markets with 2,800 riders, 14 hubs and a 24/7 dispatch operation.",
+  "about": { "@id": "https://ajilb2b.com/#organization" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ajilb2b.com/about" },
+    ],
+  },
+};
+
 const pillars = [
   {
     num: "2,800",
@@ -55,6 +72,10 @@ const leadership = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       <Nav />
 
       {/* Breadcrumb */}

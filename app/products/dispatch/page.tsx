@@ -16,6 +16,94 @@ export const metadata: Metadata = {
   },
 };
 
+const dispatchAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://ajilb2b.com/products/dispatch",
+  "name": "Ajil Dispatch",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description":
+    "Command centre for delivery operations. Route planning with stacking logic, live re-routing, exception management, multi-hub coordination and open API. Built for GCC logistics.",
+  "url": "https://dispatch.ajilb2b.com",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "1200",
+    "highPrice": "3800",
+    "priceCurrency": "QAR",
+    "offerCount": "3",
+  },
+  "featureList": [
+    "Auto-routing with stacking logic",
+    "Live re-routing",
+    "Exception management",
+    "Multi-vehicle planning",
+    "Multi-hub coordination",
+    "Live operational dashboard",
+    "Open REST API & webhooks",
+    "Multi-tenant & white-label",
+    "Local GCC intelligence",
+  ],
+  "provider": { "@id": "https://ajilb2b.com/#organization" },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Ajil Dispatch work with my existing rider app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ajil Dispatch is API-first. Most operators run it alongside their own rider app via our open API and webhook system. We provide reference integrations for the most common workflows (job assignment, status updates, proof of delivery), and our solutions engineering team supports go-live.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Is the data stored locally in the GCC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Production data is stored in regional cloud infrastructure (UAE and Bahrain regions) with active-passive failover. Enterprise customers can opt for dedicated infrastructure with country-specific data residency. SOC 2 Type II report available under NDA.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 14-day trial work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full Growth-tier sandbox provisioned within 24 hours, with sample data and white-label theming applied to your brand. We provide a 30-minute kickoff session and a dedicated solutions engineer for the trial period. No credit card required.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Can I white-label Ajil Dispatch for resale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that's what the Enterprise tier is built for. 3PLs and aggregators in the region resell Ajil Dispatch under their own brand to their carrier partners. Revenue share or fixed-fee licensing models available.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I exceed my tier's dispatch volume?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Overage is billed at QAR 0.30 per additional dispatch on Starter and Growth tiers. We notify you when usage trends exceed 85% of your tier and recommend an upgrade — no service interruption.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
+    { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://ajilb2b.com/products" },
+    { "@type": "ListItem", "position": 3, "name": "Ajil Dispatch", "item": "https://ajilb2b.com/products/dispatch" },
+  ],
+};
+
 const features = [
   {
     icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg>,
@@ -146,6 +234,18 @@ const faqs = [
 export default function DispatchPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dispatchAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Nav />
 
       {/* Breadcrumb */}

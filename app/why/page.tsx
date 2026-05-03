@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export { default } from "./WhyClient";
+import WhyClient from "./WhyClient";
 
 export const metadata: Metadata = {
   title: "Why Operators Choose Ajil — GCC Logistics Partner",
@@ -13,3 +13,24 @@ export const metadata: Metadata = {
     url: "https://ajilb2b.com/why",
   },
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
+    { "@type": "ListItem", "position": 2, "name": "Why Ajil", "item": "https://ajilb2b.com/why" },
+  ],
+};
+
+export default function Page() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <WhyClient />
+    </>
+  );
+}
