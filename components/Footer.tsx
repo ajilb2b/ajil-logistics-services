@@ -14,7 +14,7 @@ export default function Footer() {
               <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
             </div>
             <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 18, maxWidth: '34ch' }}>
-              End-to-end logistics infrastructure for modern commerce. Efficiency in Motion. Built in Doha, deployed across the GCC.
+              Ajil Logistics Services is the end-to-end logistics partner for modern commerce across the GCC. Built in Doha. Deployed across Qatar, UAE, KSA, Kuwait, Bahrain and Oman.
             </p>
             <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
               <input
@@ -62,6 +62,7 @@ export default function Footer() {
                 { label: 'On-Demand Logistics', href: '/services' },
                 { label: 'Dedicated Logistics', href: '/dedicated' },
                 { label: 'Fully Managed Operations', href: '/services' },
+                { label: 'Products', href: '/products' },
                 { label: 'Dispatch', href: '/dispatch' },
                 { label: 'Route Optimization', href: '/dispatch' },
               ].map((item) => (
@@ -111,7 +112,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 20, paddingTop: 32, borderTop: '1px solid var(--line)' }}>
           <p style={{ fontFamily: 'var(--font-geist-mono), monospace', fontSize: 11, color: 'var(--muted-2)', textTransform: 'uppercase', letterSpacing: '.08em' }}>
-            © 2026 Ajil Logistics · Doha, Qatar · Efficiency in Motion
+            © 2026 Ajil Logistics Services · Doha, Qatar · Efficiency in Motion
           </p>
           <div className="foot-social">
             {/* LinkedIn */}

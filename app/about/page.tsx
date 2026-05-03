@@ -99,7 +99,7 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="lede">
-                Ajil started as the in-house logistics function of a holding group operating cloud
+                Ajil Logistics Services started as the in-house logistics function of a holding group operating cloud
                 kitchens, restaurants and supermarkets. We built the software because we needed it,
                 and the riders because we trusted no-one else with our customers.{" "}
                 <strong>Then operators across the region asked if they could buy the same thing.</strong>

@@ -22,6 +22,7 @@ export default function Nav() {
             <Link href="/products">Products</Link>
             <Link href="/services">Service Models</Link>
             <Link href="/dedicated">Dedicated Logistics</Link>
+            <Link href="/about">About</Link>
             <Link href="/join">Join Us</Link>
           </div>
 
@@ -72,6 +73,7 @@ export default function Nav() {
                 { href: '/products', label: 'Products' },
                 { href: '/services', label: 'Service Models' },
                 { href: '/dedicated', label: 'Dedicated Logistics' },
+                { href: '/about', label: 'About' },
                 { href: '/join', label: 'Join Us' },
               ].map((item) => (
                 <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="ajil-mobile-link">

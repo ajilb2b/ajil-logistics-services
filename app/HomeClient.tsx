@@ -134,8 +134,9 @@ export default function HomePage() {
                 layer for{" "}<em>everything<br />that moves</em>.
               </h1>
               <p className="hp-hero-sub">
-                Ajil builds the dispatch operation, the operating software, and the physical
-                infrastructure that runs modern commerce — across 6 GCC markets.
+                Ajil Logistics Services builds the dispatch operation, the operating software, and
+                the physical infrastructure that runs modern commerce — across Qatar, UAE, Saudi
+                Arabia, Kuwait, Bahrain and Oman.
               </p>
               <div className="hp-hero-actions">
                 <a href="#cta" className="hp-btn-hero">
@@ -230,7 +231,7 @@ export default function HomePage() {
             {[...clients, ...clients].map((client, i) => (
               <div className="hp-logo-card" key={i}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={client.logo} alt={client.name} className="hp-logo-img" />
+                <img src={client.logo} alt={`${client.name} — Ajil Logistics Services client`} className="hp-logo-img" />
               </div>
             ))}
           </div>
