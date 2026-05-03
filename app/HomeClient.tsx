@@ -231,7 +231,7 @@ export default function HomePage() {
             {[...clients, ...clients].map((client, i) => (
               <div className="hp-logo-card" key={i}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={client.logo} alt={`${client.name} — Ajil Logistics Services client`} className="hp-logo-img" />
+                <img src={client.logo} alt={`${client.name} — Ajil Logistics Services client`} className="hp-logo-img" loading="lazy" decoding="async" />
               </div>
             ))}
           </div>

@@ -107,6 +107,25 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Markets */}
+          <div>
+            <h5 className="foot-col-head">Markets</h5>
+            <ul className="foot-col-list">
+              {[
+                { label: 'Qatar', href: '/qatar' },
+                { label: 'UAE', href: '/uae' },
+                { label: 'Saudi Arabia', href: '/saudi-arabia' },
+                { label: 'Kuwait', href: '/kuwait' },
+                { label: 'Bahrain', href: '/bahrain' },
+                { label: 'Oman', href: '/oman' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="foot-link">{item.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom bar */}
@@ -134,7 +153,7 @@ export default function Footer() {
       <style>{`
         .foot-grid {
           display: grid;
-          grid-template-columns: 1.4fr repeat(3, 1fr);
+          grid-template-columns: 1.4fr repeat(4, 1fr);
           gap: 48px;
           margin-bottom: 60px;
         }

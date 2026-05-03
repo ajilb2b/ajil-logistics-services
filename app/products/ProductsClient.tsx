@@ -13,6 +13,7 @@ type Product = {
   desc: string;
   features: string[];
   ctas?: { label: string; href: string; style: string; note?: string }[];
+  screenshot?: { src: string; type: "browser" | "mobile"; url?: string };
 };
 
 const products: Product[] = [
@@ -37,6 +38,7 @@ const products: Product[] = [
       "Brand integrations (POS, Talabat, Noon)",
       "Rider & vehicle management",
     ],
+    screenshot: { src: "/ajil-dispatch.png", type: "browser", url: "dispatch.ajilb2b.com" },
   },
   {
     num: "02",
@@ -55,6 +57,7 @@ const products: Product[] = [
       "Multilingual: EN / AR / UR / FR",
       "In-app chat with dispatch team",
     ],
+    screenshot: { src: "/ajil-runner.png", type: "mobile" },
   },
   {
     num: "03",
@@ -187,7 +190,9 @@ export default function ProductsPage() {
           <div className="pp-live-grid">
             {liveProducts.map((p) => (
               <div className="pp-product-card" key={p.num}>
-                <div className="pp-card-top">
+
+                {/* ── Content column ── */}
+                <div className="pp-card-content">
                   <div className="pp-card-meta">
                     <span className="pp-card-num">{p.num}</span>
                     <span className="pp-card-tag">{p.tag}</span>
@@ -196,47 +201,94 @@ export default function ProductsPage() {
                   <h2 className="pp-card-name">{p.name}</h2>
                   <p className="pp-card-headline">{p.headline}</p>
                   <p className="pp-card-desc">{p.desc}</p>
+
+                  <ul className="pp-feature-list">
+                    {p.features.map((f) => (
+                      <li key={f}>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="pp-card-footer">
+                    {"ctas" in p && p.ctas ? (
+                      <div className="pp-card-ctas">
+                        {p.ctas.map((c) => (
+                          <div className="pp-card-cta-item" key={c.label}>
+                            <a
+                              href={c.href}
+                              target={c.href.startsWith("http") ? "_blank" : undefined}
+                              rel="noopener noreferrer"
+                              className={c.style === "primary" ? "pp-card-cta" : "pp-card-cta-outline"}
+                            >
+                              {c.label}
+                              {c.style === "primary" && (
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+                              )}
+                            </a>
+                            <span className="pp-cta-note">{c.note}</span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : p.href ? (
+                      <a href={p.href} target="_blank" rel="noopener noreferrer" className="pp-card-cta">
+                        {p.ctaLabel}
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+                      </a>
+                    ) : (
+                      <span className="pp-card-cta-muted">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" /><path d="M12 18h.01" /></svg>
+                        {p.ctaLabel}
+                      </span>
+                    )}
+                  </div>
                 </div>
-                <ul className="pp-feature-list">
-                  {p.features.map((f) => (
-                    <li key={f}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="pp-card-footer">
-                  {"ctas" in p && p.ctas ? (
-                    <div className="pp-card-ctas">
-                      {p.ctas.map((c) => (
-                        <div className="pp-card-cta-item" key={c.label}>
-                          <a
-                            href={c.href}
-                            target={c.href.startsWith("http") ? "_blank" : undefined}
-                            rel="noopener noreferrer"
-                            className={c.style === "primary" ? "pp-card-cta" : "pp-card-cta-outline"}
-                          >
-                            {c.label}
-                            {c.style === "primary" && (
-                              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-                            )}
-                          </a>
-                          <span className="pp-cta-note">{c.note}</span>
+
+                {/* ── Screenshot visual column ── */}
+                {p.screenshot && (
+                  <div className={`pp-card-visual ${p.screenshot.type === "browser" ? "pp-visual-dispatch" : "pp-visual-runner"}`}>
+                    {/* Ambient glow orb */}
+                    <div className="pp-visual-orb" />
+
+                    {p.screenshot.type === "browser" ? (
+                      /* Browser chrome frame */
+                      <div className="pp-browser">
+                        <div className="pp-browser-chrome">
+                          <span className="pp-dot-r" /><span className="pp-dot-y" /><span className="pp-dot-g" />
+                          <div className="pp-browser-urlbar">
+                            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg>
+                            <span className="pp-browser-url-text">{p.screenshot.url}</span>
+                          </div>
                         </div>
-                      ))}
-                    </div>
-                  ) : p.href ? (
-                    <a href={p.href} target="_blank" rel="noopener noreferrer" className="pp-card-cta">
-                      {p.ctaLabel}
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
-                    </a>
-                  ) : (
-                    <span className="pp-card-cta-muted">
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" /><path d="M12 18h.01" /></svg>
-                      {p.ctaLabel}
-                    </span>
-                  )}
-                </div>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={p.screenshot.src}
+                          alt={`${p.name} — platform interface`}
+                          className="pp-browser-img"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    ) : (
+                      /* Phone / mobile frame */
+                      <div className="pp-phone-wrap">
+                        <div className="pp-phone">
+                          <div className="pp-phone-island" />
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={p.screenshot.src}
+                            alt={`${p.name} — mobile app interface`}
+                            className="pp-phone-img"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div className="pp-phone-glow" />
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -346,22 +398,33 @@ export default function ProductsPage() {
         .pp-dot-live { background: #0E9D6E; box-shadow: 0 0 8px rgba(14,157,110,.5); }
         .pp-dot-soon { background: var(--muted-2); }
 
-        /* Live products grid — 2 cols */
-        .pp-live-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-        .pp-product-card { border: 1px solid var(--line-strong); border-radius: 20px; padding: 40px 40px 36px; background: #fff; display: flex; flex-direction: column; gap: 0; transition: box-shadow .25s ease, border-color .25s ease; }
-        .pp-product-card:hover { border-color: rgba(27,26,104,.25); box-shadow: 0 16px 48px -16px rgba(27,26,104,.14); }
+        /* ── Live product showcase cards ── */
+        .pp-live-grid { display: flex; flex-direction: column; gap: 28px; }
 
-        .pp-card-top { margin-bottom: 28px; }
-        .pp-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .pp-product-card {
+          border: 1px solid var(--line-strong);
+          border-radius: 24px;
+          background: #fff;
+          display: grid;
+          grid-template-columns: 1fr 1.15fr;
+          overflow: hidden;
+          min-height: 560px;
+          transition: box-shadow .3s ease, border-color .3s ease;
+        }
+        .pp-product-card:hover { border-color: rgba(90,75,255,.22); box-shadow: 0 28px 64px -24px rgba(27,26,104,.16); }
+
+        /* Content column */
+        .pp-card-content { padding: 52px 48px 48px; display: flex; flex-direction: column; }
+        .pp-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
         .pp-card-num { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; color: var(--muted-2); letter-spacing: .1em; }
         .pp-card-tag { font-family: var(--font-geist-mono), monospace; font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 999px; }
         .pp-badge-live { font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: rgba(14,157,110,.1); color: #0E9D6E; border: 1px solid rgba(14,157,110,.25); padding: 3px 9px; border-radius: 999px; }
 
-        .pp-card-name { font-size: clamp(22px, 2.2vw, 32px); font-weight: 600; letter-spacing: -.03em; color: var(--ink); margin-bottom: 10px; }
-        .pp-card-headline { font-size: clamp(14px, 1.1vw, 17px); font-weight: 500; color: var(--ink); margin-bottom: 12px; opacity: .75; }
-        .pp-card-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+        .pp-card-name { font-size: clamp(24px, 2.4vw, 36px); font-weight: 600; letter-spacing: -.035em; color: var(--ink); margin-bottom: 10px; }
+        .pp-card-headline { font-size: clamp(14px, 1.1vw, 17px); font-weight: 500; color: var(--ink); margin-bottom: 14px; opacity: .7; line-height: 1.45; }
+        .pp-card-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 0; }
 
-        .pp-feature-list { list-style: none; padding: 0; margin: 0 0 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; border-top: 1px solid var(--line); padding-top: 24px; flex: 1; }
+        .pp-feature-list { list-style: none; padding: 0; margin: 28px 0 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; border-top: 1px solid var(--line); padding-top: 24px; flex: 1; }
         .pp-feature-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--ink); line-height: 1.4; }
         .pp-feature-list svg { flex-shrink: 0; margin-top: 2px; color: var(--indigo); }
 
@@ -374,6 +437,135 @@ export default function ProductsPage() {
         .pp-card-cta-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--ink); font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 999px; border: 1px solid var(--line-strong); transition: all .25s ease; white-space: nowrap; }
         .pp-card-cta-outline:hover { background: var(--paper-3); border-color: rgba(27,26,104,.35); }
         .pp-cta-note { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted-2); letter-spacing: .06em; padding-left: 4px; }
+
+        /* Screenshot visual column */
+        .pp-card-visual {
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding: 44px 36px 0;
+        }
+        .pp-visual-dispatch {
+          background: linear-gradient(148deg, #08091c 0%, #1b1a68 55%, #0d0c42 100%);
+          border-left: 1px solid rgba(255,255,255,.04);
+        }
+        .pp-visual-runner {
+          background: linear-gradient(148deg, #0d0920 0%, #2a1660 52%, #160c38 100%);
+          border-left: 1px solid rgba(255,255,255,.04);
+        }
+
+        /* Ambient orb */
+        .pp-visual-orb {
+          position: absolute;
+          top: 20%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 320px;
+          height: 320px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(90,75,255,.28) 0%, transparent 70%);
+          pointer-events: none;
+        }
+
+        /* Browser chrome */
+        .pp-browser {
+          position: relative;
+          z-index: 1;
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+          overflow: hidden;
+          background: #141414;
+          box-shadow: 0 -20px 80px rgba(90,75,255,.35), 0 0 0 1px rgba(255,255,255,.07), 0 -2px 0 rgba(255,255,255,.08);
+        }
+        .pp-browser-chrome {
+          background: #242424;
+          height: 38px;
+          display: flex;
+          align-items: center;
+          padding: 0 14px;
+          gap: 7px;
+          border-bottom: 1px solid rgba(255,255,255,.06);
+          flex-shrink: 0;
+        }
+        .pp-dot-r { width: 11px; height: 11px; border-radius: 50%; background: #ff5f56; flex-shrink: 0; }
+        .pp-dot-y { width: 11px; height: 11px; border-radius: 50%; background: #ffbd2e; flex-shrink: 0; }
+        .pp-dot-g { width: 11px; height: 11px; border-radius: 50%; background: #27c93f; flex-shrink: 0; }
+        .pp-browser-urlbar {
+          flex: 1;
+          background: rgba(255,255,255,.07);
+          border-radius: 5px;
+          height: 22px;
+          margin: 0 14px;
+          display: flex;
+          align-items: center;
+          padding: 0 9px;
+          gap: 5px;
+        }
+        .pp-browser-url-text {
+          font-family: var(--font-geist-mono), monospace;
+          font-size: 9px;
+          color: rgba(255,255,255,.28);
+          letter-spacing: .02em;
+        }
+        .pp-browser-img {
+          display: block;
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: cover;
+          object-position: top center;
+        }
+
+        /* Phone frame */
+        .pp-phone-wrap {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .pp-phone {
+          width: 216px;
+          border-radius: 48px;
+          overflow: hidden;
+          background: #0d0d0d;
+          border: 7px solid #242424;
+          box-shadow: 0 -24px 80px rgba(120,80,255,.4), 0 0 0 1px rgba(255,255,255,.07);
+          position: relative;
+          flex-shrink: 0;
+        }
+        .pp-phone-island {
+          position: absolute;
+          top: 12px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90px;
+          height: 26px;
+          background: #0d0d0d;
+          border-radius: 999px;
+          z-index: 2;
+        }
+        .pp-phone-img {
+          display: block;
+          width: 100%;
+          height: 500px;
+          object-fit: cover;
+          object-position: top center;
+        }
+        .pp-phone-glow {
+          position: absolute;
+          bottom: -16px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 160px;
+          height: 44px;
+          background: rgba(120,80,255,.45);
+          filter: blur(28px);
+          border-radius: 50%;
+          pointer-events: none;
+        }
 
         /* Coming soon cards */
         .pp-soon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
@@ -416,18 +608,28 @@ export default function ProductsPage() {
         /* Responsive */
         @media (max-width: 1100px) {
           .pp-plans-grid { grid-template-columns: 1fr; max-width: 480px; }
+          .pp-product-card { grid-template-columns: 1fr 1fr; min-height: 480px; }
         }
         @media (max-width: 900px) {
-          .pp-live-grid { grid-template-columns: 1fr; }
+          .pp-product-card { grid-template-columns: 1fr; min-height: unset; }
+          .pp-card-visual { min-height: 320px; align-items: center; padding: 40px 32px; }
+          .pp-browser-img { max-height: 260px; }
+          .pp-phone-img { height: 340px; }
+          .pp-phone { width: 180px; }
           .pp-soon-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 640px) {
           .pp-hero { padding: 120px 0 64px; }
           .pp-section { padding: 72px 0; }
+          .pp-card-content { padding: 32px 28px 28px; }
+          .pp-card-visual { min-height: 260px; padding: 28px 20px 0; }
+          .pp-browser-img { max-height: 200px; }
+          .pp-phone-img { height: 280px; }
+          .pp-phone { width: 150px; border-radius: 36px; }
+          .pp-phone-island { width: 70px; height: 20px; top: 8px; }
           .pp-soon-grid { grid-template-columns: 1fr; }
           .pp-feature-list { grid-template-columns: 1fr; }
           .pp-plans-grid { max-width: 100%; }
-          .pp-product-card { padding: 28px 24px; }
         }
       `}</style>
     </>

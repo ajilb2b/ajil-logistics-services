@@ -157,9 +157,22 @@ export default function ContactPage() {
                 <h4 style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 14 }}>
                   Regional Offices
                 </h4>
-                <p style={{ fontSize: 13.5, color: "var(--text-soft)", lineHeight: 1.7 }}>
-                  <strong style={{ color: "var(--text)" }}>Qatar</strong> · Doha, Almuntazah Trading Center
-                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  {[
+                    { country: "Qatar", detail: "Doha, Almuntazah Trading Center", href: "/qatar" },
+                    { country: "UAE", detail: "Dubai, UAE", href: "/uae" },
+                    { country: "Saudi Arabia", detail: "Riyadh, KSA", href: "/saudi-arabia" },
+                    { country: "Kuwait", detail: "Kuwait City", href: "/kuwait" },
+                    { country: "Bahrain", detail: "Manama, Bahrain", href: "/bahrain" },
+                    { country: "Oman", detail: "Muscat, Oman", href: "/oman" },
+                  ].map((office) => (
+                    <p key={office.country} style={{ fontSize: 13.5, color: "var(--text-soft)", lineHeight: 1.7, margin: 0 }}>
+                      <Link href={office.href} style={{ color: "var(--text)", fontWeight: 500 }}>{office.country}</Link>
+                      <span style={{ color: "var(--text-faint)" }}> · </span>
+                      {office.detail}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
 
