@@ -42,15 +42,15 @@ const products: Product[] = [
   },
   {
     num: "02",
-    name: "Ajil Rider App",
+    name: "Ajil Runner",
     tag: "iOS & Android",
     status: "live" as const,
     href: null,
-    ctaLabel: "App Store & Play Store — coming soon",
-    headline: "The app every rider runs their shift on.",
-    desc: "iOS and Android, offline-first. Riders receive orders from Dispatch, navigate with one tap, capture proof of delivery and track their earnings in real time — all in one app.",
+    ctaLabel: "Ajil Runner — App Store & Play Store coming soon",
+    headline: "The app every runner runs their shift on.",
+    desc: "iOS and Android, offline-first. Runners receive orders from Dispatch, navigate with one tap, capture proof of delivery and track their earnings in real time — all in one app.",
     features: [
-      "Auto-receive orders from Dispatch",
+      "Auto-receive orders from Ajil Dispatch",
       "Photo & signature proof of delivery",
       "Earnings & performance dashboard",
       "Works offline",
@@ -278,7 +278,7 @@ export default function ProductsPage() {
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={p.screenshot.src}
-                            alt={`${p.name} — mobile app interface`}
+                            alt="Ajil Runner — rider mobile app interface"
                             className="pp-phone-img"
                             loading="lazy"
                             decoding="async"
@@ -406,9 +406,9 @@ export default function ProductsPage() {
           border-radius: 24px;
           background: #fff;
           display: grid;
-          grid-template-columns: 1fr 1.15fr;
+          grid-template-columns: 1fr 1.45fr;
           overflow: hidden;
-          min-height: 560px;
+          min-height: 620px;
           transition: box-shadow .3s ease, border-color .3s ease;
         }
         .pp-product-card:hover { border-color: rgba(90,75,255,.22); box-shadow: 0 28px 64px -24px rgba(27,26,104,.16); }
@@ -445,28 +445,45 @@ export default function ProductsPage() {
           display: flex;
           align-items: flex-end;
           justify-content: center;
-          padding: 44px 36px 0;
+          padding: 44px 20px 0;
         }
+        /* Dispatch: browser fills column — oversized height clipped by card overflow:hidden */
         .pp-visual-dispatch {
-          background: linear-gradient(148deg, #08091c 0%, #1b1a68 55%, #0d0c42 100%);
+          background: linear-gradient(148deg, #0d0920 0%, #2a1660 52%, #160c38 100%);
           border-left: 1px solid rgba(255,255,255,.04);
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: center;
+          padding: 36px 6px 28px;
         }
         .pp-visual-runner {
           background: linear-gradient(148deg, #0d0920 0%, #2a1660 52%, #160c38 100%);
           border-left: 1px solid rgba(255,255,255,.04);
         }
+        .pp-visual-dispatch .pp-browser {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 0 -8px 40px rgba(90,75,255,.4), 0 0 0 1px rgba(255,255,255,.08);
+          overflow: hidden;
+        }
+        .pp-visual-dispatch .pp-browser-img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
 
         /* Ambient orb */
         .pp-visual-orb {
           position: absolute;
-          top: 20%;
+          top: 0;
           left: 50%;
-          transform: translate(-50%, -50%);
-          width: 320px;
-          height: 320px;
+          transform: translateX(-50%);
+          width: 260px;
+          height: 70px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(90,75,255,.28) 0%, transparent 70%);
+          background: radial-gradient(ellipse, rgba(90,75,255,.45) 0%, transparent 70%);
           pointer-events: none;
+          z-index: 2;
         }
 
         /* Browser chrome */
@@ -513,7 +530,7 @@ export default function ProductsPage() {
           display: block;
           width: 100%;
           height: auto;
-          max-height: 400px;
+          max-height: 520px;
           object-fit: cover;
           object-position: top center;
         }
@@ -527,22 +544,22 @@ export default function ProductsPage() {
           align-items: center;
         }
         .pp-phone {
-          width: 216px;
-          border-radius: 48px;
+          width: 300px;
+          border-radius: 52px;
           overflow: hidden;
           background: #0d0d0d;
-          border: 7px solid #242424;
+          border: 8px solid #242424;
           box-shadow: 0 -24px 80px rgba(120,80,255,.4), 0 0 0 1px rgba(255,255,255,.07);
           position: relative;
           flex-shrink: 0;
         }
         .pp-phone-island {
           position: absolute;
-          top: 12px;
+          top: 14px;
           left: 50%;
           transform: translateX(-50%);
-          width: 90px;
-          height: 26px;
+          width: 110px;
+          height: 30px;
           background: #0d0d0d;
           border-radius: 999px;
           z-index: 2;
@@ -550,17 +567,15 @@ export default function ProductsPage() {
         .pp-phone-img {
           display: block;
           width: 100%;
-          height: 500px;
-          object-fit: cover;
-          object-position: top center;
+          height: auto;
         }
         .pp-phone-glow {
           position: absolute;
           bottom: -16px;
           left: 50%;
           transform: translateX(-50%);
-          width: 160px;
-          height: 44px;
+          width: 220px;
+          height: 48px;
           background: rgba(120,80,255,.45);
           filter: blur(28px);
           border-radius: 50%;
@@ -614,8 +629,7 @@ export default function ProductsPage() {
           .pp-product-card { grid-template-columns: 1fr; min-height: unset; }
           .pp-card-visual { min-height: 320px; align-items: center; padding: 40px 32px; }
           .pp-browser-img { max-height: 260px; }
-          .pp-phone-img { height: 340px; }
-          .pp-phone { width: 180px; }
+          .pp-phone { width: 240px; border-radius: 44px; }
           .pp-soon-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 640px) {
@@ -624,9 +638,8 @@ export default function ProductsPage() {
           .pp-card-content { padding: 32px 28px 28px; }
           .pp-card-visual { min-height: 260px; padding: 28px 20px 0; }
           .pp-browser-img { max-height: 200px; }
-          .pp-phone-img { height: 280px; }
-          .pp-phone { width: 150px; border-radius: 36px; }
-          .pp-phone-island { width: 70px; height: 20px; top: 8px; }
+          .pp-phone { width: 190px; border-radius: 40px; }
+          .pp-phone-island { width: 80px; height: 22px; top: 10px; }
           .pp-soon-grid { grid-template-columns: 1fr; }
           .pp-feature-list { grid-template-columns: 1fr; }
           .pp-plans-grid { max-width: 100%; }
