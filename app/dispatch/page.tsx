@@ -33,6 +33,38 @@ const dispatchServiceSchema = {
   ],
 };
 
+const dispatchFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Ajil's dispatch service?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ajil's dispatch service is a 24/7 command centre that plans, monitors and optimises delivery routes across your fleet using stacking logic, live re-routing and local GCC intelligence. The operation runs from Doha with senior dispatchers managing every active route across all 6 GCC markets." },
+    },
+    {
+      "@type": "Question",
+      "name": "How does route optimization reduce cost per drop?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Stacking logic bundles multiple deliveries onto a single route based on time windows, vehicle capacity and SLA priority. In live deployments, Ajil's optimization engine has reduced cost per drop by up to 34% and cut route time by up to 28% versus unoptimised dispatch plans." },
+    },
+    {
+      "@type": "Question",
+      "name": "What is order stacking logic in logistics?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Order stacking is the process of combining multiple customer deliveries into a single optimised route. The Ajil engine considers time windows, vehicle capacity, geographic clustering and SLA risk to determine the optimal stack — typically reducing empty kilometres by over 30% versus separate single-delivery routes." },
+    },
+    {
+      "@type": "Question",
+      "name": "Does Ajil's dispatch cover Ramadan and public holiday scheduling?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Local intelligence is built into the routing engine for all 6 GCC markets: prayer time windows, Ramadan schedule shifts, school zones, public holiday road patterns and gated compound access rules for Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman." },
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Ajil's dispatch service with my own riders?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Ajil dispatch integrates with your existing fleet via API. The dispatch platform can plan and monitor third-party and in-house fleets alongside Ajil riders, with a unified live dashboard showing all active routes and SLA status." },
+    },
+  ],
+};
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -48,6 +80,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(dispatchServiceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dispatchFaqSchema) }}
       />
       <script
         type="application/ld+json"

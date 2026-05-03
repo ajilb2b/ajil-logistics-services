@@ -107,6 +107,38 @@ const servicesSchema = {
   ],
 };
 
+const servicesFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between On-Demand and Dedicated Logistics?",
+      "acceptedAnswer": { "@type": "Answer", "text": "On-Demand Logistics uses Ajil's shared rider, vehicle and warehouse network on a pay-per-delivery basis — ideal for variable volumes and seasonal peaks. Dedicated Logistics is a ringfenced operation running exclusively for your business, with branded riders, a reserved fleet and a dedicated warehouse footprint. The choice comes down to volume predictability and how much control you need over brand experience and unit economics." },
+    },
+    {
+      "@type": "Question",
+      "name": "Does Ajil operate its own riders and vehicles?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 2,800 Ajil riders are directly employed — not gig workers or sub-contractors. Every vehicle is managed by a dedicated fleet operations team. This is how Ajil Logistics Services can offer guaranteed SLAs and consistent service quality across Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman." },
+    },
+    {
+      "@type": "Question",
+      "name": "Which GCC markets does Ajil Logistics Services operate in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ajil Logistics Services operates in Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman. All six markets are managed from the Doha operations centre, with local logistics hubs and dedicated teams in each country." },
+    },
+    {
+      "@type": "Question",
+      "name": "Can we start with one service model and switch to another later?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All four service models — Software, On-Demand, Dedicated and Fully Managed — sit under a single Ajil master agreement. Most clients start with On-Demand to validate the network and migrate to Dedicated or Fully Managed as volumes grow. No new procurement process is required." },
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Ajil platform included in every service model?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All four service models include full platform access: Ajil Dispatch (TMS and route optimization), the rider app, customer tracking, the live operations dashboard and API integrations. You never pay separately for software when using an Ajil service model." },
+    },
+  ],
+};
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -122,6 +154,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesFaqSchema) }}
       />
       <script
         type="application/ld+json"

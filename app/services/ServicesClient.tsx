@@ -92,6 +92,43 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="faq-section">
+        <div className="hp-container">
+          <span className="hp-section-tag">FAQ</span>
+          <h2 className="faq-h2">Common questions about <em>our service models</em>.</h2>
+          <div className="faq-list">
+            {[
+              {
+                q: "What is the difference between On-Demand and Dedicated Logistics?",
+                a: "On-Demand Logistics uses Ajil's shared rider, vehicle and warehouse network on a pay-per-delivery basis — ideal for variable volumes and seasonal peaks. Dedicated Logistics is a ringfenced operation running exclusively for your business, with branded riders, a reserved fleet and a dedicated warehouse footprint.",
+              },
+              {
+                q: "Does Ajil operate its own riders and vehicles?",
+                a: "Yes. All 2,800 Ajil riders are directly employed — not gig workers or sub-contractors. Every vehicle is managed by a dedicated fleet operations team. This is how Ajil Logistics Services can offer guaranteed SLAs across Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman.",
+              },
+              {
+                q: "Which GCC markets does Ajil operate in?",
+                a: "Ajil Logistics Services operates in Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman. All six markets are managed from the Doha operations centre, with local logistics hubs and dedicated teams in each country.",
+              },
+              {
+                q: "Can we start with one service model and switch to another later?",
+                a: "Yes. All four service models sit under a single Ajil master agreement. Most clients start with On-Demand to validate the network and migrate to Dedicated or Fully Managed as volumes grow. No new procurement process is required.",
+              },
+              {
+                q: "Is the Ajil platform included in every service model?",
+                a: "Yes. All four service models include full platform access: Ajil Dispatch (TMS and route optimization), the rider app, customer tracking, the live operations dashboard and API integrations. You never pay separately for software when using an Ajil service model.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="faq-item">
+                <h3 className="faq-q">{item.q}</h3>
+                <p className="faq-a">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
 
       <style>{`
@@ -128,6 +165,13 @@ export default function ServicesPage() {
         .sv-btn-primary:hover { background: var(--indigo); transform: translateY(-1px); }
         .sv-btn-ghost { color: var(--indigo); font-weight: 500; font-size: 15px; }
         .sv-btn-ghost:hover { text-decoration: underline; }
+        .faq-section { padding: 100px 0 120px; background: var(--paper-2); border-top: 1px solid var(--line); }
+        .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; color: var(--ink); margin-top: 20px; max-width: 24ch; }
+        .faq-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; margin-top: 48px; }
+        .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
+        .faq-q { font-size: 17px; font-weight: 500; letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }
+        .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 72ch; }
       `}</style>
     </>
   );

@@ -96,7 +96,30 @@ const orgSchema = {
     { "@type": "Country", "name": "Bahrain" },
     { "@type": "Country", "name": "Oman" },
   ],
-  "sameAs": ["https://www.linkedin.com/company/ajilb2b"],
+  "sameAs": [
+    "https://www.linkedin.com/company/ajilb2b",
+    "https://twitter.com/ajilb2b",
+    "https://www.instagram.com/ajilb2b",
+  ],
+  "slogan": "Efficiency in Motion",
+  "knowsAbout": [
+    "Last-mile logistics",
+    "Route optimization",
+    "Delivery management software",
+    "Dark store operations",
+    "3PL outsourcing",
+    "Dispatch management",
+    "Fleet management",
+    "GCC logistics",
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+97477058594",
+    "email": "hello@ajilb2b.com",
+    "areaServed": ["QA", "AE", "SA", "KW", "BH", "OM"],
+    "availableLanguage": ["English", "Arabic"],
+  },
 };
 
 export default function RootLayout({

@@ -110,6 +110,43 @@ export default function DispatchPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="faq-section">
+        <div className="hp-container">
+          <span className="hp-section-tag">FAQ</span>
+          <h2 className="faq-h2">Common questions about <em>dispatch &amp; routing</em>.</h2>
+          <div className="faq-list">
+            {[
+              {
+                q: "What is Ajil's dispatch service?",
+                a: "Ajil's dispatch service is a 24/7 command centre that plans, monitors and optimises delivery routes across your fleet using stacking logic, live re-routing and local GCC intelligence. The operation runs from Doha with senior dispatchers managing every active route across all 6 GCC markets.",
+              },
+              {
+                q: "How does route optimization reduce cost per drop?",
+                a: "Stacking logic bundles multiple deliveries onto a single route based on time windows, vehicle capacity and SLA priority. In live deployments, Ajil's optimization engine has reduced cost per drop by up to 34% and cut route time by up to 28% versus unoptimised dispatch plans.",
+              },
+              {
+                q: "What is order stacking logic in logistics?",
+                a: "Order stacking is the process of combining multiple customer deliveries into a single optimised route. The Ajil engine considers time windows, vehicle capacity, geographic clustering and SLA risk to determine the optimal stack — typically reducing empty kilometres by over 30% versus separate single-delivery routes.",
+              },
+              {
+                q: "Does Ajil's dispatch cover Ramadan and public holiday scheduling?",
+                a: "Yes. Local intelligence is built into the routing engine for all 6 GCC markets: prayer time windows, Ramadan schedule shifts, school zones, public holiday road patterns and gated compound access rules for Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman.",
+              },
+              {
+                q: "Can I use Ajil's dispatch service with my own riders?",
+                a: "Yes. Ajil dispatch integrates with your existing fleet via API. The dispatch platform can plan and monitor third-party and in-house fleets alongside Ajil riders, with a unified live dashboard showing all active routes and SLA status.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="faq-item">
+                <h3 className="faq-q">{item.q}</h3>
+                <p className="faq-a">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
 
       <style>{`
@@ -171,6 +208,13 @@ export default function DispatchPage() {
         .dp-btn-primary:hover { background: var(--indigo); transform: translateY(-1px); }
         .dp-btn-ghost { color: var(--indigo); font-weight: 500; font-size: 15px; }
         .dp-btn-ghost:hover { text-decoration: underline; }
+        .faq-section { padding: 100px 0 120px; background: var(--paper-2); border-top: 1px solid var(--line); }
+        .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; color: var(--ink); margin-top: 20px; max-width: 24ch; }
+        .faq-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; margin-top: 48px; }
+        .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
+        .faq-q { font-size: 17px; font-weight: 500; letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }
+        .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 72ch; }
       `}</style>
     </>
   );

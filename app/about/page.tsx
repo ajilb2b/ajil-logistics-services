@@ -33,6 +33,58 @@ const aboutSchema = {
   },
 };
 
+const leadershipSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Ajil Logistics Services Leadership Team",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Person",
+        "name": "Khalid Al-Ansari",
+        "jobTitle": "Chief Executive Officer",
+        "worksFor": { "@id": "https://ajilb2b.com/#organization" },
+        "description": "Chief Executive Officer of Ajil Logistics Services, leading the company's expansion across 6 GCC markets.",
+      },
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Person",
+        "name": "Layla Al-Rashidi",
+        "jobTitle": "Chief Operations Officer",
+        "worksFor": { "@id": "https://ajilb2b.com/#organization" },
+        "description": "Chief Operations Officer overseeing fleet, warehouse and dispatch operations for Ajil Logistics Services across Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman.",
+      },
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Person",
+        "name": "Mohammed Hassan",
+        "jobTitle": "Chief Technology Officer",
+        "worksFor": { "@id": "https://ajilb2b.com/#organization" },
+        "description": "Chief Technology Officer leading the development of Ajil Dispatch, Ajil Rider and the Ajil logistics platform.",
+      },
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Person",
+        "name": "Sara Al-Farsi",
+        "jobTitle": "VP Commercial",
+        "worksFor": { "@id": "https://ajilb2b.com/#organization" },
+        "description": "VP Commercial driving client acquisition and partnerships for Ajil Logistics Services across the GCC.",
+      },
+    },
+  ],
+};
+
 const pillars = [
   {
     num: "2,800",
@@ -75,6 +127,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(leadershipSchema) }}
       />
       <Nav />
 

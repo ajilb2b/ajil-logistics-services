@@ -105,6 +105,43 @@ export default function DedicatedPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="faq-section">
+        <div className="hp-container">
+          <span className="hp-section-tag">FAQ</span>
+          <h2 className="faq-h2">Common questions about <em>dedicated logistics</em>.</h2>
+          <div className="faq-list">
+            {[
+              {
+                q: "What is Ajil Dedicated Logistics?",
+                a: "Ajil Dedicated Logistics is a ringfenced delivery operation that runs exclusively for your business. Ajil designs the network, sources the warehouse and dark store footprint, hires and manages the riders, and operates a branded delivery arm under your name — with a named General Manager accountable to your SLAs.",
+              },
+              {
+                q: "What is a dark store in logistics?",
+                a: "A dark store is a fulfilment hub closed to the public and optimised for rapid picking and dispatch. Ajil operates dark stores as micro-fulfilment nodes in high-density catchments — enabling 15-minute delivery SLAs for grocery, pharmacy and quick-commerce operators across the GCC.",
+              },
+              {
+                q: "How long does it take to set up a dedicated logistics operation?",
+                a: "A standard dedicated deployment — network design, hub and dark store procurement, rider hiring and go-live — takes 8 to 12 weeks depending on geographic footprint and vehicle mix required. Enterprise deployments covering multiple GCC markets may require additional lead time.",
+              },
+              {
+                q: "Who is accountable for the dedicated operation?",
+                a: "A named Ajil General Manager owns the entire dedicated operation, supported by a dedicated operations and technology team. You have a single escalation path, a single contract and monthly SLA review sessions with Ajil senior leadership.",
+              },
+              {
+                q: "Can Ajil white-label the operation under our brand?",
+                a: "Yes. The entire operation is white-labelled to your identity: riders wear your uniform, vehicles carry your livery, customer notifications are sent in your tone of voice, and all customer-facing touchpoints — tracking pages, SMS, email — are branded to your company.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="faq-item">
+                <h3 className="faq-q">{item.q}</h3>
+                <p className="faq-a">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
 
       <style>{`
@@ -146,6 +183,13 @@ export default function DedicatedPage() {
         .dd-btn-primary:hover { background: var(--indigo); transform: translateY(-1px); }
         .dd-btn-ghost { color: var(--indigo); font-weight: 500; font-size: 15px; }
         .dd-btn-ghost:hover { text-decoration: underline; }
+        .faq-section { padding: 100px 0 120px; background: var(--paper-2); border-top: 1px solid var(--line); }
+        .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; color: var(--ink); margin-top: 20px; max-width: 24ch; }
+        .faq-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; margin-top: 48px; }
+        .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
+        .faq-q { font-size: 17px; font-weight: 500; letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }
+        .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 72ch; }
       `}</style>
     </>
   );
