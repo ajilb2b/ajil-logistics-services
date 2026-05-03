@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Ajil — GCC Logistics Built From the Inside Out",
+  description:
+    "Founded in Doha in 2019. 2,800 riders, 14 hubs, 6 GCC markets. Ajil Logistics Services started as an in-house logistics operation and became the operating platform for GCC commerce.",
+  alternates: { canonical: "https://ajilb2b.com/about" },
+  openGraph: {
+    title: "About Ajil Logistics Services",
+    description:
+      "Founded in Doha in 2019. 2,800 riders, 14 hubs, 6 GCC markets. We run logistics before we sell it.",
+    url: "https://ajilb2b.com/about",
+  },
+};
 
 const pillars = [
   {

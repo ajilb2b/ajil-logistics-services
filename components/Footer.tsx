@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div style={{ marginBottom: 18 }}>
-              <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+              <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
             </div>
             <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 18, maxWidth: '34ch' }}>
               End-to-end logistics infrastructure for modern commerce. Efficiency in Motion. Built in Doha, deployed across the GCC.

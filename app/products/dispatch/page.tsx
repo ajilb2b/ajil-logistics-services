@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Ajil Dispatch — Delivery Management Software for the GCC",
+  description:
+    "Command centre for your entire delivery operation. Auto-routing with stacking logic, live operations map, shift management, client portals and brand integrations. Built for GCC roads.",
+  alternates: { canonical: "https://ajilb2b.com/products/dispatch" },
+  openGraph: {
+    title: "Ajil Dispatch — Delivery Management Software | Ajil Logistics Services",
+    description:
+      "Command centre for your entire delivery operation. Auto-routing, live map, shift management and brand integrations.",
+    url: "https://ajilb2b.com/products/dispatch",
+  },
+};
 
 const features = [
   {

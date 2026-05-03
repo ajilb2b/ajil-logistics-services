@@ -12,7 +12,7 @@ export default function Nav() {
         <div className="ajil-nav-inner">
           {/* Logo */}
           <Link href="/" className="ajil-logo">
-            <Image src="/ajil-logo-transparent.png" alt="Ajil" height={50} width={150} style={{ objectFit: 'contain' }} priority />
+            <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" height={50} width={150} style={{ objectFit: 'contain' }} priority />
           </Link>
 
           {/* Center nav links */}
@@ -44,7 +44,7 @@ export default function Nav() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/97400000000"
+        href="https://wa.me/97477058594"
         target="_blank"
         rel="noopener noreferrer"
         className="ajil-wa-fab"

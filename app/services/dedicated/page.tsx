@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Dedicated Logistics Service — Branded Fleet, Dark Stores & Named GM",
+  description:
+    "Ajil's dedicated service model: branded riders, ringfenced fleet, dedicated warehouse zones, dark-store hubs and a named General Manager. SLA-bound, custom KPIs, across the GCC.",
+  alternates: { canonical: "https://ajilb2b.com/services/dedicated" },
+  openGraph: {
+    title: "Dedicated Logistics Service | Ajil Logistics Services",
+    description:
+      "Branded riders, ringfenced fleet, dedicated warehouses and a named GM. SLA-bound dedicated logistics across the GCC.",
+    url: "https://ajilb2b.com/services/dedicated",
+  },
+};
 
 const included = [
   { title: "Branded Fleet", desc: "Riders and vehicles in your livery, operating exclusively on your routes. No shared pool, no brand dilution." },
