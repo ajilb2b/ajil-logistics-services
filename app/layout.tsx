@@ -33,13 +33,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ajil Logistics",
-  description:
-    "Ajil Logistics is the end-to-end logistics partner for modern commerce. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management.",
-  metadataBase: new URL("https://ajilb2b.com"),
-  alternates: {
-    canonical: "/",
+  title: {
+    default: "Ajil Logistics Services — GCC Delivery & Dispatch",
+    template: "%s | Ajil Logistics Services",
   },
+  description:
+    "Ajil Logistics Services is the end-to-end logistics partner for modern commerce in the GCC. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management. Headquartered in Doha, Qatar.",
+  metadataBase: new URL("https://ajilb2b.com"),
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -48,12 +48,19 @@ export const metadata: Metadata = {
     apple: { url: "/icon.svg", type: "image/svg+xml" },
   },
   openGraph: {
-    title: "Ajil Logistics — Efficiency in Motion",
+    title: "Ajil Logistics Services — Efficiency in Motion",
     description: "End-to-end logistics infrastructure for modern commerce. Built in Doha, deployed across the GCC.",
     url: "https://ajilb2b.com",
-    siteName: "Ajil Logistics",
+    siteName: "Ajil Logistics Services",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/ajil-logo-transparent.png", width: 1200, height: 630, alt: "Ajil Logistics Services" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ajil Logistics Services — Efficiency in Motion",
+    description: "End-to-end logistics infrastructure for modern commerce. Built in Doha, deployed across the GCC.",
+    images: ["/ajil-logo-transparent.png"],
   },
 };
 
