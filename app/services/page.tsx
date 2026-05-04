@@ -114,7 +114,7 @@ const servicesFaqSchema = {
     {
       "@type": "Question",
       "name": "What is the difference between On-Demand and Dedicated Logistics?",
-      "acceptedAnswer": { "@type": "Answer", "text": "On-Demand Logistics uses Ajil's shared rider, vehicle and warehouse network on a pay-per-delivery basis — ideal for variable volumes and seasonal peaks. Dedicated Logistics is a ringfenced operation running exclusively for your business, with branded riders, a reserved fleet and a dedicated warehouse footprint. The choice comes down to volume predictability and how much control you need over brand experience and unit economics." },
+      "acceptedAnswer": { "@type": "Answer", "text": "On-Demand Logistics uses Ajil's shared rider, vehicle and warehouse network on a pay-per-delivery basis, ideal for variable volumes and seasonal peaks. Dedicated Logistics is a ringfenced operation running exclusively for your business, with branded riders, a reserved fleet and a dedicated warehouse footprint. The choice comes down to volume predictability and how much control you need over brand experience and unit economics." },
     },
     {
       "@type": "Question",
@@ -129,7 +129,7 @@ const servicesFaqSchema = {
     {
       "@type": "Question",
       "name": "Can we start with one service model and switch to another later?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All four service models — Software, On-Demand, Dedicated and Fully Managed — sit under a single Ajil master agreement. Most clients start with On-Demand to validate the network and migrate to Dedicated or Fully Managed as volumes grow. No new procurement process is required." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All four service models (Software, On-Demand, Dedicated and Fully Managed) sit under a single Ajil master agreement. Most clients start with On-Demand to validate the network and migrate to Dedicated or Fully Managed as volumes grow. No new procurement process is required." },
     },
     {
       "@type": "Question",

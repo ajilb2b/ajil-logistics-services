@@ -25,11 +25,11 @@ const products: Product[] = [
     href: "https://dispatch.ajilb2b.com",
     ctaLabel: "Open Platform",
     ctas: [
-      { label: "Start Free Trial", href: "#pricing", style: "primary", note: "14 days free · no credit card" },
+      { label: "Start Free Trial", href: "#pricing", style: "primary", note: "No credit card required" },
       { label: "Open Platform", href: "https://dispatch.ajilb2b.com", style: "ghost", note: "Login to your account" },
     ],
     headline: "Command centre for your entire delivery operation.",
-    desc: "A single console where your team manages orders, riders, clients and shifts. Connect it to your brand partners — orders flow in automatically. Or keep it standalone — your dispatchers handle everything from one screen.",
+    desc: "A single console where your team manages orders, riders, clients and shifts. Connect it to your brand partners and orders flow in automatically, or keep it standalone so your dispatchers handle everything from one screen.",
     features: [
       "Auto & manual order assignment",
       "Live operations map",
@@ -46,9 +46,9 @@ const products: Product[] = [
     tag: "iOS & Android",
     status: "live" as const,
     href: null,
-    ctaLabel: "Ajil Runner — App Store & Play Store coming soon",
+    ctaLabel: "Ajil Runner: App Store & Play Store coming soon",
     headline: "The app every runner runs their shift on.",
-    desc: "iOS and Android, offline-first. Runners receive orders from Dispatch, navigate with one tap, capture proof of delivery and track their earnings in real time — all in one app.",
+    desc: "iOS and Android, offline-first. Runners receive orders from Dispatch, navigate with one tap, capture proof of delivery and track their earnings in real time. All in one app.",
     features: [
       "Auto-receive orders from Ajil Dispatch",
       "Photo & signature proof of delivery",
@@ -62,7 +62,7 @@ const products: Product[] = [
   {
     num: "03",
     name: "Coming Soon",
-    tag: "— ",
+    tag: "",
     status: "soon" as const,
     href: null,
     ctaLabel: null,
@@ -73,7 +73,7 @@ const products: Product[] = [
   {
     num: "04",
     name: "Coming Soon",
-    tag: "— ",
+    tag: "",
     status: "soon" as const,
     href: null,
     ctaLabel: null,
@@ -84,7 +84,7 @@ const products: Product[] = [
   {
     num: "05",
     name: "Coming Soon",
-    tag: "— ",
+    tag: "",
     status: "soon" as const,
     href: null,
     ctaLabel: null,
@@ -165,10 +165,10 @@ export default function ProductsPage() {
         <div className="pp-container">
           <p className="pp-eyebrow">Product Suite</p>
           <h1 className="pp-h1">
-            Tools built for<br /><em>logistics operations</em>.
+            Tools built for<br /><em>logistics operations</em><span style={{color:'#2D2BE0'}}>.</span>
           </h1>
           <p className="pp-lead">
-            Two products live today. More in 2026. Everything built to work together — from the dispatch console to the rider's pocket.
+            Two products live today. More in 2026. Everything built to work together, from the dispatch console to the rider's pocket.
           </p>
           <div className="pp-hero-stats">
             <div className="pp-stat"><span className="pp-stat-n">2</span><span className="pp-stat-l">Live products</span></div>
@@ -194,7 +194,6 @@ export default function ProductsPage() {
                 {/* ── Content column ── */}
                 <div className="pp-card-content">
                   <div className="pp-card-meta">
-                    <span className="pp-card-num">{p.num}</span>
                     <span className="pp-card-tag">{p.tag}</span>
                     <span className="pp-badge-live">Live</span>
                   </div>
@@ -305,7 +304,6 @@ export default function ProductsPage() {
           <div className="pp-soon-grid">
             {soonProducts.map((p) => (
               <div className="pp-soon-card" key={p.num}>
-                <span className="pp-soon-num">{p.num}</span>
                 <div className="pp-soon-lock">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg>
                 </div>
@@ -378,9 +376,9 @@ export default function ProductsPage() {
 
         /* Hero */
         .pp-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
-        .pp-eyebrow { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(27,26,104,.42); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+        .pp-eyebrow { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; }
         .pp-h1 { font-size: clamp(44px, 5.5vw, 84px); line-height: .95; letter-spacing: -.045em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .pp-h1 em, .pp-h2 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
+        .pp-h1 em, .pp-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .pp-h2 { font-size: clamp(32px, 3.5vw, 56px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 20px; }
         .pp-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 54ch; line-height: 1.7; margin-bottom: 48px; }
         .pp-hero-stats { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
@@ -392,7 +390,7 @@ export default function ProductsPage() {
         /* Sections */
         .pp-section { padding: 96px 0; background: #fff; border-bottom: 1px solid var(--line); }
         .pp-section-alt { background: var(--paper-2); }
-        .pp-section-label { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(27,26,104,.42); margin-bottom: 40px; }
+        .pp-section-label { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 40px; }
         .pp-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
         .pp-dot-live { background: #0E9D6E; }
         .pp-dot-soon { background: var(--muted-2); }
@@ -415,7 +413,7 @@ export default function ProductsPage() {
         /* Content column */
         .pp-card-content { padding: 52px 48px 48px; display: flex; flex-direction: column; }
         .pp-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
-        .pp-card-num { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; color: var(--muted-2); letter-spacing: .1em; }
+        .pp-card-num { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 15px; color: var(--muted-2); }
         .pp-card-tag { font-family: var(--font-jetbrains), monospace; font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 4px; }
         .pp-badge-live { font-family: var(--font-jetbrains), monospace; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: rgba(14,157,110,.08); color: #0E9D6E; border: 1px solid rgba(14,157,110,.2); padding: 3px 9px; border-radius: 4px; }
 
@@ -584,7 +582,7 @@ export default function ProductsPage() {
         /* Coming soon cards */
         .pp-soon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
         .pp-soon-card { border: 1px solid var(--line); border-radius: 10px; padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; background: #fff; min-height: 180px; justify-content: space-between; }
-        .pp-soon-num { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; color: var(--muted-2); letter-spacing: .1em; }
+        .pp-soon-num { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 15px; color: var(--muted-2); }
         .pp-soon-lock { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--muted-2); background: var(--paper-2); }
         .pp-soon-label { font-size: 13px; color: var(--muted-2); line-height: 1.6; }
         .pp-soon-note { font-size: 14px; color: var(--muted-2); }

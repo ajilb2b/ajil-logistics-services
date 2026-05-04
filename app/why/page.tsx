@@ -4,7 +4,7 @@ import WhyClient from "./WhyClient";
 export const metadata: Metadata = {
   title: "Why Ajil",
   description:
-    "Operators consolidate three logistics vendors into one Ajil contract — usually within their first year. Built for GCC roads, prayer times and gated compounds — not a European model retrofitted.",
+    "Operators consolidate three logistics vendors into one Ajil contract, usually within their first year. Built for GCC roads, prayer times and gated compounds, not a European model retrofitted.",
   alternates: { canonical: "https://ajilb2b.com/why" },
   openGraph: {
     title: "Why Operators Choose Ajil | Ajil Logistics Services",

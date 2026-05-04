@@ -79,7 +79,7 @@ const pillars = [
   {
     num: "600+",
     title: "Our people, not contractors.",
-    desc: "600+ Ajil riders are on our payroll — trained, insured, and managed by a dedicated fleet ops team. No gig-worker risk, no quality variance.",
+    desc: "600+ Ajil riders are on our payroll, trained, insured, and managed by a dedicated fleet ops team. No gig-worker risk, no quality variance.",
   },
   {
     num: "9",
@@ -89,13 +89,13 @@ const pillars = [
   {
     num: "24/7",
     title: "A 24/7 command centre.",
-    desc: "Doha-based dispatch operation running every Ajil route 24 hours a day. Senior dispatchers, supervisors and exception handlers — escalation paths that real customers can call.",
+    desc: "Doha-based dispatch operation running every Ajil route 24 hours a day. Senior dispatchers, supervisors and exception handlers: escalation paths that real customers can call.",
   },
 ];
 
 const timeline = [
   { year: "2024", event: "Ajil Logistics Services founded in Doha, Qatar." },
-  { year: "2025", event: "Launched Ajil Dispatch — the platform powering our own operations. First external clients onboarded." },
+  { year: "2025", event: "Launched Ajil Dispatch, the platform powering our own operations. First external clients onboarded." },
   { year: "2026", event: "Expanding across Qatar & UAE. Building the network, growing the team." },
 ];
 
@@ -201,7 +201,7 @@ export default function AboutPage() {
             </div>
             <p className="lede">
               Seven years from the first delivery to the operating layer for GCC commerce. A short
-              history of how Ajil came to be — and where it&apos;s going.
+              history of how Ajil came to be, and where it&apos;s going.
             </p>
           </div>
 
@@ -212,7 +212,7 @@ export default function AboutPage() {
                   <div style={{ position: "absolute", left: 36, top: 32, bottom: 0, width: 1, background: "var(--ink-line)" }} />
                 )}
                 <div style={{ flexShrink: 0, width: 72 }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 11, color: "var(--violet)", letterSpacing: "0.1em" }}>{t.year}</span>
+                  <span style={{ fontFamily: "var(--font-instrument),serif", fontStyle: "italic", fontWeight: 400, fontSize: 15, color: "#2D2BE0" }}>{t.year}</span>
                 </div>
                 <div style={{ paddingTop: 2 }}>
                   <p style={{ fontSize: 15, lineHeight: 1.65, color: "var(--text-soft)" }}>{t.event}</p>
@@ -246,7 +246,7 @@ export default function AboutPage() {
             <div className="ab-ceo-body">
               <div className="ab-ceo-tag">Founder &amp; Chief Executive Officer</div>
               <h3 className="ab-ceo-name">Umair Naseem Khan</h3>
-              <p className="ab-ceo-bio">8+ years building and scaling logistics operations across GCC — from talabat country head to founding Ajil.</p>
+              <p className="ab-ceo-bio">8+ years building and scaling logistics operations across GCC, from talabat country head to founding Ajil.</p>
               <div className="ab-ceo-track">
                 {["talabat · 5+ yrs", "Baladi Express · COO", "Fetchr · Ops Leader", "PepsiCo · Supply Chain"].map((t) => (
                   <span key={t} className="ab-ceo-chip">{t}</span>
@@ -268,7 +268,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <div style={{ fontSize: 15, fontWeight: 600, color: "var(--ink)", marginBottom: 4 }}>{l.name}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>{l.role}</div>
+                  <div style={{ fontFamily: "var(--font-instrument), serif", fontStyle: "italic", fontWeight: 400, fontSize: 14, color: "var(--muted)", letterSpacing: ".01em" }}>{l.role}</div>
                 </div>
               </div>
             ))}
@@ -284,7 +284,7 @@ export default function AboutPage() {
             Want to <span className="ab-accent">learn more</span>?
           </h2>
           <p className="lede" style={{ margin: "24px auto 36px", textAlign: "center" }}>
-            Talk to our team — about a brief, a partnership, a press enquiry, or just to understand how we work.
+            Talk to our team about a brief, a partnership, a press enquiry, or just to understand how we work.
           </p>
           <Link href="/contact" className="ajil-btn-primary-lg">
             Talk to us
@@ -304,20 +304,20 @@ export default function AboutPage() {
         .ab-ceo-card:hover { border-color: rgba(27,26,104,.3); }
         .ab-ceo-photo-wrap { position: relative; width: 220px; flex-shrink: 0; min-height: 280px; background: var(--paper-2); }
         .ab-ceo-body { padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; gap: 0; }
-        .ab-ceo-tag { font-family: var(--font-jetbrains),monospace; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: rgba(27,26,104,.42); margin-bottom: 10px; }
+        .ab-ceo-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 10px; }
         .ab-ceo-name { font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; letter-spacing: -.03em; color: var(--ink); margin-bottom: 12px; line-height: 1.1; }
         .ab-ceo-bio { font-size: 15px; color: var(--muted); line-height: 1.65; max-width: 48ch; margin-bottom: 20px; }
         .ab-ceo-track { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
         .ab-ceo-chip { font-family: var(--font-jetbrains),monospace; font-size: 10px; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--ink-line); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-        .ab-ceo-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #2D2BE0; }
+        .ab-ceo-link { display: inline-flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 400; font-family: var(--font-instrument), serif; font-style: italic; color: #2D2BE0; }
         @media (max-width: 640px) { .ab-ceo-card { flex-direction: column; } .ab-ceo-photo-wrap { width: 100%; min-height: 240px; } .ab-ceo-body { padding: 28px 24px; } }
         .leadership-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
         .bc-link:hover { color: var(--text) !important; }
-        .ab-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; margin-bottom: 20px; }
+        .ab-eyebrow { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 20px; }
         .ab-h1 { font-size: clamp(40px,6.5vw,88px); font-weight: 700; line-height: .95; letter-spacing: -.04em; color: var(--ink); margin: 0 0 28px; }
         .ab-h2 { font-size: clamp(32px,4.5vw,60px); font-weight: 700; line-height: 1; letter-spacing: -.035em; color: var(--ink); margin: 0 0 24px; }
-        .ab-accent { color: #2D2BE0; }
-        .ab-section-tag { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+        .ab-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
+        .ab-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; }
         .ajil-btn-primary-lg {
           display: inline-flex; align-items: center; gap: 8px;
           padding: 13px 22px; border-radius: 8px; font-size: 14.5px; font-weight: 600;

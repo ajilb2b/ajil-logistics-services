@@ -117,14 +117,14 @@ export default function MarketPage(p: MarketPageProps) {
 
       <style>{`
         .mkt-container { max-width: 1380px; margin: 0 auto; padding: 0 40px; }
-        .mkt-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 20px; display: block; }
-        .mkt-accent { color: #2D2BE0; font-style: normal; font-weight: 600; }
+        .mkt-eyebrow { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 20px; display: block; }
+        .mkt-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .mkt-h1 { font-size: clamp(38px,6.5vw,88px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 600; color: var(--ink); margin-bottom: 24px; }
         .mkt-lede { font-size: clamp(15px,1.3vw,18px); color: var(--muted); max-width: 62ch; line-height: 1.7; margin-bottom: 40px; }
         .mkt-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid var(--line); }
         .mkt-stat-num { font-size: 28px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
         .mkt-stat-lbl { font-family: var(--font-jetbrains),monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
-        .mkt-section-tag { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px; display: block; }
+        .mkt-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 16px; display: block; }
         .mkt-h2 { font-size: clamp(24px,3.2vw,40px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 600; color: var(--ink); margin-bottom: 24px; }
         .mkt-zones { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line-strong); border-radius: 10px; overflow: hidden; }
         .mkt-zone { background: #fff; padding: 20px 22px; }
@@ -133,7 +133,7 @@ export default function MarketPage(p: MarketPageProps) {
         .mkt-services { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
         .mkt-svc-card { padding: 28px 32px; border: 1px solid var(--line-strong); border-radius: 10px; background: #fff; transition: border-color .2s ease; display: block; }
         .mkt-svc-card:hover { border-color: rgba(27,26,104,.22); }
-        .mkt-svc-num { font-family: var(--font-jetbrains),monospace; font-size: 10px; color: rgba(27,26,104,.42); letter-spacing: 0.1em; margin-bottom: 10px; }
+        .mkt-svc-num { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 15px; color: rgba(27,26,104,.42); margin-bottom: 10px; }
         .mkt-svc-name { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.02em; }
         .mkt-svc-desc { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
         .mkt-bc-link:hover { color: var(--ink) !important; }

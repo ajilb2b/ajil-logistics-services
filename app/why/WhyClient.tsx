@@ -4,15 +4,15 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const whyCards = [
-  { n: "i.", title: "Built For The GCC", desc: "Our dispatch operation was built on this region's roads, traffic patterns, prayer times and gated compounds — not retrofitted from a European model." },
-  { n: "ii.", title: "One Model Or All Four", desc: "License software, use the network, build dedicated capacity, or outsource the function entirely — without changing partners as you grow." },
+  { n: "i.", title: "Built For The GCC", desc: "Our dispatch operation was built on this region's roads, traffic patterns, prayer times and gated compounds. Not retrofitted from a European model." },
+  { n: "ii.", title: "One Model Or All Four", desc: "License software, use the network, build dedicated capacity, or outsource the function entirely, without changing partners as you grow." },
   { n: "iii.", title: "Operator DNA", desc: "We run logistics ourselves before we sell it. Every capability is shaped by a live operations team, not a roadmap committee." },
 ];
 
 const testimonials = [
-  { industry: "Grocery", q: `We replaced three logistics vendors with a single Ajil contract — software, network and a dedicated dark-store layer. Cost per drop fell 27% and our COO finally has <em>one number to look at</em>.`, initials: "FA", name: "Fatima Al Sayed", role: "VP Operations · Regional Grocery Group" },
+  { industry: "Grocery", q: `We replaced three logistics vendors with a single Ajil contract: software, network and a dedicated dark-store layer. Cost per drop fell 27% and our COO finally has <em>one number to look at</em>.`, initials: "FA", name: "Fatima Al Sayed", role: "VP Operations · Regional Grocery Group" },
   { industry: "Quick Commerce", q: `Ajil's stacking logic took our cost-per-drop down by 31% in the first quarter. The dispatch team flagged exceptions before our own ops noticed them. <em>It just runs</em>.`, initials: "RM", name: "Rashid Mansoori", role: "Head Of Logistics · Quick Commerce Platform" },
-  { industry: "QSR", q: `We onboarded across 47 outlets in 14 days. Branded riders, our packaging, our SLA. The customer never knows it's outsourced — they just know <em>their food is on time</em>.`, initials: "SK", name: "Sara Khoury", role: "COO · Multi-Brand Restaurant Group" },
+  { industry: "QSR", q: `Branded riders, our packaging, our SLA. The customer never knows it's outsourced. They just know <em>their food is on time</em>.`, initials: "SK", name: "Sara Khoury", role: "COO · Multi-Brand Restaurant Group" },
 ];
 
 export default function WhyPage() {
@@ -31,9 +31,9 @@ export default function WhyPage() {
 
       <header className="wy-hero">
         <div className="hp-container">
-          <span className="hp-section-tag">04 · Why Ajil</span>
-          <h1 className="wy-h1">Why Operators <em>Switch</em>.</h1>
-          <p className="wy-lead">Three reasons our customers consolidate three vendors into one Ajil contract — usually within their first year.</p>
+          <span className="hp-section-tag">Why Ajil</span>
+          <h1 className="wy-h1">Why Operators <em>Switch</em><span style={{color:'#2D2BE0'}}>.</span></h1>
+          <p className="wy-lead">Three reasons our customers consolidate three vendors into one Ajil contract, usually within their first year.</p>
         </div>
       </header>
 
@@ -89,8 +89,7 @@ export default function WhyPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--indigo); text-transform: uppercase; letter-spacing: .18em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
-        .hp-section-tag::before { content: ""; width: 24px; height: 1px; background: var(--indigo); }
+        .hp-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.in { opacity: 1; transform: none; }
 

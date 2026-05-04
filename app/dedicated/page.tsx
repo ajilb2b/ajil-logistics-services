@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Ringfenced fleet, branded riders, dedicated dark stores and a named GM — capacity that operates exclusively for your brand across 6 GCC markets. Same Ajil platform, your colours.",
   alternates: { canonical: "https://ajilb2b.com/dedicated" },
   openGraph: {
-    title: "Dedicated Logistics — Branded Fleet & Warehouse | Ajil",
+    title: "Dedicated Logistics: Branded Fleet & Warehouse | Ajil",
     description:
       "Ringfenced fleet, branded riders, dedicated dark stores across the GCC. Capacity that operates exclusively for your brand.",
     url: "https://ajilb2b.com/dedicated",
@@ -61,7 +61,7 @@ const dedicatedFaqSchema = {
     {
       "@type": "Question",
       "name": "How long does it take to set up a dedicated logistics operation with Ajil?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A standard dedicated deployment — covering network design, hub and dark store procurement, rider hiring and operations go-live — takes 8 to 12 weeks depending on the geographic footprint and vehicle mix required. Enterprise deployments covering multiple GCC markets may require additional lead time." },
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard dedicated deployment covering network design, hub and dark store procurement, rider hiring and operations go-live takes 8 to 12 weeks depending on the geographic footprint and vehicle mix required. Enterprise deployments covering multiple GCC markets may require additional lead time." },
     },
     {
       "@type": "Question",
@@ -71,7 +71,7 @@ const dedicatedFaqSchema = {
     {
       "@type": "Question",
       "name": "Can Ajil white-label the dedicated operation under our brand?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The dedicated operation is fully white-labelled to your identity: riders wear your uniform, vehicles carry your livery, customer notifications are sent in your tone of voice, and all customer-facing touchpoints — tracking pages, SMS, email — are branded to your company." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The dedicated operation is fully white-labelled to your identity: riders wear your uniform, vehicles carry your livery, customer notifications are sent in your tone of voice, and all customer-facing touchpoints (tracking pages, SMS, email) are branded to your company." },
     },
   ],
 };

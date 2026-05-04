@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Ajil Logistics Services is the end-to-end logistics partner for modern commerce in the GCC. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management. Headquartered in Doha, Qatar.",
+    "Ajil Logistics Services is the end-to-end logistics partner for modern commerce in the GCC. Four service models: software, network, dedicated, fully managed. Backed by GCC-built dispatch management. Headquartered in Doha, Qatar.",
   metadataBase: new URL("https://ajilb2b.com"),
   icons: {
     icon: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     apple: { url: "/icon.svg", type: "image/svg+xml" },
   },
   openGraph: {
-    title: "Ajil Logistics Services — Efficiency in Motion",
+    title: "Ajil Logistics Services: Efficiency in Motion",
     description: "End-to-end logistics infrastructure for modern commerce. Built in Doha, deployed across the GCC.",
     url: "https://ajilb2b.com",
     siteName: "Ajil Logistics Services",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ajil Logistics Services — Efficiency in Motion",
+    title: "Ajil Logistics Services: Efficiency in Motion",
     description: "End-to-end logistics infrastructure for modern commerce. Built in Doha, deployed across the GCC.",
     images: ["/ajil-logo-transparent.png"],
   },
@@ -84,7 +84,7 @@ const orgSchema = {
     "addressLocality": "Doha",
     "addressCountry": "QA",
   },
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "foundingDate": "2019",
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": 600 },
@@ -115,7 +115,7 @@ const orgSchema = {
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "telephone": "+97477058594",
+    "telephone": "+97441404004",
     "email": "hello@ajilb2b.com",
     "areaServed": ["QA", "AE", "SA", "KW", "BH", "OM"],
     "availableLanguage": ["English", "Arabic"],

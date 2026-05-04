@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           <p className="leg-meta">Effective date: {EFFECTIVE} · {COMPANY}</p>
           <p className="leg-intro">
             {COMPANY} (&ldquo;Ajil&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is
-            committed to protecting the privacy of everyone whose data we handle — clients, delivery
+            committed to protecting the privacy of everyone whose data we handle: clients, delivery
             recipients, drivers, and website visitors. This Privacy Policy explains what personal data we
             collect, why we collect it, how we use and protect it, and your rights in relation to it.
           </p>
@@ -130,14 +130,14 @@ export default function PrivacyPage() {
               <h2 className="leg-h2">3. How We Use Your Data</h2>
               <p>We use personal data only for the purposes for which it was collected or for compatible purposes. Specifically:</p>
               <ul>
-                <li><strong>Service delivery</strong> — routing and dispatching Orders, coordinating deliveries, managing driver assignments, and providing proof of delivery.</li>
-                <li><strong>Platform operation</strong> — maintaining user accounts, providing access to the Ajil Dispatch platform, TMS, and WMS; sending system notifications and alerts.</li>
-                <li><strong>Client account management</strong> — billing and invoicing, account communications, service performance reporting, and customer support.</li>
-                <li><strong>Driver management</strong> — payroll processing, shift scheduling, performance monitoring, compliance with Qatar and UAE labour regulations, and safety management.</li>
-                <li><strong>Legal compliance</strong> — fulfilling obligations under applicable law, responding to lawful requests from regulatory authorities, and enforcing our <Link href="/terms" className="leg-inline-link">Terms &amp; Conditions</Link>.</li>
-                <li><strong>Security &amp; fraud prevention</strong> — monitoring platform access, detecting misuse, and protecting our systems and the people who use them.</li>
-                <li><strong>Service improvement</strong> — aggregated, anonymised analysis of delivery patterns, route efficiency, and platform usage to improve our products and operations.</li>
-                <li><strong>Marketing communications</strong> — with your consent, or where we have a legitimate interest, to send information about relevant Ajil services. You may opt out at any time.</li>
+                <li><strong>Service delivery:</strong> routing and dispatching Orders, coordinating deliveries, managing driver assignments, and providing proof of delivery.</li>
+                <li><strong>Platform operation:</strong> maintaining user accounts, providing access to the Ajil Dispatch platform, TMS, and WMS; sending system notifications and alerts.</li>
+                <li><strong>Client account management:</strong> billing and invoicing, account communications, service performance reporting, and customer support.</li>
+                <li><strong>Driver management:</strong> payroll processing, shift scheduling, performance monitoring, compliance with Qatar and UAE labour regulations, and safety management.</li>
+                <li><strong>Legal compliance:</strong> fulfilling obligations under applicable law, responding to lawful requests from regulatory authorities, and enforcing our <Link href="/terms" className="leg-inline-link">Terms &amp; Conditions</Link>.</li>
+                <li><strong>Security &amp; fraud prevention:</strong> monitoring platform access, detecting misuse, and protecting our systems and the people who use them.</li>
+                <li><strong>Service improvement:</strong> aggregated, anonymised analysis of delivery patterns, route efficiency, and platform usage to improve our products and operations.</li>
+                <li><strong>Marketing communications:</strong> with your consent, or where we have a legitimate interest, to send information about relevant Ajil services. You may opt out at any time.</li>
               </ul>
             </section>
 
@@ -145,10 +145,10 @@ export default function PrivacyPage() {
               <h2 className="leg-h2">4. Legal Basis for Processing</h2>
               <p>We process personal data under the following legal bases, consistent with Qatar&rsquo;s Personal Data Privacy Protection Law (Law No. 13 of 2016) and UAE Federal Decree-Law No. 45 of 2021 on Personal Data Protection:</p>
               <ul>
-                <li><strong>Contract performance</strong> — processing necessary to provide the services agreed with Clients or to fulfil obligations to drivers under their engagement terms.</li>
-                <li><strong>Legal obligation</strong> — processing required to comply with applicable laws, including labour law, tax regulations, and regulatory reporting requirements in Qatar and the UAE.</li>
-                <li><strong>Legitimate interests</strong> — processing for fraud prevention, network security, operational analytics, and business communications, where our interests do not override your fundamental rights.</li>
-                <li><strong>Consent</strong> — for marketing communications and for any processing not covered by the above bases. Consent may be withdrawn at any time without affecting the lawfulness of prior processing.</li>
+                <li><strong>Contract performance:</strong> processing necessary to provide the services agreed with Clients or to fulfil obligations to drivers under their engagement terms.</li>
+                <li><strong>Legal obligation:</strong> processing required to comply with applicable laws, including labour law, tax regulations, and regulatory reporting requirements in Qatar and the UAE.</li>
+                <li><strong>Legitimate interests:</strong> processing for fraud prevention, network security, operational analytics, and business communications, where our interests do not override your fundamental rights.</li>
+                <li><strong>Consent:</strong> for marketing communications and for any processing not covered by the above bases. Consent may be withdrawn at any time without affecting the lawfulness of prior processing.</li>
               </ul>
             </section>
 
@@ -156,10 +156,10 @@ export default function PrivacyPage() {
               <h2 className="leg-h2">5. Who We Share Data With</h2>
               <p>We do not sell personal data. We share it only in the following circumstances:</p>
               <ul>
-                <li><strong>Clients</strong> — delivery data (including proof of delivery and status updates) is shared with the Client who placed the Order in the normal course of service delivery.</li>
-                <li><strong>Service providers</strong> — we engage third-party providers for cloud hosting, payment processing, SMS/communication services, and mapping/routing technology. These providers are contractually bound to process data only on our instructions and to maintain appropriate security standards.</li>
-                <li><strong>Regulatory authorities</strong> — we disclose data to government bodies, courts, or law enforcement where required to do so by applicable law or legal process.</li>
-                <li><strong>Business transfers</strong> — in the event of a merger, acquisition, or sale of business assets, personal data may be transferred as part of that transaction. We will notify affected individuals in advance where required by law.</li>
+                <li><strong>Clients:</strong> delivery data (including proof of delivery and status updates) is shared with the Client who placed the Order in the normal course of service delivery.</li>
+                <li><strong>Service providers:</strong> we engage third-party providers for cloud hosting, payment processing, SMS/communication services, and mapping/routing technology. These providers are contractually bound to process data only on our instructions and to maintain appropriate security standards.</li>
+                <li><strong>Regulatory authorities:</strong> we disclose data to government bodies, courts, or law enforcement where required to do so by applicable law or legal process.</li>
+                <li><strong>Business transfers:</strong> in the event of a merger, acquisition, or sale of business assets, personal data may be transferred as part of that transaction. We will notify affected individuals in advance where required by law.</li>
               </ul>
             </section>
 
@@ -172,12 +172,12 @@ export default function PrivacyPage() {
               <h2 className="leg-h2">7. Data Retention</h2>
               <p>We retain personal data only for as long as necessary for the purpose for which it was collected, and to meet our legal obligations. Our standard retention periods are:</p>
               <ul>
-                <li><strong>Client account and transaction data</strong> — 7 years from the end of the commercial relationship, in line with financial record-keeping requirements.</li>
-                <li><strong>Delivery records and proof of delivery</strong> — 2 years from the date of delivery.</li>
-                <li><strong>Driver employment and engagement records</strong> — duration of engagement plus 5 years, or as required by Qatar and UAE labour law.</li>
-                <li><strong>GPS and location data</strong> — 90 days from collection, after which it is aggregated and anonymised.</li>
-                <li><strong>Website enquiry and contact form data</strong> — 12 months from submission, unless a commercial relationship results.</li>
-                <li><strong>Marketing consent records</strong> — retained until consent is withdrawn, plus a reasonable period thereafter for evidence of compliance.</li>
+                <li><strong>Client account and transaction data:</strong> 7 years from the end of the commercial relationship, in line with financial record-keeping requirements.</li>
+                <li><strong>Delivery records and proof of delivery:</strong> 2 years from the date of delivery.</li>
+                <li><strong>Driver employment and engagement records:</strong> duration of engagement plus 5 years, or as required by Qatar and UAE labour law.</li>
+                <li><strong>GPS and location data:</strong> 90 days from collection, after which it is aggregated and anonymised.</li>
+                <li><strong>Website enquiry and contact form data:</strong> 12 months from submission, unless a commercial relationship results.</li>
+                <li><strong>Marketing consent records:</strong> retained until consent is withdrawn, plus a reasonable period thereafter for evidence of compliance.</li>
               </ul>
               <p>When data is no longer required, it is securely deleted or anonymised.</p>
             </section>
@@ -200,13 +200,13 @@ export default function PrivacyPage() {
               <h2 className="leg-h2">9. Your Rights</h2>
               <p>Subject to applicable law, you have the following rights in relation to your personal data:</p>
               <ul>
-                <li><strong>Access</strong> — you may request a copy of the personal data we hold about you.</li>
-                <li><strong>Correction</strong> — you may request correction of inaccurate or incomplete data.</li>
-                <li><strong>Deletion</strong> — you may request deletion of your personal data where it is no longer necessary for the purpose for which it was collected, subject to our legal retention obligations.</li>
-                <li><strong>Objection</strong> — you may object to processing based on legitimate interests, including direct marketing.</li>
-                <li><strong>Restriction</strong> — you may request that we restrict processing of your data in certain circumstances.</li>
-                <li><strong>Data portability</strong> — where processing is based on consent or contract, you may request a copy of your data in a structured, machine-readable format.</li>
-                <li><strong>Withdraw consent</strong> — where processing is based on consent, you may withdraw it at any time without affecting the lawfulness of prior processing.</li>
+                <li><strong>Access:</strong> you may request a copy of the personal data we hold about you.</li>
+                <li><strong>Correction:</strong> you may request correction of inaccurate or incomplete data.</li>
+                <li><strong>Deletion:</strong> you may request deletion of your personal data where it is no longer necessary for the purpose for which it was collected, subject to our legal retention obligations.</li>
+                <li><strong>Objection:</strong> you may object to processing based on legitimate interests, including direct marketing.</li>
+                <li><strong>Restriction:</strong> you may request that we restrict processing of your data in certain circumstances.</li>
+                <li><strong>Data portability:</strong> where processing is based on consent or contract, you may request a copy of your data in a structured, machine-readable format.</li>
+                <li><strong>Withdraw consent:</strong> where processing is based on consent, you may withdraw it at any time without affecting the lawfulness of prior processing.</li>
               </ul>
               <p>To exercise any of these rights, please contact us at <a href={`mailto:${SECURITY_EMAIL}`} className="leg-inline-link">{SECURITY_EMAIL}</a>. We will respond within 30 days. We may need to verify your identity before processing your request.</p>
             </section>
@@ -215,8 +215,8 @@ export default function PrivacyPage() {
               <h2 className="leg-h2">10. Cookies &amp; Tracking</h2>
               <p>Our website uses cookies and similar technologies to ensure the site functions correctly, to understand how visitors use the site, and to improve performance. We use:</p>
               <ul>
-                <li><strong>Essential cookies</strong> — required for the website to operate and cannot be disabled.</li>
-                <li><strong>Analytics cookies</strong> — used to understand traffic patterns and site usage in aggregate. These do not identify you personally.</li>
+                <li><strong>Essential cookies:</strong> required for the website to operate and cannot be disabled.</li>
+                <li><strong>Analytics cookies:</strong> used to understand traffic patterns and site usage in aggregate. These do not identify you personally.</li>
               </ul>
               <p>You can control cookies through your browser settings. Disabling non-essential cookies will not affect your ability to use the site.</p>
             </section>
@@ -240,7 +240,7 @@ export default function PrivacyPage() {
                 <p>{ADDRESS}</p>
                 <p>Privacy &amp; Data: <a href={`mailto:${SECURITY_EMAIL}`} className="leg-inline-link">{SECURITY_EMAIL}</a></p>
                 <p>General: <a href={`mailto:${EMAIL}`} className="leg-inline-link">{EMAIL}</a></p>
-                <p>Phone: <a href="tel:+97477058594" className="leg-inline-link">+974 7705 8594</a></p>
+                <p>Phone: <a href="tel:+97441404004" className="leg-inline-link">+974 4140 4004</a></p>
               </div>
               <p style={{ marginTop: 20 }}>If you are not satisfied with our response, you have the right to lodge a complaint with the competent data protection authority in Qatar or the UAE, depending on your location and the nature of your complaint.</p>
             </section>
@@ -288,7 +288,7 @@ export default function PrivacyPage() {
         .leg-article ul { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
         .leg-article li { font-size: 15px; color: var(--muted); line-height: 1.7; }
         .leg-article strong { color: var(--ink); font-weight: 600; }
-        .leg-inline-link { color: #2D2BE0; text-decoration: underline; text-underline-offset: 3px; }
+        .leg-inline-link { color: #2D2BE0; text-decoration: underline; text-underline-offset: 3px; font-family: var(--font-instrument), serif; font-style: italic; }
         .leg-contact-block { background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: 8px; padding: 24px 28px; margin-top: 18px; }
         .leg-contact-block p { margin-bottom: 6px; font-size: 14px; }
         .leg-contact-block p:last-child { margin-bottom: 0; }

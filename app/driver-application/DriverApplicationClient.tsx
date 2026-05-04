@@ -123,10 +123,9 @@ export default function DriverApplicationClient() {
                 {[
                   { n: "01", t: "Application reviewed", d: "Our fleet team reviews every application within 48 hours." },
                   { n: "02", t: "Onboarding call", d: "A short call to verify your details and confirm your city and vehicle." },
-                  { n: "03", t: "Start earning", d: "Complete orientation and you're live on the network — usually within one week." },
+                  { n: "03", t: "Start earning", d: "Complete orientation and you're live on the network, usually within one week." },
                 ].map((s) => (
                   <div key={s.n} className="da-step">
-                    <div className="da-step-num">{s.n}</div>
                     <div>
                       <div className="da-step-title">{s.t}</div>
                       <div className="da-step-desc">{s.d}</div>
@@ -137,11 +136,11 @@ export default function DriverApplicationClient() {
             </div>
             <div className="da-aside-block">
               <p className="da-aside-head">Questions?</p>
-              <a href="https://wa.me/97477058594?text=Hi%20Ajil%20-%20I%20have%20a%20question%20about%20driving" className="da-wa-btn">
+              <a href="https://wa.me/97441404004?text=Hi%20Ajil%20-%20I%20have%20a%20question%20about%20driving" className="da-wa-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 WhatsApp us instead
               </a>
-              <p className="da-wa-note">Fastest response — usually within 2 hours.</p>
+              <p className="da-wa-note">Fastest response, usually within 2 hours.</p>
             </div>
           </aside>
 
@@ -319,7 +318,7 @@ export default function DriverApplicationClient() {
         .da-hero { padding: 80px 0 72px; background: #fff; border-bottom: 1px solid var(--line); }
         .da-eyebrow { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: block; margin-bottom: 20px; }
         .da-h1 { font-size: clamp(36px, 5vw, 68px); font-weight: 700; letter-spacing: -.04em; line-height: 1; color: var(--ink); margin: 0 0 20px; }
-        .da-accent { color: #2D2BE0; }
+        .da-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .da-lead { font-size: clamp(15px, 1.2vw, 17px); color: var(--muted); max-width: 58ch; line-height: 1.7; margin-bottom: 28px; }
         .da-perks { display: flex; flex-wrap: wrap; gap: 10px 24px; }
         .da-perk { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink); font-weight: 500; }
@@ -361,7 +360,7 @@ export default function DriverApplicationClient() {
         /* Inputs */
         .da-label { display: flex; flex-direction: column; gap: 6px; }
         .da-label-text { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
-        .da-required { color: #2D2BE0; }
+        .da-required { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; }
         .da-input, .da-select, .da-textarea {
           background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: 6px;
           padding: 11px 14px; font-family: inherit; font-size: 14px; color: var(--ink);
@@ -388,14 +387,14 @@ export default function DriverApplicationClient() {
         .da-upload-file-icon { width: 44px; height: 44px; border-radius: 8px; background: rgba(45,43,224,.06); border: 1px solid rgba(45,43,224,.15); display: flex; align-items: center; justify-content: center; color: #2D2BE0; flex-shrink: 0; }
         .da-upload-file-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 3px; word-break: break-all; }
         .da-upload-file-size { font-size: 12px; color: var(--muted); font-family: var(--font-jetbrains), monospace; }
-        .da-upload-change { color: #2D2BE0; cursor: pointer; }
+        .da-upload-change { color: #2D2BE0; cursor: pointer; font-family: var(--font-instrument), serif; font-style: italic; }
 
         /* Submit */
         .da-submit-row { padding-top: 28px; margin-top: 32px; border-top: 1px solid var(--line); }
         .da-submit-error { font-size: 13px; color: #C0392B; padding: 10px 14px; background: rgba(192,57,43,.05); border: 1px solid rgba(192,57,43,.15); border-radius: 6px; margin-bottom: 16px; }
         .da-submit-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
         .da-privacy-note { font-size: 12px; color: var(--muted); max-width: 40ch; line-height: 1.55; }
-        .da-privacy-link { color: #2D2BE0; text-decoration: underline; text-underline-offset: 2px; }
+        .da-privacy-link { color: #2D2BE0; text-decoration: underline; text-underline-offset: 2px; font-family: var(--font-instrument), serif; font-style: italic; }
         .da-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; background: #1B1A68; color: #fff; border: none; cursor: pointer; transition: background .2s ease; white-space: nowrap; }
         .da-btn-primary:disabled { opacity: .6; cursor: not-allowed; }
         .da-btn-primary:not(:disabled):hover { background: #14136B; }

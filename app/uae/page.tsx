@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ajil Logistics Services — UAE",
+  "name": "Ajil Logistics Services: UAE",
   "@id": "https://ajilb2b.com/#organization",
   "url": "https://ajilb2b.com/uae",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",
@@ -50,7 +50,7 @@ export default function Page() {
         country="UAE"
         heroMain="UAE Logistics."
         heroItalic="Dubai, Abu Dhabi, Sharjah."
-        lede="Ajil Logistics Services operates across the UAE's major commerce corridors — Dubai, Abu Dhabi and Sharjah. Same-day delivery, route optimization, dedicated dark stores and fully managed logistics for UAE's e-commerce and quick-commerce operators."
+        lede="Ajil Logistics Services operates across the UAE's major commerce corridors: Dubai, Abu Dhabi and Sharjah. Same-day delivery, route optimization, dedicated dark stores and fully managed logistics for UAE's e-commerce and quick-commerce operators."
         stats={[
           { num: "2022", lbl: "Active in UAE" },
           { num: "3", lbl: "Emirates covered" },

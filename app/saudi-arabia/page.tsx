@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import MarketPage from "@/components/MarketPage";
 
 export const metadata: Metadata = {
-  title: "Logistics Services in Saudi Arabia — Ajil Logistics Services",
+  title: "Logistics Services in Saudi Arabia | Ajil Logistics Services",
   description:
     "Ajil Logistics Services operates in Saudi Arabia across Riyadh, Jeddah and Dammam. Last-mile delivery, route optimization, dedicated fleet and fully managed logistics for KSA commerce operators.",
   alternates: { canonical: "https://ajilb2b.com/saudi-arabia" },
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ajil Logistics Services — Saudi Arabia",
+  "name": "Ajil Logistics Services: Saudi Arabia",
   "@id": "https://ajilb2b.com/#organization",
   "url": "https://ajilb2b.com/saudi-arabia",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",
@@ -29,7 +29,7 @@ const localSchema = {
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 24.6877, "longitude": 46.7219 },
   "areaServed": { "@type": "Country", "name": "Saudi Arabia" },
-  "description": "Ajil Logistics Services operates across Saudi Arabia — Riyadh, Jeddah and Dammam — with last-mile delivery, route optimization, dedicated fleet and fully managed logistics.",
+  "description": "Ajil Logistics Services operates across Saudi Arabia: Riyadh, Jeddah and Dammam, with last-mile delivery, route optimization, dedicated fleet and fully managed logistics.",
 };
 
 const breadcrumbSchema = {
@@ -50,7 +50,7 @@ export default function Page() {
         country="Saudi Arabia"
         heroMain="Saudi Arabia Logistics."
         heroItalic="Riyadh. Jeddah. Dammam."
-        lede="Saudi Arabia is the GCC's largest economy and fastest-growing e-commerce market. Ajil Logistics Services operates across the Kingdom's three major commerce hubs — Riyadh, Jeddah and Dammam — with dedicated dispatch teams, local fleet management and dark store infrastructure."
+        lede="Saudi Arabia is the GCC's largest economy and fastest-growing e-commerce market. Ajil Logistics Services operates across the Kingdom's three major commerce hubs: Riyadh, Jeddah and Dammam, with dedicated dispatch teams, local fleet management and dark store infrastructure."
         stats={[
           { num: "2022", lbl: "Active in KSA" },
           { num: "3", lbl: "Major cities covered" },

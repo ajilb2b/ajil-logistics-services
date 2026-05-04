@@ -10,8 +10,9 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
-            <div style={{ marginBottom: 18 }}>
-              <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+            <div style={{ marginBottom: 18, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}>
+              <Image src="/ajil-logo-transparent2.png" alt="Ajil Logistics Services" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
+              <Image src="/ajil-logo-transparent3.png" alt="Efficiency in Motion" width={160} height={26} style={{ objectFit: 'contain', objectPosition: 'left' }} />
             </div>
             <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 18, maxWidth: '34ch' }}>
               Ajil Logistics Services is the end-to-end logistics partner for modern commerce. Built in Doha. Deployed across Qatar and UAE.

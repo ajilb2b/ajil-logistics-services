@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Command centre for your entire delivery operation. Auto-routing with stacking logic, live operations map, shift management, client portals and brand integrations. Built for GCC roads.",
   alternates: { canonical: "https://ajilb2b.com/products/dispatch" },
   openGraph: {
-    title: "Ajil Dispatch — Delivery Management Software | Ajil Logistics Services",
+    title: "Ajil Dispatch: Delivery Management Software | Ajil Logistics Services",
     description:
       "Command centre for your entire delivery operation. Auto-routing, live map, shift management and brand integrations.",
     url: "https://ajilb2b.com/products/dispatch",
@@ -80,7 +80,7 @@ const faqSchema = {
       "name": "Can I white-label Ajil Dispatch for resale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — that's what the Enterprise tier is built for. 3PLs and aggregators in the region resell Ajil Dispatch under their own brand to their carrier partners. Revenue share or fixed-fee licensing models available.",
+        "text": "Yes, that's what the Enterprise tier is built for. 3PLs and aggregators in the region resell Ajil Dispatch under their own brand to their carrier partners. Revenue share or fixed-fee licensing models available.",
       },
     },
     {
@@ -88,7 +88,7 @@ const faqSchema = {
       "name": "What happens if I exceed my tier's dispatch volume?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Overage is billed at QAR 0.30 per additional dispatch on Starter and Growth tiers. We notify you when usage trends exceed 85% of your tier and recommend an upgrade — no service interruption.",
+        "text": "Overage is billed at QAR 0.30 per additional dispatch on Starter and Growth tiers. We notify you when usage trends exceed 85% of your tier and recommend an upgrade with no service interruption.",
       },
     },
   ],
@@ -113,7 +113,7 @@ const features = [
   {
     icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>,
     title: "Live Re-Routing",
-    desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network. The plan you see at 09:00 is not the plan running at 14:00 — and that's the point.",
+    desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network. The plan you see at 09:00 is not the plan running at 14:00. That adaptability is the point.",
   },
   {
     icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="9" /><path d="M12 8v4M12 16h.01" /></svg>,
@@ -223,11 +223,11 @@ const faqs = [
   },
   {
     q: "Can I white-label Ajil Dispatch for resale?",
-    a: "Yes — that's what the Enterprise tier is built for. 3PLs and aggregators in the region resell Ajil Dispatch under their own brand to their carrier partners. Revenue share or fixed-fee licensing models available.",
+    a: "Yes, that's what the Enterprise tier is built for. 3PLs and aggregators in the region resell Ajil Dispatch under their own brand to their carrier partners. Revenue share or fixed-fee licensing models available.",
   },
   {
     q: "What happens if I exceed my tier's dispatch volume?",
-    a: "Overage is billed at QAR 0.30 per additional dispatch on Starter and Growth tiers. We notify you when usage trends exceed 85% of your tier and recommend an upgrade — no service interruption.",
+    a: "Overage is billed at QAR 0.30 per additional dispatch on Starter and Growth tiers. We notify you when usage trends exceed 85% of your tier and recommend an upgrade with no service interruption.",
   },
 ];
 
@@ -298,7 +298,7 @@ export default function DispatchPage() {
                 <span style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 13, color: "var(--text-muted)", fontWeight: 400 }}>/ mo</span>
               </div>
               <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--text-soft)", marginTop: 14 }}>
-                Billed monthly or annually with 14-day free trial. Volume discounts and enterprise terms available — contact sales for tailored pricing on multi-tenant or white-label deployments.
+                Billed monthly or annually with 14-day free trial. Volume discounts and enterprise terms available. Contact sales for tailored pricing on multi-tenant or white-label deployments.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 24 }}>
                 <Link href="#tiers" className="ajil-btn-primary-lg">

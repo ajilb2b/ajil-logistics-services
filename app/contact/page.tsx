@@ -22,7 +22,7 @@ const localBusinessSchema = {
   "url": "https://ajilb2b.com",
   "logo": "https://ajilb2b.com/ajil-logo-transparent.png",
   "image": "https://ajilb2b.com/ajil-logo-transparent.png",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",

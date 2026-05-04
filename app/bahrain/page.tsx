@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import MarketPage from "@/components/MarketPage";
 
 export const metadata: Metadata = {
-  title: "Logistics Services in Bahrain — Ajil Logistics Services",
+  title: "Logistics Services in Bahrain | Ajil Logistics Services",
   description:
     "Ajil Logistics Services operates across Manama, Juffair, Adliya and the Capital Governorate. Last-mile delivery, route optimization and dedicated logistics for Bahrain's commerce operators.",
   alternates: { canonical: "https://ajilb2b.com/bahrain" },
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ajil Logistics Services — Bahrain",
+  "name": "Ajil Logistics Services: Bahrain",
   "@id": "https://ajilb2b.com/#organization",
   "url": "https://ajilb2b.com/bahrain",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",
@@ -50,7 +50,7 @@ export default function Page() {
         country="Bahrain"
         heroMain="Bahrain Logistics."
         heroItalic="Manama and the Capital Governorate."
-        lede="Ajil Logistics Services serves Bahrain's e-commerce and commerce operators across Manama, Riffa, Juffair, Adliya and all major residential and commercial districts. Fast deployment, local fleet management and the full Ajil platform — built for island-market delivery economics."
+        lede="Ajil Logistics Services serves Bahrain's e-commerce and commerce operators across Manama, Riffa, Juffair, Adliya and all major residential and commercial districts. Fast deployment, local fleet management and the full Ajil platform, built for island-market delivery economics."
         stats={[
           { num: "2022", lbl: "Active in Bahrain" },
           { num: "Island-wide", lbl: "Bahrain coverage" },

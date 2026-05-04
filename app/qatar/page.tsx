@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ajil Logistics Services — Qatar",
+  "name": "Ajil Logistics Services: Qatar",
   "@id": "https://ajilb2b.com/#organization",
   "url": "https://ajilb2b.com/qatar",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",
@@ -31,7 +31,7 @@ const localSchema = {
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 25.2854, "longitude": 51.531 },
   "areaServed": { "@type": "Country", "name": "Qatar" },
-  "description": "Ajil Logistics Services is headquartered in Doha, Qatar — the 24/7 operations hub for all GCC markets. Delivery management software, on-demand network, dedicated fleet and managed logistics.",
+  "description": "Ajil Logistics Services is headquartered in Doha, Qatar, the 24/7 operations hub for all GCC markets. Delivery management software, on-demand network, dedicated fleet and managed logistics.",
 };
 
 const breadcrumbSchema = {
@@ -52,14 +52,14 @@ export default function Page() {
         country="Qatar"
         heroMain="Qatar Logistics."
         heroItalic="Built here. Run here."
-        lede="Ajil Logistics Services is headquartered in Doha — the command centre for all GCC markets. From Almuntazah Trading Center, our 24/7 dispatch operation plans and monitors every route across Qatar's major catchments, gated compounds and delivery corridors."
+        lede="Ajil Logistics Services is headquartered in Doha, the command centre for all GCC markets. From Almuntazah Trading Center, our 24/7 dispatch operation plans and monitors every route across Qatar's major catchments, gated compounds and delivery corridors."
         stats={[
           { num: "2019", lbl: "Founded in Doha" },
           { num: "9", lbl: "Logistics hubs" },
           { num: "24/7", lbl: "Dispatch command centre" },
           { num: "15 min", lbl: "SLA in prime Doha zones" },
         ]}
-        coverageIntro="Ajil operates across all major Qatar catchments — gated compounds, Lusail's new city grid, Pearl Island routes, Industrial Area B2B distribution, and Al Wakra south-corridor deliveries. Our routing engine is tuned for Qatar's road network, prayer windows, and the Ramadan calendar."
+        coverageIntro="Ajil operates across all major Qatar catchments: gated compounds, Lusail's new city grid, Pearl Island routes, Industrial Area B2B distribution, and Al Wakra south-corridor deliveries. Our routing engine is tuned for Qatar's road network, prayer windows, and the Ramadan calendar."
         zones={[
           { city: "Doha", name: "West Bay" },
           { city: "Doha", name: "The Pearl" },
@@ -72,7 +72,7 @@ export default function Page() {
         ]}
         services={[
           { num: "01", name: "Logistics Software", desc: "License Ajil Dispatch, TMS, WMS, driver and rider apps, and the live control tower for your own Qatar fleet.", href: "/services" },
-          { num: "02", name: "On-Demand Network", desc: "Pay-per-delivery access to Ajil's Qatar rider and vehicle network — scale up during Ramadan and peak campaigns without fixed costs.", href: "/services" },
+          { num: "02", name: "On-Demand Network", desc: "Pay-per-delivery access to Ajil's Qatar rider and vehicle network. Scale up during Ramadan and peak campaigns without fixed costs.", href: "/services" },
           { num: "03", name: "Dedicated Logistics", desc: "A ringfenced Qatar operation in your brand — riders in your uniform, dark stores in your target Doha catchments, SLA-bound.", href: "/dedicated" },
           { num: "04", name: "Fully Managed", desc: "Ajil takes ownership of your entire Qatar logistics function — network design, fleet, warehouses, team and a named General Manager.", href: "/services" },
         ]}

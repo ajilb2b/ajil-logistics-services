@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import MarketPage from "@/components/MarketPage";
 
 export const metadata: Metadata = {
-  title: "Logistics Services in Oman — Ajil Logistics Services",
+  title: "Logistics Services in Oman | Ajil Logistics Services",
   description:
-    "Ajil Logistics Services operates in Oman, serving commerce operators across Muscat — Qurum, Al Khuwair, Ruwi, Al Ghubra and the Muscat Governorate. Last-mile delivery and dedicated logistics for Oman.",
+    "Ajil Logistics Services operates in Oman, serving commerce operators across Muscat: Qurum, Al Khuwair, Ruwi, Al Ghubra and the Muscat Governorate. Last-mile delivery and dedicated logistics for Oman.",
   alternates: { canonical: "https://ajilb2b.com/oman" },
   openGraph: {
     title: "Logistics Services in Oman | Ajil Logistics Services",
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ajil Logistics Services — Oman",
+  "name": "Ajil Logistics Services: Oman",
   "@id": "https://ajilb2b.com/#organization",
   "url": "https://ajilb2b.com/oman",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",
@@ -29,7 +29,7 @@ const localSchema = {
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 23.5880, "longitude": 58.3829 },
   "areaServed": { "@type": "Country", "name": "Oman" },
-  "description": "Ajil Logistics Services operates in Oman, serving commerce operators across Muscat — Qurum, Al Khuwair, Ruwi, Al Ghubra and the Muscat Governorate.",
+  "description": "Ajil Logistics Services operates in Oman, serving commerce operators across Muscat: Qurum, Al Khuwair, Ruwi, Al Ghubra and the Muscat Governorate.",
 };
 
 const breadcrumbSchema = {
@@ -50,7 +50,7 @@ export default function Page() {
         country="Oman"
         heroMain="Oman Logistics."
         heroItalic="Muscat and the Muscat Governorate."
-        lede="Ajil Logistics Services operates in Oman, serving commerce operators across Muscat — Qurum, Al Khuwair, Ruwi, Al Ghubra and Madinat Al Sultan Qaboos. On-demand and dedicated logistics, powered by the Ajil platform and backed by our GCC-wide dispatch operation."
+        lede="Ajil Logistics Services operates in Oman, serving commerce operators across Muscat: Qurum, Al Khuwair, Ruwi, Al Ghubra and Madinat Al Sultan Qaboos. On-demand and dedicated logistics, powered by the Ajil platform and backed by our GCC-wide dispatch operation."
         stats={[
           { num: "2023", lbl: "Active in Oman" },
           { num: "Muscat", lbl: "Primary coverage" },

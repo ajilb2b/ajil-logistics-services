@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import MarketPage from "@/components/MarketPage";
 
 export const metadata: Metadata = {
-  title: "Logistics Services in Kuwait — Ajil Logistics Services",
+  title: "Logistics Services in Kuwait | Ajil Logistics Services",
   description:
     "Ajil Logistics Services operates across Kuwait City, Salmiya, Hawally and the greater Kuwait metropolitan area. Last-mile delivery, route optimization and dedicated logistics for Kuwait's commerce operators.",
   alternates: { canonical: "https://ajilb2b.com/kuwait" },
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 const localSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Ajil Logistics Services — Kuwait",
+  "name": "Ajil Logistics Services: Kuwait",
   "@id": "https://ajilb2b.com/#organization",
   "url": "https://ajilb2b.com/kuwait",
-  "telephone": "+97477058594",
+  "telephone": "+97441404004",
   "email": "hello@ajilb2b.com",
   "address": {
     "@type": "PostalAddress",
@@ -50,7 +50,7 @@ export default function Page() {
         country="Kuwait"
         heroMain="Kuwait Logistics."
         heroItalic="Kuwait City and beyond."
-        lede="Ajil Logistics Services operates across the Kuwait metropolitan area — Kuwait City, Salmiya, Hawally, Fintas and the major commercial and residential districts — with on-demand, dedicated and managed logistics for e-commerce, grocery, pharmacy and B2B distribution operators."
+        lede="Ajil Logistics Services operates across the Kuwait metropolitan area, including Kuwait City, Salmiya, Hawally, Fintas and the major commercial and residential districts, with on-demand, dedicated and managed logistics for e-commerce, grocery, pharmacy and B2B distribution operators."
         stats={[
           { num: "2022", lbl: "Active in Kuwait" },
           { num: "Metro", lbl: "Kuwait coverage" },

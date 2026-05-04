@@ -7,10 +7,10 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Umair Naseem Khan",
   description:
-    "Umair Naseem Khan is the Founder and CEO of Ajil Logistics Services. 8+ years building and scaling logistics operations across GCC — from talabat Country Head to founding Ajil.",
+    "Umair Naseem Khan is the Founder and CEO of Ajil Logistics Services. 8+ years building and scaling logistics operations across GCC, from talabat Country Head to founding Ajil.",
   alternates: { canonical: "https://ajilb2b.com/team/umair-naseem-khan" },
   openGraph: {
-    title: "Umair Naseem Khan — Founder & CEO | Ajil Logistics Services",
+    title: "Umair Naseem Khan: Founder & CEO | Ajil Logistics Services",
     description: "Founder and CEO of Ajil Logistics Services. Former Country Head at talabat, COO at Baladi Express.",
     url: "https://ajilb2b.com/team/umair-naseem-khan",
     images: [{ url: "/ceo.png", alt: "Umair Naseem Khan" }],
@@ -32,42 +32,42 @@ const career = [
   {
     org: "Ajil Logistics Services",
     role: "Founder & Chief Executive Officer",
-    period: "Jan 2024 — Present",
+    period: "Jan 2024 to Present",
     location: "Doha, Qatar",
-    desc: "Founded and leads Ajil Logistics Services — building the B2B logistics infrastructure for modern commerce across Qatar and UAE. Responsible for company strategy, product direction, and operations.",
+    desc: "Founded and leads Ajil Logistics Services, building the B2B logistics infrastructure for modern commerce across Qatar and UAE. Responsible for company strategy, product direction, and operations.",
   },
   {
     org: "talabat",
     role: "Director of Logistics → Country Head, Logistics",
-    period: "Aug 2019 — Jun 2023 · 4 yrs",
+    period: "Aug 2019 to Jun 2023 · 4 yrs",
     location: "Doha, Qatar",
     desc: "Led country-wide logistics operations across four divisions: Core Logistics, Restaurant Operations, Grocery Operations, and Fleet Management. Responsible for talabat's growth and expansion into new verticals in Qatar.",
   },
   {
     org: "Baladi Express",
     role: "Chief Operating & Strategy Officer",
-    period: "Apr 2023 — Feb 2024 · 11 mos",
+    period: "Apr 2023 to Feb 2024 · 11 mos",
     location: "Qatar",
     desc: "Led a team of 200+ employees. Spearheaded operational strategy resulting in a 20% increase in efficiency. Implemented cost-saving initiatives reducing operational expenses by 15% without compromising quality.",
   },
   {
     org: "talabat",
-    role: "Operations Manager — Logistics, UAE",
-    period: "Nov 2017 — Aug 2019 · 2 yrs",
+    role: "Operations Manager, Logistics, UAE",
+    period: "Nov 2017 to Aug 2019 · 2 yrs",
     location: "Dubai, UAE",
-    desc: "Managed regional logistics performance across UAE. Led Talabat Go operations — zone configuration, hub expansion, P&L ownership, 3PL contracting, and fleet supply management.",
+    desc: "Managed regional logistics performance across UAE. Led Talabat Go operations: zone configuration, hub expansion, P&L ownership, 3PL contracting, and fleet supply management.",
   },
   {
     org: "Fetchr",
     role: "Operations Leader",
-    period: "Dec 2016 — Nov 2017 · 1 yr",
+    period: "Dec 2016 to Nov 2017 · 1 yr",
     location: "UAE",
     desc: "Led UAE dispatch and reverse logistics. Managed a team of 50 across warehouse operations, last-mile delivery, and key accounts including Majid Al Futtaim, Sephora, and Namshi. Helped Fetchr win Startup of the Year in MENA for two consecutive years.",
   },
   {
     org: "PepsiCo",
     role: "Supply Chain Lead",
-    period: "Aug 2012 — Sep 2016 · 4 yrs",
+    period: "Aug 2012 to Sep 2016 · 4 yrs",
     location: "Regional",
     desc: "Managed logistics operations and supply chain standards across a $17M portfolio. Served as logistics liaison between key regional accounts, overseeing vendor sourcing, contracting, and fleet management.",
   },
@@ -104,7 +104,7 @@ export default function UmairPage() {
             <div className="pr-photo-wrap">
               <Image
                 src="/ceo.png"
-                alt="Umair Naseem Khan — Founder & CEO, Ajil Logistics Services"
+                alt="Umair Naseem Khan, Founder & CEO, Ajil Logistics Services"
                 fill
                 priority
                 style={{ objectFit: "cover", objectPosition: "center top" }}
@@ -146,7 +146,7 @@ export default function UmairPage() {
               the GCC&apos;s most demanding businesses.
             </p>
             <p>
-              Before Ajil, Umair spent nearly six years at talabat — rising from Operations Manager in the
+              Before Ajil, Umair spent nearly six years at talabat, rising from Operations Manager in the
               UAE to Country Head of Logistics in Qatar, where he led four operational divisions simultaneously.
               His track record includes scaling multi-hundred-person teams, reducing operational costs by double
               digits, and launching entirely new logistics verticals across multiple GCC markets.
@@ -154,7 +154,7 @@ export default function UmairPage() {
             <p>
               Umair&apos;s approach to logistics is operator-first: understanding the problem on the ground before
               designing the solution. That philosophy sits at the core of how Ajil builds its products and runs
-              its operations — software that was built because it was needed, and a rider network managed the
+              its operations: software that was built because it was needed, and a rider network managed the
               same way Ajil would expect its own deliveries to be managed.
             </p>
             <p>
@@ -201,9 +201,9 @@ export default function UmairPage() {
           </div>
           <div className="pr-recognition-list">
             {[
-              { title: "Silver Medalist — Academics", desc: "Recognised for academic excellence." },
-              { title: "Youngest Public Speaker on Youth Affairs", desc: "Addressed the Parliament of Pakistan on youth affairs — one of the youngest speakers to do so." },
-              { title: "UN Ambassador — Polio Eradication", desc: "Served as a United Nations ambassador on the global polio eradication campaign." },
+              { title: "Silver Medalist, Academics", desc: "Recognised for academic excellence." },
+              { title: "Youngest Public Speaker on Youth Affairs", desc: "Addressed the Parliament of Pakistan on youth affairs, one of the youngest speakers to do so." },
+              { title: "UN Ambassador: Polio Eradication", desc: "Served as a United Nations ambassador on the global polio eradication campaign." },
             ].map((r) => (
               <div key={r.title} className="pr-rec-row">
                 <div className="pr-rec-dot" />
@@ -226,7 +226,7 @@ export default function UmairPage() {
               <h2 className="pr-h2" style={{ marginTop: 18 }}>Talk to the<br /><span className="pr-accent">Ajil team</span>.</h2>
             </div>
             <div className="pr-cta-right">
-              <p className="pr-cta-p">For enterprise enquiries, partnership discussions, or to understand how Ajil can operate your logistics — reach out directly.</p>
+              <p className="pr-cta-p">For enterprise enquiries, partnership discussions, or to understand how Ajil can operate your logistics, reach out directly.</p>
               <div className="pr-cta-actions">
                 <Link href="/contact" className="pr-btn-primary">
                   Contact us
@@ -255,7 +255,7 @@ export default function UmairPage() {
         .pr-hero-grid { display: grid; grid-template-columns: 360px 1fr; gap: 80px; align-items: end; }
         .pr-photo-wrap { position: relative; height: 480px; border-radius: 10px 10px 0 0; overflow: hidden; background: var(--paper-2); }
         .pr-hero-body { padding-bottom: 64px; }
-        .pr-eyebrow { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: block; margin-bottom: 20px; }
+        .pr-eyebrow { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: block; margin-bottom: 20px; }
         .pr-h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 700; letter-spacing: -.04em; color: var(--ink); line-height: 1; margin: 0 0 10px; }
         .pr-title { font-family: var(--font-jetbrains), monospace; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: #2D2BE0; margin-bottom: 24px; }
         .pr-tagline { font-size: clamp(15px, 1.3vw, 18px); color: var(--muted); line-height: 1.7; max-width: 52ch; margin-bottom: 40px; }
@@ -270,9 +270,9 @@ export default function UmairPage() {
         .pr-section-alt { background: var(--paper-2); }
         .pr-section-grid { display: grid; grid-template-columns: .38fr .62fr; gap: 80px; align-items: start; }
         .pr-section-head { margin-bottom: 56px; }
-        .pr-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: block; margin-bottom: 0; }
+        .pr-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: block; margin-bottom: 0; }
         .pr-h2 { font-size: clamp(28px, 3.5vw, 48px); font-weight: 700; letter-spacing: -.035em; color: var(--ink); line-height: 1.05; margin: 18px 0 0; }
-        .pr-accent { color: #2D2BE0; }
+        .pr-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         @media (max-width: 860px) { .pr-section-grid { grid-template-columns: 1fr; gap: 32px; } }
 
         /* Prose */

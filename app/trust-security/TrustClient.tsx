@@ -44,7 +44,7 @@ export default function TrustSecurityPage() {
         <div className="hp-container">
           <span className="hp-section-tag">Trust & Security</span>
           <h1 className="ts-h1">Built To Be<br /><span className="ts-accent">Trusted</span>.</h1>
-          <p className="ts-lead">Ajil handles sensitive operational data for over 60 brands across Qatar &amp; UAE. Security and reliability are not features — they are the foundation everything else runs on.</p>
+          <p className="ts-lead">Ajil handles sensitive operational data for over 60 brands across Qatar &amp; UAE. Security and reliability are not features. They are the foundation everything else runs on.</p>
         </div>
       </header>
 
@@ -76,11 +76,11 @@ export default function TrustSecurityPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
+        .hp-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
 
         .ts-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
         .ts-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .ts-accent { color: #2D2BE0; font-style: normal; font-weight: 600; }
+        .ts-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .ts-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 56ch; line-height: 1.7; }
 
         .ts-section { padding: 96px 0 140px; background: var(--paper-2); }

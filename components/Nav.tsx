@@ -12,7 +12,8 @@ export default function Nav() {
         <div className="ajil-nav-inner">
           {/* Logo */}
           <Link href="/" className="ajil-logo">
-            <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" height={30} width={92} style={{ objectFit: 'contain' }} priority />
+            <Image src="/ajil-logo-transparent2.png" alt="Ajil Logistics Services" height={30} width={92} style={{ objectFit: 'contain' }} priority />
+            <Image src="/ajil-logo-transparent3.png" alt="Efficiency in Motion" height={26} width={160} style={{ objectFit: 'contain' }} />
           </Link>
 
           {/* Center nav links */}
@@ -110,8 +111,8 @@ export default function Nav() {
           box-shadow: 0 6px 24px -4px rgba(27,26,104,.16), 0 1px 0 rgba(255,255,255,.8) inset;
         }
         .ajil-logo {
-          display: inline-flex; align-items: center;
-          flex-shrink: 0;
+          display: inline-flex; flex-direction: column; align-items: center;
+          flex-shrink: 0; gap: 1px;
         }
         .ajil-nav-links {
           display: flex; gap: clamp(14px, 1.8vw, 26px); align-items: center;

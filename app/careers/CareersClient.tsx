@@ -6,15 +6,15 @@ const roles = [
   { dept: "Operations", title: "Dispatch Manager", location: "Doha, Qatar", type: "Full-time" },
   { dept: "Operations", title: "Fleet Coordinator", location: "Dubai, UAE", type: "Full-time" },
   { dept: "Technology", title: "Senior Full-Stack Engineer", location: "Remote / Doha", type: "Full-time" },
-  { dept: "Technology", title: "Product Manager — Dispatch Platform", location: "Doha, Qatar", type: "Full-time" },
+  { dept: "Technology", title: "Product Manager, Dispatch Platform", location: "Doha, Qatar", type: "Full-time" },
   { dept: "Sales", title: "Enterprise Account Executive", location: "Doha, Qatar", type: "Full-time" },
-  { dept: "Sales", title: "Business Development Manager — UAE", location: "Dubai, UAE", type: "Full-time" },
+  { dept: "Sales", title: "Business Development Manager, UAE", location: "Dubai, UAE", type: "Full-time" },
 ];
 
 const perks = [
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>, title: "Build For The Region", desc: "Work on infrastructure that moves real goods across Qatar and UAE every day." },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>, title: "Move Fast", desc: "Flat structure. Ship quickly. See the impact of your work within weeks, not quarters." },
-  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>, title: "Operator DNA", desc: "Work alongside people who run logistics before they sell it — not the other way around." },
+  { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>, title: "Operator DNA", desc: "Work alongside people who run logistics before they sell it. Not the other way around." },
   { icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>, title: "Competitive Package", desc: "Market-rate salaries, visa support, health insurance and performance bonuses." },
 ];
 
@@ -27,7 +27,7 @@ export default function CareersPage() {
         <div className="hp-container">
           <span className="hp-section-tag">Careers</span>
           <h1 className="cr-h1">Build The Logistics<br /><span className="cr-accent">Infrastructure Of Qatar &amp; UAE</span>.</h1>
-          <p className="cr-lead">We&apos;re a small team solving a large problem. If you want to work on real operations — not demos — Ajil is hiring across engineering, operations and growth.</p>
+          <p className="cr-lead">We&apos;re a small team solving a large problem. If you want to work on real operations, not demos, Ajil is hiring across engineering, operations and growth.</p>
         </div>
       </header>
 
@@ -80,11 +80,11 @@ export default function CareersPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
+        .hp-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
 
         .cr-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
         .cr-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .cr-accent { color: #2D2BE0; }
+        .cr-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .cr-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 54ch; line-height: 1.7; }
 
         .cr-perks-section { padding: 96px 0; background: var(--paper-2); border-bottom: 1px solid var(--line); }
@@ -101,7 +101,7 @@ export default function CareersPage() {
         .cr-role-row { display: flex; align-items: center; justify-content: space-between; padding: 22px 28px; background: #fff; border-bottom: 1px solid var(--line); transition: background .2s ease; gap: 24px; text-decoration: none; color: inherit; }
         .cr-role-row:last-child { border-bottom: none; }
         .cr-role-row:hover { background: var(--paper-2); }
-        .cr-role-dept { font-family: var(--font-jetbrains), monospace; font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(27,26,104,.42); margin-bottom: 6px; }
+        .cr-role-dept { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 6px; }
         .cr-role-title { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
         .cr-role-meta { display: flex; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); flex-shrink: 0; }
         .cr-role-type { font-family: var(--font-jetbrains), monospace; font-size: 10px; padding: 3px 9px; border-radius: 4px; border: 1px solid var(--line-strong); text-transform: uppercase; letter-spacing: .08em; }

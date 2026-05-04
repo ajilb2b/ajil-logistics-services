@@ -18,7 +18,7 @@ const productsSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Ajil Logistics Platform Products",
-  "description": "The Ajil platform — six products for end-to-end logistics operations.",
+  "description": "The Ajil platform: six products for end-to-end logistics operations.",
   "itemListElement": [
     {
       "@type": "ListItem",

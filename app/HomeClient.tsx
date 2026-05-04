@@ -30,10 +30,10 @@ const signals = [
 ];
 
 const routeCaps = [
-  { n: "/ 01", title: "Stacking Logic",     desc: "We bundle multiple deliveries onto a single route to drive down cost per drop without breaking SLA." },
-  { n: "/ 02", title: "Live Re-Routing",    desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network." },
-  { n: "/ 03", title: "Local Intelligence", desc: "Routes built around prayer times, gated compounds, school zones and Ramadan timings." },
-  { n: "/ 04", title: "Demand Planning",    desc: "We anticipate volume by daypart and location, pre-positioning vehicles before peak windows." },
+  { n: "1", title: "Stacking Logic",     desc: "We bundle multiple deliveries onto a single route to drive down cost per drop without breaking SLA." },
+  { n: "2", title: "Live Re-Routing",    desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network." },
+  { n: "3", title: "Local Intelligence", desc: "Routes built around prayer times, gated compounds, school zones and Ramadan timings." },
+  { n: "4", title: "Demand Planning",    desc: "We anticipate volume by daypart and location, pre-positioning vehicles before peak windows." },
 ];
 
 const layers = [
@@ -41,7 +41,7 @@ const layers = [
     grad: "linear-gradient(180deg,#0F1A3D,#1F1E9C)",
     num: "01", tag: "SOFTWARE",
     title: "Logistics Delivery Management Software",
-    desc: "License the Ajil platform — TMS, WMS, dispatch, driver and rider apps, customer tracking and a unified control tower. Run with your own fleet, your own warehouses, your own people. Multi-tenant, white-label and API-first.",
+    desc: "License the Ajil platform: TMS, WMS, dispatch, driver and rider apps, customer tracking and a unified control tower. Run with your own fleet, your own warehouses, your own people. Multi-tenant, white-label and API-first.",
     chips: ["TMS", "WMS", "Dispatch", "Driver App", "Control Tower"],
     cta: "License The Platform →", href: "/services",
   },
@@ -49,7 +49,7 @@ const layers = [
     grad: "linear-gradient(180deg,#1F1E9C,#2D2BE0)",
     num: "02", tag: "ON-DEMAND",
     title: "On-Demand Logistics",
-    desc: "Tap into Ajil's existing rider, vehicle and warehouse network on a pay-per-delivery basis — flex up during peaks, scale down on quiet days. A ready-made network across the GCC, available the day you onboard.",
+    desc: "Tap into Ajil's existing rider, vehicle and warehouse network on a pay-per-delivery basis. Flex up during peaks, scale down on quiet days. A ready-made network across the GCC, available the day you onboard.",
     chips: ["Pay Per Delivery", "Same-Day", "Scheduled", "Surge Capacity", "Software Included"],
     cta: "Use On-Demand →", href: "/services",
   },
@@ -57,7 +57,7 @@ const layers = [
     grad: "linear-gradient(180deg,#2D2BE0,#5A4BFF)",
     num: "03", tag: "DEDICATED",
     title: "Dedicated Logistics",
-    desc: "Capacity that operates exclusively for your business — branded riders, ringfenced fleet, dedicated warehouse footprint, dark store hubs in your target catchments. The same operating platform, but the operation wears your colours.",
+    desc: "Capacity that operates exclusively for your business: branded riders, ringfenced fleet, dedicated warehouse footprint, dark store hubs in your target catchments. The same operating platform, but the operation wears your colours.",
     chips: ["Branded Fleet", "Dedicated Warehouse", "Dark Stores", "SLA-Bound", "Custom KPIs"],
     cta: "Build Dedicated →", href: "/services/dedicated",
   },
@@ -65,7 +65,7 @@ const layers = [
     grad: "linear-gradient(180deg,#5A4BFF,#8775FF)",
     num: "04", tag: "MANAGED",
     title: "Fully Managed Operations",
-    desc: "We take ownership of your entire logistics function. Network design, hiring, warehouse leasing, dark store operations, fleet management — and a single accountable leadership team reporting against the KPIs you set.",
+    desc: "We take ownership of your entire logistics function. Network design, hiring, warehouse leasing, dark store operations, fleet management, and a single accountable leadership team reporting against the KPIs you set.",
     chips: ["End-To-End", "Outsourced", "Single Contract", "Custom SLAs", "Quarterly Reviews"],
     cta: "Outsource To Ajil →", href: "/services",
   },
@@ -83,16 +83,16 @@ const industries = [
 ];
 
 const testimonials = [
-  { industry: "Grocery",          q: `We replaced three logistics vendors with a single Ajil contract — software, network and a dedicated dark-store layer. Cost per drop fell 27% and our COO finally has <em>one number to look at</em>.`,          initials: "FA", name: "Fatima Al Sayed",  role: "VP Operations · Regional Grocery Group",      metric: "27%", metricLabel: "cost reduction" },
+  { industry: "Grocery",          q: `We replaced three logistics vendors with a single Ajil contract: software, network and a dedicated dark-store layer. Cost per drop fell 27% and our COO finally has <em>one number to look at</em>.`,          initials: "FA", name: "Fatima Al Sayed",  role: "VP Operations · Regional Grocery Group",      metric: "27%", metricLabel: "cost reduction" },
   { industry: "Quick Commerce",   q: `Ajil's stacking logic took our cost-per-drop down by 31% in the first quarter. The dispatch team flagged exceptions before our own ops noticed them. <em>It just runs</em>.`,                            initials: "RM", name: "Rashid Mansoori", role: "Head Of Logistics · Quick Commerce Platform",  metric: "31%", metricLabel: "fewer failed deliveries" },
-  { industry: "QSR",              q: `We onboarded across 47 outlets in 14 days. Branded riders, our packaging, our SLA. The customer never knows it's outsourced — they just know <em>their food is on time</em>.`,                          initials: "SK", name: "Sara Khoury",      role: "COO · Multi-Brand Restaurant Group",          metric: "14 days", metricLabel: "full onboarding" },
+  { industry: "QSR",              q: `Branded riders, our packaging, our SLA. The customer never knows it's outsourced. They just know <em>their food is on time</em>. Ajil handled the full operational setup from day one.`,       initials: "SK", name: "Sara Khoury",      role: "COO · Multi-Brand Restaurant Group",          metric: "47", metricLabel: "outlets covered" },
   { industry: "Retail",           q: `We needed scheduled, branded last-mile across three GCC markets. Ajil delivered the software, the riders and the warehouse footprint. <em>One partner, one contract, one team to call</em>.`,           initials: "YH", name: "Yousef Habib",    role: "Head Of E-Commerce · Fashion Retailer",       metric: "3", metricLabel: "markets, one contract" },
-  { industry: "B2B Distribution", q: `Route optimization that actually understands GCC roads — prayer windows, gated compounds, the lot. Our drivers complete 23% more drops per shift and they're <em>happier doing it</em>.`,               initials: "AB", name: "Abdullah Bilal",   role: "Logistics Manager · F&B Distributor",         metric: "23%", metricLabel: "more drops per shift" },
+  { industry: "B2B Distribution", q: `Route optimization that actually understands GCC roads: prayer windows, gated compounds, the lot. Our drivers complete 23% more drops per shift and they're <em>happier doing it</em>.`,               initials: "AB", name: "Abdullah Bilal",   role: "Logistics Manager · F&B Distributor",         metric: "23%", metricLabel: "more drops per shift" },
 ];
 
 const whyCards = [
-  { n: "i.",   title: "Built For The GCC",    desc: "Our dispatch operation was built on this region's roads, traffic patterns, prayer times and gated compounds — not retrofitted from a European model." },
-  { n: "ii.",  title: "One Partner, All Four", desc: "License software, use the network, build dedicated capacity, or outsource the function entirely — without changing partners as you grow." },
+  { n: "i.",   title: "Built For The GCC",    desc: "Our dispatch operation was built on this region's roads, traffic patterns, prayer times and gated compounds. Not retrofitted from a European model." },
+  { n: "ii.",  title: "One Partner, All Four", desc: "License software, use the network, build dedicated capacity, or outsource the function entirely. Without changing partners as you grow." },
   { n: "iii.", title: "Operator DNA",          desc: "We run logistics ourselves before we sell it. Every capability is shaped by a live operations team, not a roadmap committee." },
 ];
 
@@ -192,12 +192,12 @@ export default function HomePage() {
         <div className="hp-container">
           <div className="hp-section-head reveal">
             <div>
-              <span className="hp-section-tag">01 · What We Do</span>
-              <h2 className="hp-section-title">Three Ways Ajil<br /><em>Runs Your Logistics</em>.</h2>
+              <span className="hp-section-tag">What We Do</span>
+              <h2 className="hp-section-title">Three Ways Ajil<br /><em>Runs Your Logistics</em><span style={{color:'#2D2BE0'}}>.</span></h2>
             </div>
             <p className="hp-section-desc">
               Whether you need software to run your own operation, a network to plug into, or a
-              partner to take over entirely — Ajil covers all three. One company, every model.
+              partner to take over entirely. Ajil covers all three. One company, every model.
             </p>
           </div>
           <div className="hp-what-grid reveal">
@@ -257,20 +257,18 @@ export default function HomePage() {
         <div className="hp-container">
           <div className="hp-section-head reveal" style={{ gridTemplateColumns: "1fr", textAlign: "center" }}>
             <div style={{ margin: "0 auto" }}>
-              <span className="hp-section-tag" style={{ justifyContent: "center", display: "inline-flex" }}>02 · Process</span>
-              <h2 className="hp-section-title" style={{ margin: "18px auto 0", textAlign: "center", maxWidth: "22ch" }}>From First Call to <em>Live Operation</em> in 14 Days.</h2>
+              <span className="hp-section-tag" style={{ justifyContent: "center", display: "inline-flex" }}>Process</span>
+              <h2 className="hp-section-title" style={{ margin: "18px auto 0", textAlign: "center", maxWidth: "22ch" }}>How We Get Your <em>Operation Running</em><span style={{color:'#2D2BE0'}}>.</span></h2>
             </div>
           </div>
           <div className="hp-hiw-steps reveal">
             {[
-              { n: "01", title: "Consult",  desc: "A 30-minute session with a logistics architect. Bring your real numbers — volumes, geographies, SLA requirements." },
+              { n: "01", title: "Consult",  desc: "An initial session with a logistics architect. We assess your volumes, geographies, and SLA requirements." },
               { n: "02", title: "Design",   desc: "We model your operation: network layout, hub placement, fleet mix, SLA targets and unit economics." },
-              { n: "03", title: "Deploy",   desc: "Onboarded in 14 days or less. Drivers hired and trained. Software live. Warehouses operational." },
+              { n: "03", title: "Deploy",   desc: "Drivers hired and trained. Software configured. Warehouses operational. We manage the full launch." },
               { n: "04", title: "Operate",  desc: "24/7 control room. Live re-routing. Monthly performance reviews. One team accountable end-to-end." },
             ].map((step, i) => (
               <div className="hp-hiw-step" key={step.n}>
-                <div className="hp-hiw-num">{step.n}</div>
-                {i < 3 && <div className="hp-hiw-line" />}
                 <h4 className="hp-hiw-title">{step.title}</h4>
                 <p className="hp-hiw-desc">{step.desc}</p>
               </div>
@@ -278,7 +276,7 @@ export default function HomePage() {
           </div>
           <div className="hp-hiw-cta reveal">
             <a href="/contact" className="hp-btn-primary">
-              Book a 30-minute session
+              Talk to our team
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -292,8 +290,8 @@ export default function HomePage() {
         <div className="hp-container">
           <div className="hp-section-head reveal">
             <div>
-              <span className="hp-section-tag">03 · Service Models</span>
-              <h2 className="hp-section-title">Four Ways To <em>Partner With Us</em>.</h2>
+              <span className="hp-section-tag">Service Models</span>
+              <h2 className="hp-section-title">Four Ways To <em>Partner With Us</em><span style={{color:'#2D2BE0'}}>.</span></h2>
             </div>
             <p className="hp-section-desc">
               Every business runs logistics differently. Pick the model that fits where you are
@@ -304,7 +302,6 @@ export default function HomePage() {
             {layers.map((layer) => (
               <a href={layer.href} key={layer.num} className="hp-model-card" style={{ "--hp-gradient": layer.grad } as React.CSSProperties}>
                 <div className="hp-model-header">
-                  <span className="hp-model-num">{layer.num}</span>
                   <span className="hp-model-tag">{layer.tag}</span>
                 </div>
                 <h3 className="hp-model-title">{layer.title}</h3>
@@ -327,12 +324,12 @@ export default function HomePage() {
           <div className="hp-route-hero reveal">
             {/* Text */}
             <div className="hp-route-text">
-              <span className="hp-section-tag">04 · How Our Operations Work</span>
+              <span className="hp-section-tag">How Our Operations Work</span>
               <h3 className="hp-route-h">
-                Fewer Drops Per Route.<br /><em>Lower Cost Per Delivery.</em>
+                Fewer Drops Per Route.<br /><em>Lower Cost Per Delivery</em><span style={{color:'#2D2BE0'}}>.</span>
               </h3>
               <p className="hp-route-p">
-                Our dispatch teams plan, monitor and intervene across thousands of routes every day —
+                Our dispatch teams plan, monitor and intervene across thousands of routes every day,
                 driven by route optimization and stacking logic built specifically for the GCC.
                 Every plan balances cost per drop, on-time delivery, vehicle utilization and driver
                 workload, at network scale.
@@ -397,7 +394,6 @@ export default function HomePage() {
           <div className="hp-route-caps reveal">
             {routeCaps.map((cap) => (
               <div className="hp-route-cap" key={cap.n}>
-                <span className="hp-cap-num">{cap.n}</span>
                 <h4 className="hp-cap-h">{cap.title}</h4>
                 <p className="hp-cap-p">{cap.desc}</p>
               </div>
@@ -413,12 +409,12 @@ export default function HomePage() {
         <div className="hp-container">
           <div className="hp-section-head reveal">
             <div>
-              <span className="hp-section-tag">05 · Our Coverage</span>
-              <h2 className="hp-section-title">Operating Across<br /><em>The GCC</em>.</h2>
+              <span className="hp-section-tag">Our Coverage</span>
+              <h2 className="hp-section-title">Operating Across<br /><em>The GCC</em><span style={{color:'#2D2BE0'}}>.</span></h2>
             </div>
             <p className="hp-section-desc">
-              Established infrastructure in six markets with local operations teams, owned hubs
-              and active fleet. Not a partner network — our own people, on the ground.
+              Established infrastructure across Qatar and UAE with local operations teams, owned hubs
+              and active fleet. Not a partner network. Our own people, on the ground.
             </p>
           </div>
           <div className="hp-coverage-grid reveal">
@@ -444,11 +440,11 @@ export default function HomePage() {
         <div className="hp-container">
           <div className="hp-section-head reveal">
             <div>
-              <span className="hp-section-tag">06 · Results</span>
-              <h2 className="hp-section-title">What Our <em>Customers Say</em>.</h2>
+              <span className="hp-section-tag">Results</span>
+              <h2 className="hp-section-title">What Our <em>Customers Say</em><span style={{color:'#2D2BE0'}}>.</span></h2>
             </div>
             <p className="hp-section-desc">
-              From quick commerce to QSR to enterprise retail — operators across the GCC are running
+              From quick commerce to QSR to enterprise retail. Operators across the GCC are running
               their logistics on Ajil and finding measurable results fast.
             </p>
           </div>
@@ -458,7 +454,7 @@ export default function HomePage() {
             {[
               { val: "27%",    label: "Average cost reduction" },
               { val: "31%",    label: "Fewer failed deliveries" },
-              { val: "14 days", label: "Average onboarding time" },
+              { val: "4",       label: "Markets active" },
               { val: "23%",    label: "More drops per shift" },
             ].map((m) => (
               <div className="hp-proof-metric" key={m.label}>
@@ -496,16 +492,13 @@ export default function HomePage() {
 
             {/* Left: Why Ajil */}
             <div className="hp-wi-left">
-              <span className="hp-section-tag">07 · Why Operators Switch</span>
-              <h2 className="hp-wi-h">Three reasons operators<br />consolidate to <em>Ajil</em>.</h2>
+              <span className="hp-section-tag">Why Operators Switch</span>
+              <h2 className="hp-wi-h">Three reasons operators<br />consolidate to <em>Ajil</em><span style={{color:'#2D2BE0'}}>.</span></h2>
               <div className="hp-why-cards">
                 {whyCards.map((card) => (
                   <div className="hp-why-card" key={card.n}>
-                    <div className="hp-why-num">{card.n}</div>
-                    <div>
-                      <h4 className="hp-why-h4">{card.title}</h4>
-                      <p className="hp-why-p">{card.desc}</p>
-                    </div>
+                    <h4 className="hp-why-h4">{card.title}</h4>
+                    <p className="hp-why-p">{card.desc}</p>
                   </div>
                 ))}
               </div>
@@ -514,7 +507,7 @@ export default function HomePage() {
             {/* Right: Industries */}
             <div className="hp-wi-right">
               <span className="hp-section-tag">Industries We Serve</span>
-              <h2 className="hp-wi-h">Tuned for every<br />category that <em>moves</em>.</h2>
+              <h2 className="hp-wi-h">Tuned for every<br />category that <em>moves</em><span style={{color:'#2D2BE0'}}>.</span></h2>
               <div className="hp-ind-strip">
                 {industries.map((ind) => (
                   <div className="hp-ind-chip" key={ind.label}>
@@ -538,12 +531,12 @@ export default function HomePage() {
         <div className="hp-container hp-cta-inner reveal">
           <h2 className="hp-cta-h">Ready to redesign<br /><em>your logistics?</em></h2>
           <p className="hp-cta-p">
-            Book 30 minutes with a logistics architect. Bring your real numbers — we&apos;ll show you
+            Speak with a logistics architect. Bring your real numbers and we&apos;ll show you
             which service model fits, where the savings come from, and how the operation would look
             in practice.
           </p>
           <div className="hp-cta-proof">
-            {["No lock-in", "14-day deployment", "Live 24/7 support", "GCC-native operation", "SLA-backed"].map((pt) => (
+            {["No lock-in", "Rapid deployment", "Live 24/7 support", "GCC-native operation", "SLA-backed"].map((pt) => (
               <span key={pt} className="hp-cta-proof-pt">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 {pt}
@@ -552,16 +545,17 @@ export default function HomePage() {
           </div>
           <div className="hp-cta-actions">
             <a href="/contact" className="hp-cta-btn-primary">
-              Book a working session
+              Get in touch
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
             </a>
-            <a href="/contact" className="hp-cta-btn-ghost">Download capability deck</a>
+            <a href="/contact" className="hp-cta-btn-ghost">Talk to our team →</a>
           </div>
           <div className="hp-big-wordmark">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/ajil-logo-transparent.png" alt="Ajil" className="hp-cta-logo" />
+            <img src="/ajil-logo-transparent2.png" alt="Ajil" className="hp-cta-logo" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/ajil-logo-transparent3.png" alt="Efficiency in Motion" className="hp-cta-tagline-img" />
           </div>
-          <div className="hp-big-tagline">— Efficiency in Motion —</div>
         </div>
       </section>
 
@@ -571,15 +565,15 @@ export default function HomePage() {
           <div className="hp-drivers-inner reveal">
             <div className="hp-drivers-text">
               <span className="hp-section-tag">Join the Ajil Fleet</span>
-              <h3 className="hp-drivers-h">Drive with Ajil. <em>Earn every day.</em></h3>
+              <h3 className="hp-drivers-h">Drive with Ajil. <em>Earn every day</em><span style={{color:'#2D2BE0'}}>.</span></h3>
               <p className="hp-drivers-desc">We&apos;re growing our rider and driver network across the GCC. Daily routes, weekly payouts, performance bonuses.</p>
             </div>
             <div className="hp-drivers-actions">
-              <a href="https://wa.me/97400000000?text=Hi%20Ajil%20-%20I%20want%20to%20join%20as%20a%20driver" className="hp-drivers-btn hp-btn-wa">
+              <a href="https://wa.me/97441404004" className="hp-drivers-btn hp-btn-wa">
                 <WaSvg />
-                <span><small>WhatsApp Us</small><strong>Apply In 60 Seconds</strong></span>
+                <span><small>WhatsApp Us</small><strong>Start Your Application</strong></span>
               </a>
-              <a href="#" className="hp-drivers-link">Driver application form →</a>
+              <a href="/driver-application" className="hp-drivers-link">Driver application form →</a>
             </div>
             <p className="hp-drivers-foot">Now Hiring · Doha · Dubai</p>
           </div>
@@ -599,9 +593,9 @@ export default function HomePage() {
         /* ── Section framework ── */
         .hp-section-head { display: grid; grid-template-columns: auto 1fr; gap: 48px; margin-bottom: 72px; align-items: end; }
         @media (max-width: 780px) { .hp-section-head { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; } }
-        .hp-section-tag { font-size: 11px; color: rgba(27,26,104,.5); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; }
+        .hp-section-tag { font-size: 14px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.5); letter-spacing: .01em; text-transform: none; }
         .hp-section-title { font-size: clamp(32px, 4.5vw, 60px); line-height: 1.06; letter-spacing: -.03em; font-weight: 700; margin-top: 16px; max-width: 20ch; color: #1B1A68; }
-        .hp-section-title em { font-style: normal; color: #2D2BE0; }
+        .hp-section-title em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .hp-section-desc { font-size: 16px; color: rgba(27,26,104,.55); max-width: 48ch; line-height: 1.65; }
 
         /* ── Reveal ── */
@@ -615,11 +609,11 @@ export default function HomePage() {
         .hp-btn-ghost:hover { background: rgba(27,26,104,.04); border-color: rgba(27,26,104,.35); }
 
         /* ── HERO ── */
-        .hp-hero { background: #fff; display: flex; flex-direction: column; border-bottom: 1px solid rgba(27,26,104,.1); }
+        .hp-hero { background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(45,43,224,.055) 0%, transparent 70%), linear-gradient(180deg, #fafbff 0%, #fff 100%); display: flex; flex-direction: column; border-bottom: 1px solid rgba(27,26,104,.1); }
         .hp-hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 140px clamp(24px, 6vw, 120px) 80px; max-width: 900px; margin: 0 auto; width: 100%; }
         .hp-hero-eyebrow { display: inline-flex; align-items: center; font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; color: rgba(27,26,104,.42); margin-bottom: 28px; text-transform: uppercase; animation: fadeUp .5s both; }
         .hp-hero-h { font-size: clamp(42px, 5.5vw, 80px); line-height: 1.08; letter-spacing: -.03em; font-weight: 700; color: #1B1A68; margin: 0 0 28px; animation: fadeUp .6s .08s both; }
-        .hp-hero-accent { color: #2D2BE0; }
+        .hp-hero-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .hp-hero-sub { font-size: clamp(15px, 1.3vw, 18px); color: rgba(27,26,104,.55); max-width: 52ch; line-height: 1.7; font-weight: 400; margin-bottom: 44px; animation: fadeUp .6s .16s both; }
         .hp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; animation: fadeUp .6s .24s both; }
         .hp-btn-hero { background: #1B1A68; color: #fff; font-weight: 600; padding: 13px 26px; border-radius: 8px; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; transition: background .15s ease; white-space: nowrap; }
@@ -659,13 +653,13 @@ export default function HomePage() {
         .hp-what-card { background: #fff; padding: 36px 32px; display: flex; flex-direction: column; transition: background .2s ease; }
         .hp-what-card:hover { background: #FAFBFD; }
         .hp-what-icon { color: #1B1A68; margin-bottom: 20px; opacity: .7; }
-        .hp-what-tag { font-size: 11px; color: rgba(27,26,104,.45); text-transform: uppercase; letter-spacing: .12em; font-weight: 500; margin-bottom: 10px; }
+        .hp-what-tag { font-size: 14px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.45); text-transform: none; letter-spacing: .01em; margin-bottom: 10px; }
         .hp-what-h { font-size: clamp(18px, 1.6vw, 22px); font-weight: 600; letter-spacing: -.02em; color: #1B1A68; margin-bottom: 12px; line-height: 1.25; }
         .hp-what-desc { font-size: 14px; color: rgba(27,26,104,.55); line-height: 1.65; margin-bottom: 20px; }
         .hp-what-points { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
         .hp-what-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: rgba(27,26,104,.55); line-height: 1.5; }
         .hp-what-dot { width: 4px; height: 4px; border-radius: 50%; background: #2D2BE0; flex-shrink: 0; margin-top: 7px; }
-        .hp-what-cta { font-size: 13px; color: #2D2BE0; font-weight: 500; margin-top: auto; transition: color .15s ease; }
+        .hp-what-cta { font-size: 16px; color: #2D2BE0; font-weight: 400; font-family: var(--font-instrument), serif; font-style: italic; margin-top: auto; transition: color .15s ease; }
         .hp-what-card:hover .hp-what-cta { color: #1B1A68; }
 
         /* ── HOW IT WORKS ── */
@@ -689,13 +683,13 @@ export default function HomePage() {
         .hp-model-card { position: relative; padding: 32px; border: 1px solid rgba(27,26,104,.1); border-radius: 10px; background: #fff; transition: border-color .2s ease; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
         .hp-model-card:hover { border-color: rgba(45,43,224,.28); }
         .hp-model-header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
-        .hp-model-num { font-size: 11px; font-weight: 600; color: rgba(27,26,104,.3); letter-spacing: .08em; }
-        .hp-model-tag { font-size: 11px; color: rgba(27,26,104,.4); letter-spacing: .1em; text-transform: uppercase; font-weight: 500; }
+        .hp-model-num { font-size: 16px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.35); letter-spacing: .02em; }
+        .hp-model-tag { font-size: 14px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.45); letter-spacing: .01em; text-transform: none; }
         .hp-model-title { font-size: clamp(17px, 1.5vw, 20px); font-weight: 600; letter-spacing: -.02em; color: #1B1A68; margin-bottom: 10px; }
         .hp-model-desc { font-size: 14px; color: rgba(27,26,104,.55); line-height: 1.65; margin-bottom: 18px; flex: 1; }
         .hp-model-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
         .hp-model-chips span { font-size: 11px; padding: 3px 10px; border-radius: 4px; background: rgba(27,26,104,.05); border: 1px solid rgba(27,26,104,.1); color: rgba(27,26,104,.5); letter-spacing: .04em; }
-        .hp-model-cta { font-size: 13px; color: #2D2BE0; font-weight: 500; margin-top: auto; transition: color .15s ease; }
+        .hp-model-cta { font-size: 16px; color: #2D2BE0; font-weight: 400; font-family: var(--font-instrument), serif; font-style: italic; margin-top: auto; transition: color .15s ease; }
         .hp-model-card:hover .hp-model-cta { color: #1B1A68; }
 
         /* ── DISPATCH & OPERATIONS ── */
@@ -703,7 +697,7 @@ export default function HomePage() {
         .hp-route-hero { display: grid; grid-template-columns: 1fr 1.3fr; gap: 72px; align-items: center; }
         @media (max-width: 980px) { .hp-route-hero { grid-template-columns: 1fr; gap: 40px; } }
         .hp-route-h { font-size: clamp(28px, 3.5vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 700; margin: 16px 0 20px; color: #1B1A68; }
-        .hp-route-h em { font-style: normal; color: #2D2BE0; }
+        .hp-route-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .hp-route-p { font-size: 16px; color: rgba(27,26,104,.55); line-height: 1.65; margin-bottom: 28px; max-width: 46ch; }
         .hp-route-pills { display: flex; flex-wrap: wrap; gap: 8px; }
         .hp-route-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 4px; background: #FAFBFD; border: 1px solid rgba(27,26,104,.12); font-size: 12px; color: rgba(27,26,104,.65); }
@@ -737,7 +731,7 @@ export default function HomePage() {
         @media (max-width: 560px)  { .hp-route-caps { grid-template-columns: 1fr; } }
         .hp-route-cap { background: #fff; padding: 28px 24px; transition: background .2s ease; }
         .hp-route-cap:hover { background: #FAFBFD; }
-        .hp-cap-num { font-size: 11px; color: rgba(27,26,104,.4); letter-spacing: .08em; font-weight: 500; }
+        .hp-cap-num { font-size: 15px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.4); letter-spacing: .01em; }
         .hp-cap-h { font-size: 17px; font-weight: 600; letter-spacing: -.02em; margin: 12px 0 8px; color: #1B1A68; }
         .hp-cap-p { font-size: 13px; color: rgba(27,26,104,.55); line-height: 1.6; }
 
@@ -749,8 +743,8 @@ export default function HomePage() {
         .hp-coverage-card { background: #fff; border: 1px solid rgba(27,26,104,.1); border-radius: 10px; padding: 24px; transition: border-color .2s ease; }
         .hp-coverage-card:hover { border-color: rgba(45,43,224,.22); }
         .hp-coverage-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-        .hp-coverage-code { font-size: 11px; font-weight: 600; color: #2D2BE0; letter-spacing: .1em; text-transform: uppercase; }
-        .hp-coverage-hubs { font-size: 11px; color: rgba(27,26,104,.4); text-transform: uppercase; letter-spacing: .08em; }
+        .hp-coverage-code { font-size: 15px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
+        .hp-coverage-hubs { font-size: 15px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.4); }
         .hp-coverage-name { font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: #1B1A68; margin-bottom: 5px; }
         .hp-coverage-cities { font-size: 11px; color: rgba(27,26,104,.45); letter-spacing: .04em; margin-bottom: 10px; }
         .hp-coverage-note { font-size: 13px; color: rgba(27,26,104,.5); line-height: 1.5; }
@@ -767,7 +761,7 @@ export default function HomePage() {
         @media (max-width: 640px)  { .hp-quotes-grid { grid-template-columns: 1fr; } }
         .hp-quote-card { background: #fff; border: 1px solid rgba(27,26,104,.1); border-radius: 10px; padding: 28px; display: flex; flex-direction: column; transition: border-color .2s ease; }
         .hp-quote-card:hover { border-color: rgba(45,43,224,.2); }
-        .hp-industry-tag { font-size: 10px; color: rgba(27,26,104,.45); text-transform: uppercase; letter-spacing: .12em; font-weight: 500; margin-bottom: 16px; }
+        .hp-industry-tag { font-size: 14px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.45); text-transform: none; letter-spacing: .01em; margin-bottom: 16px; }
         .hp-qmark { display: none; }
         .hp-quote-card p { font-size: 14px; color: rgba(27,26,104,.65); line-height: 1.7; flex: 1; margin-bottom: 20px; }
         .hp-quote-card em { color: #1B1A68; font-style: normal; font-weight: 500; }
@@ -781,11 +775,11 @@ export default function HomePage() {
         .hp-wi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
         @media (max-width: 900px) { .hp-wi-grid { grid-template-columns: 1fr; gap: 56px; } }
         .hp-wi-h { font-size: clamp(26px, 3vw, 44px); line-height: 1.1; letter-spacing: -.03em; font-weight: 700; color: #1B1A68; margin: 14px 0 32px; }
-        .hp-wi-h em { font-style: normal; color: #2D2BE0; }
+        .hp-wi-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .hp-why-cards { display: flex; flex-direction: column; gap: 1px; background: rgba(27,26,104,.08); border: 1px solid rgba(27,26,104,.08); border-radius: 10px; overflow: hidden; }
-        .hp-why-card { background: #fff; padding: 20px 24px; display: flex; gap: 16px; align-items: flex-start; transition: background .15s ease; }
+        .hp-why-card { background: #fff; padding: 24px 28px; display: block; transition: background .15s ease; }
         .hp-why-card:hover { background: #FAFBFD; }
-        .hp-why-num { font-size: 11px; color: rgba(27,26,104,.35); font-weight: 600; flex-shrink: 0; padding-top: 3px; min-width: 20px; letter-spacing: .04em; }
+        .hp-why-num { font-size: 16px; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: rgba(27,26,104,.35); flex-shrink: 0; padding-top: 2px; min-width: 24px; }
         .hp-why-h4 { font-size: 15px; font-weight: 600; letter-spacing: -.01em; color: #1B1A68; margin-bottom: 4px; }
         .hp-why-p { font-size: 13px; color: rgba(27,26,104,.55); line-height: 1.6; }
         .hp-ind-strip { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -793,10 +787,12 @@ export default function HomePage() {
         .hp-ind-chip:hover { border-color: rgba(45,43,224,.28); color: #1B1A68; }
 
         /* ── CTA ── */
-        .hp-cta { background: #0B0F2E; padding: 100px 0; }
+        .hp-cta { background: radial-gradient(ellipse 90% 70% at 50% 0%, #1B1A68 0%, #0B0F2E 55%, #060818 100%); padding: 120px 0; position: relative; overflow: hidden; }
+        .hp-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 80%, rgba(90,75,255,.12) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 20%, rgba(45,43,224,.1) 0%, transparent 60%); pointer-events: none; }
+        .hp-cta .hp-container { position: relative; z-index: 1; }
         .hp-cta-inner { text-align: center; }
         .hp-cta-h { font-size: clamp(36px, 5.5vw, 76px); line-height: 1.06; letter-spacing: -.04em; font-weight: 700; color: #fff; margin-bottom: 20px; }
-        .hp-cta-h em { font-style: normal; color: #7B78FF; }
+        .hp-cta-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #7B78FF; }
         .hp-cta-p { font-size: 17px; color: rgba(255,255,255,.55); max-width: 50ch; margin: 0 auto 32px; line-height: 1.65; }
         .hp-cta-proof { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; margin-bottom: 44px; }
         .hp-cta-proof-pt { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: rgba(255,255,255,.45); letter-spacing: .04em; }
@@ -806,16 +802,16 @@ export default function HomePage() {
         .hp-cta-btn-primary:hover { background: #e8e8f8; }
         .hp-cta-btn-ghost { background: transparent; color: rgba(255,255,255,.65); font-weight: 500; padding: 14px 28px; border-radius: 8px; font-size: 15px; border: 1px solid rgba(255,255,255,.2); display: inline-flex; align-items: center; transition: border-color .15s ease, color .15s ease; }
         .hp-cta-btn-ghost:hover { border-color: rgba(255,255,255,.4); color: #fff; }
-        .hp-big-wordmark { display: flex; justify-content: center; margin-bottom: 12px; }
-        .hp-cta-logo { height: 32px; width: auto; opacity: .2; }
-        .hp-big-tagline { text-align: center; font-size: 11px; color: rgba(255,255,255,.2); letter-spacing: .2em; text-transform: uppercase; }
+        .hp-big-wordmark { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 12px; }
+        .hp-cta-logo { height: 56px; width: auto; opacity: .7; filter: brightness(0) invert(1); }
+        .hp-cta-tagline-img { height: 22px; width: auto; opacity: .5; filter: brightness(0) invert(1); }
 
         /* ── DRIVER RECRUITING ── */
         .hp-drivers { background: #fff; border-top: 1px solid rgba(27,26,104,.08); padding: 56px 0; }
         .hp-drivers-inner { display: grid; grid-template-columns: 1fr auto auto; gap: 48px; align-items: center; }
         @media (max-width: 900px) { .hp-drivers-inner { grid-template-columns: 1fr; gap: 24px; } }
         .hp-drivers-h { font-size: clamp(20px, 2.2vw, 28px); font-weight: 700; letter-spacing: -.02em; color: #1B1A68; margin: 6px 0 8px; line-height: 1.2; }
-        .hp-drivers-h em { font-style: normal; color: #2D2BE0; }
+        .hp-drivers-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .hp-drivers-desc { font-size: 14px; color: rgba(27,26,104,.55); line-height: 1.6; max-width: 44ch; }
         .hp-drivers-actions { display: flex; flex-direction: column; gap: 10px; }
         .hp-drivers-btn { display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; border-radius: 8px; font-weight: 500; font-size: 14px; transition: background .15s ease; white-space: nowrap; text-decoration: none; }

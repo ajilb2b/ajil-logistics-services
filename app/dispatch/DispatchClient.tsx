@@ -4,10 +4,10 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const routeCaps = [
-  { n: "/ 01", title: "Stacking Logic", desc: "We bundle multiple deliveries onto a single route to drive down cost per drop without breaking SLA." },
-  { n: "/ 02", title: "Live Re-Routing", desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network." },
-  { n: "/ 03", title: "Local Intelligence", desc: "Routes built around prayer times, gated compounds, school zones and Ramadan timings." },
-  { n: "/ 04", title: "Demand Planning", desc: "We anticipate volume by daypart and location, pre-positioning vehicles before peak windows." },
+  { n: "1", title: "Stacking Logic", desc: "We bundle multiple deliveries onto a single route to drive down cost per drop without breaking SLA." },
+  { n: "2", title: "Live Re-Routing", desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network." },
+  { n: "3", title: "Local Intelligence", desc: "Routes built around prayer times, gated compounds, school zones and Ramadan timings." },
+  { n: "4", title: "Demand Planning", desc: "We anticipate volume by daypart and location, pre-positioning vehicles before peak windows." },
 ];
 
 export default function DispatchPage() {
@@ -26,9 +26,9 @@ export default function DispatchPage() {
 
       <header className="dp-hero">
         <div className="hp-container">
-          <span className="hp-section-tag">01 · Dispatch &amp; Route Optimization</span>
-          <h1 className="dp-h1">Smarter Routing. <em>Lower Cost.</em><br />Higher Efficiency.</h1>
-          <p className="dp-lead">Our dispatch teams plan, monitor and intervene across thousands of routes every day — driven by route optimization and stacking logic built specifically for the GCC.</p>
+          <span className="hp-section-tag">Dispatch &amp; Route Optimization</span>
+          <h1 className="dp-h1">Smarter Routing. <em>Lower Cost</em><span style={{color:'#2D2BE0'}}>.</span><br />Higher Efficiency.</h1>
+          <p className="dp-lead">Our dispatch teams plan, monitor and intervene across thousands of routes every day, driven by route optimization and stacking logic built specifically for the GCC.</p>
           <div className="dp-pills">
             {["24/7 Control Room", "Route Optimization", "Order Stacking Logic", "Live Re-Routing"].map((p) => (
               <span className="hp-route-pill" key={p}><span className="hp-pdot" />{p}</span>
@@ -42,7 +42,7 @@ export default function DispatchPage() {
           <div className="hp-route-hero reveal">
             <div className="hp-route-text">
               <p className="hp-route-p">
-                Every plan balances cost per drop, on-time delivery, vehicle utilization and driver workload — the way a senior dispatcher would, only at network scale.
+                Every plan balances cost per drop, on-time delivery, vehicle utilization and driver workload. The way a senior dispatcher would, only at network scale.
               </p>
             </div>
             <div className="hp-route-canvas">
@@ -93,7 +93,6 @@ export default function DispatchPage() {
           <div className="hp-route-caps reveal">
             {routeCaps.map((cap) => (
               <div className="hp-route-cap" key={cap.n}>
-                <span className="hp-cap-num">{cap.n}</span>
                 <h4 className="hp-cap-h">{cap.title}</h4>
                 <p className="hp-cap-p">{cap.desc}</p>
               </div>
@@ -114,7 +113,7 @@ export default function DispatchPage() {
       <section className="faq-section">
         <div className="hp-container">
           <span className="hp-section-tag">FAQ</span>
-          <h2 className="faq-h2">Common questions about <em>dispatch &amp; routing</em>.</h2>
+          <h2 className="faq-h2">Common questions about <em>dispatch &amp; routing</em><span style={{color:'#2D2BE0'}}>.</span></h2>
           <div className="faq-list">
             {[
               {
@@ -127,7 +126,7 @@ export default function DispatchPage() {
               },
               {
                 q: "What is order stacking logic in logistics?",
-                a: "Order stacking is the process of combining multiple customer deliveries into a single optimised route. The Ajil engine considers time windows, vehicle capacity, geographic clustering and SLA risk to determine the optimal stack — typically reducing empty kilometres by over 30% versus separate single-delivery routes.",
+                a: "Order stacking is the process of combining multiple customer deliveries into a single optimised route. The Ajil engine considers time windows, vehicle capacity, geographic clustering and SLA risk to determine the optimal stack, typically reducing empty kilometres by over 30% versus separate single-delivery routes.",
               },
               {
                 q: "Does Ajil's dispatch cover Ramadan and public holiday scheduling?",
@@ -152,13 +151,13 @@ export default function DispatchPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
+        .hp-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.in { opacity: 1; transform: none; }
 
         .dp-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
         .dp-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .dp-h1 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
+        .dp-h1 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .dp-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 56ch; line-height: 1.7; margin-bottom: 36px; }
         .dp-pills { display: flex; flex-wrap: wrap; gap: 8px; }
         .hp-route-pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 6px; background: var(--paper); border: 1px solid var(--line-strong); font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.62); letter-spacing: .06em; text-transform: uppercase; }
@@ -198,7 +197,7 @@ export default function DispatchPage() {
         @media (max-width: 560px) { .hp-route-caps { grid-template-columns: 1fr; } }
         .hp-route-cap { background: var(--paper); padding: 32px 28px; transition: background .3s ease; }
         .hp-route-cap:hover { background: var(--paper-3); }
-        .hp-cap-num { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--indigo); letter-spacing: .1em; font-weight: 500; }
+        .hp-cap-num { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 15px; color: var(--indigo); }
         .hp-cap-h { font-size: 18px; font-weight: 500; letter-spacing: -.02em; margin: 14px 0 8px; color: var(--ink); }
         .hp-cap-p { font-size: 13px; color: var(--muted); line-height: 1.6; }
         .dp-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--line); }
@@ -208,7 +207,7 @@ export default function DispatchPage() {
         .dp-btn-ghost:hover { text-decoration: underline; }
         .faq-section { padding: 100px 0 120px; background: var(--paper-2); border-top: 1px solid var(--line); }
         .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 600; color: var(--ink); margin-top: 20px; max-width: 24ch; }
-        .faq-h2 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
+        .faq-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; margin-top: 48px; }
         .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
         .faq-q { font-size: 17px; font-weight: 500; letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }

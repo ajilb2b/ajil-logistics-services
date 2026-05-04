@@ -25,9 +25,9 @@ export default function JoinPage() {
 
       <header className="jn-hero">
         <div className="hp-container">
-          <span className="hp-section-tag">05 · Join Us</span>
+          <span className="hp-section-tag">Join Us</span>
           <h1 className="jn-h1">Two Paths, <span className="jn-accent">One Network</span>.</h1>
-          <p className="jn-lead">Whether you move goods or have goods to move — Ajil is hiring, partnering and onboarding every week across Qatar &amp; UAE.</p>
+          <p className="jn-lead">Whether you move goods or have goods to move, Ajil is hiring, partnering and onboarding every week across Qatar &amp; UAE.</p>
         </div>
       </header>
 
@@ -43,16 +43,16 @@ export default function JoinPage() {
                 </div>
                 <span className="hp-join-eyebrow">For Riders &amp; Drivers</span>
                 <h3 className="hp-join-title">Drive With Ajil.<br /><span className="jn-accent">Earn Every Day.</span></h3>
-                <p className="hp-join-desc">Bikes, cars and vans — owned or rented. Daily routes, weekly payouts, performance bonuses, and a network big enough to keep you moving every shift.</p>
+                <p className="hp-join-desc">Bikes, cars and vans, owned or rented. Daily routes, weekly payouts, performance bonuses, and a network big enough to keep you moving every shift.</p>
                 <ul className="hp-join-perks">
-                  {["Weekly Payouts In QAR / AED", "Daily Stacked Routes — Earn More Per Hour", "Bike, Vehicle & Fuel Support", "Health Insurance & Visa Support", "Performance Bonuses Every Month"].map((perk) => (
+                  {["Weekly Payouts In QAR / AED", "Daily Stacked Routes, Earn More Per Hour", "Bike, Vehicle & Fuel Support", "Health Insurance & Visa Support", "Performance Bonuses Every Month"].map((perk) => (
                     <li key={perk}><span className="hp-perk-dot" />{perk}</li>
                   ))}
                 </ul>
                 <div className="hp-join-actions">
-                  <a href="https://wa.me/97400000000?text=Hi%20Ajil%20-%20I%20want%20to%20join%20as%20a%20driver" className="hp-join-btn hp-btn-wa">
+                  <a href="https://wa.me/97441404004?text=Hi%20Ajil%20-%20I%20want%20to%20join%20as%20a%20driver" className="hp-join-btn hp-btn-wa">
                     <WaSvg />
-                    <span><small>WhatsApp Us</small><strong>Apply In 60 Seconds</strong></span>
+                    <span><small>WhatsApp Us</small><strong>Start Your Application</strong></span>
                   </a>
                   <a href="/driver-application" className="hp-join-btn hp-btn-form">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
@@ -72,14 +72,14 @@ export default function JoinPage() {
                 </div>
                 <span className="hp-join-eyebrow">For Businesses</span>
                 <h3 className="hp-join-title">Move Your Goods.<br /><span className="jn-accent">Move Faster.</span></h3>
-                <p className="hp-join-desc">Whether you ship 100 or 100,000 deliveries a month — book a working session with our logistics team. We&apos;ll show you which service model fits and what it would cost against your real numbers.</p>
+                <p className="hp-join-desc">Whether you ship 100 or 100,000 deliveries a month, book a working session with our logistics team. We&apos;ll show you which service model fits and what it would cost against your real numbers.</p>
                 <ul className="hp-join-perks">
-                  {["Same-Day & Scheduled Coverage · Qatar & UAE", "Pricing Built Around Your Volume", "Onboarded In 14 Days Or Less", "Live Visibility & Branded Tracking Pages", "Named Account Manager From Day One"].map((perk) => (
+                  {["Same-Day & Scheduled Coverage · Qatar & UAE", "Pricing Built Around Your Volume", "Rapid Onboarding & Dedicated Setup Support", "Live Visibility & Branded Tracking Pages", "Named Account Manager From Day One"].map((perk) => (
                     <li key={perk}><span className="hp-perk-dot hp-perk-dot-client" />{perk}</li>
                   ))}
                 </ul>
                 <div className="hp-join-actions">
-                  <a href="https://wa.me/97400000000?text=Hi%20Ajil%20-%20I'd%20like%20to%20discuss%20logistics%20for%20my%20business" className="hp-join-btn hp-btn-wa">
+                  <a href="https://wa.me/97441404004?text=Hi%20Ajil%20-%20I'd%20like%20to%20discuss%20logistics%20for%20my%20business" className="hp-join-btn hp-btn-wa">
                     <WaSvg />
                     <span><small>WhatsApp Sales</small><strong>Get A Quote Today</strong></span>
                   </a>
@@ -100,13 +100,13 @@ export default function JoinPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
+        .hp-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.in { opacity: 1; transform: none; }
 
         .jn-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
         .jn-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .jn-accent { color: #2D2BE0; }
+        .jn-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .jn-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 54ch; line-height: 1.7; }
 
         .jn-section { background: var(--paper-2); border-top: 1px solid var(--line); padding: 100px 0 140px; }
@@ -120,7 +120,7 @@ export default function JoinPage() {
         .hp-join-icon { width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: var(--paper-3); border: 1px solid var(--line-strong); color: var(--ink); }
         .hp-join-icon-driver { color: var(--ink); }
         .hp-join-icon-client { color: var(--ink); }
-        .hp-join-eyebrow { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; color: rgba(27,26,104,.42); }
+        .hp-join-eyebrow { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; letter-spacing: .01em; margin-bottom: 12px; color: rgba(27,26,104,.42); }
         .hp-join-title { font-size: clamp(26px, 3.5vw, 40px); font-weight: 600; line-height: 1.1; letter-spacing: -.03em; margin-bottom: 16px; color: var(--ink); }
         .hp-join-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 24px; max-width: 44ch; }
         .hp-join-perks { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; border-top: 1px solid var(--line); padding-top: 20px; }

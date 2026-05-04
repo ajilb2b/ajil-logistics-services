@@ -87,10 +87,10 @@ export default function TermsPage() {
               <h2 className="leg-h2">2. Scope of Services</h2>
               <p>Ajil provides four primary service models across Qatar and UAE:</p>
               <ul>
-                <li><strong>Logistics Software Licensing</strong> — access to the Ajil Dispatch TMS, WMS, driver apps, and live control tower under a software licence agreement.</li>
-                <li><strong>On-Demand Logistics Network</strong> — pay-per-delivery access to Ajil&rsquo;s rider and vehicle network on a variable-volume basis.</li>
-                <li><strong>Dedicated Logistics</strong> — a ring-fenced fleet and warehouse operation branded to the Client, operating under agreed service level agreements (&ldquo;SLAs&rdquo;).</li>
-                <li><strong>Fully Managed Operations</strong> — Ajil assumes full operational responsibility for the Client&rsquo;s logistics function, including network design, fleet, staff, and a named account manager.</li>
+                <li><strong>Logistics Software Licensing:</strong> access to the Ajil Dispatch TMS, WMS, driver apps, and live control tower under a software licence agreement.</li>
+                <li><strong>On-Demand Logistics Network:</strong> pay-per-delivery access to Ajil&rsquo;s rider and vehicle network on a variable-volume basis.</li>
+                <li><strong>Dedicated Logistics:</strong> a ring-fenced fleet and warehouse operation branded to the Client, operating under agreed service level agreements (&ldquo;SLAs&rdquo;).</li>
+                <li><strong>Fully Managed Operations:</strong> Ajil assumes full operational responsibility for the Client&rsquo;s logistics function, including network design, fleet, staff, and a named account manager.</li>
               </ul>
               <p>The specific scope, pricing, and SLAs applicable to a Client are set out in the executed Service Agreement or Statement of Work (&ldquo;SOW&rdquo;) between the parties. In the event of conflict between these Terms and a SOW, the SOW prevails.</p>
             </section>
@@ -172,7 +172,7 @@ export default function TermsPage() {
                 <p><strong>{COMPANY}</strong></p>
                 <p>{ADDRESS}</p>
                 <p>Email: <a href={`mailto:${EMAIL}`} className="leg-inline-link">{EMAIL}</a></p>
-                <p>Phone: <a href="tel:+97477058594" className="leg-inline-link">+974 7705 8594</a></p>
+                <p>Phone: <a href="tel:+97441404004" className="leg-inline-link">+974 4140 4004</a></p>
               </div>
             </section>
 
@@ -218,7 +218,7 @@ export default function TermsPage() {
         .leg-article ul { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
         .leg-article li { font-size: 15px; color: var(--muted); line-height: 1.7; }
         .leg-article strong { color: var(--ink); font-weight: 600; }
-        .leg-inline-link { color: #2D2BE0; text-decoration: underline; text-underline-offset: 3px; }
+        .leg-inline-link { color: #2D2BE0; text-decoration: underline; text-underline-offset: 3px; font-family: var(--font-instrument), serif; font-style: italic; }
         .leg-contact-block { background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: 8px; padding: 24px 28px; margin-top: 18px; }
         .leg-contact-block p { margin-bottom: 6px; font-size: 14px; }
         .leg-contact-block p:last-child { margin-bottom: 0; }

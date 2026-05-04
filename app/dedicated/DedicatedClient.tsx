@@ -19,9 +19,9 @@ export default function DedicatedPage() {
 
       <header className="dd-hero">
         <div className="hp-container">
-          <span className="hp-section-tag">03 · Dedicated Logistics</span>
-          <h1 className="dd-h1">Your Operation, <em>Engineered</em>.</h1>
-          <p className="dd-lead">When the on-demand network can&apos;t deliver the SLA, brand experience or unit economics you need — Ajil designs and operates a dedicated logistics arm, exclusively for your business.</p>
+          <span className="hp-section-tag">Dedicated Logistics</span>
+          <h1 className="dd-h1">Your Operation, <em>Engineered</em><span style={{color:'#2D2BE0'}}>.</span></h1>
+          <p className="dd-lead">When the on-demand network can&apos;t deliver the SLA, brand experience or unit economics you need, Ajil designs and operates a dedicated logistics arm exclusively for your business.</p>
         </div>
       </header>
 
@@ -39,7 +39,6 @@ export default function DedicatedPage() {
                   { n: "04", title: "Single Accountability", desc: "One Ajil leadership team owns your operation end-to-end with a named General Manager." },
                 ].map((item) => (
                   <li key={item.n}>
-                    <span className="hp-ded-dot">{item.n}</span>
                     <div>
                       <strong>{item.title}</strong>
                       <span>{item.desc}</span>
@@ -109,20 +108,20 @@ export default function DedicatedPage() {
       <section className="faq-section">
         <div className="hp-container">
           <span className="hp-section-tag">FAQ</span>
-          <h2 className="faq-h2">Common questions about <em>dedicated logistics</em>.</h2>
+          <h2 className="faq-h2">Common questions about <em>dedicated logistics</em><span style={{color:'#2D2BE0'}}>.</span></h2>
           <div className="faq-list">
             {[
               {
                 q: "What is Ajil Dedicated Logistics?",
-                a: "Ajil Dedicated Logistics is a ringfenced delivery operation that runs exclusively for your business. Ajil designs the network, sources the warehouse and dark store footprint, hires and manages the riders, and operates a branded delivery arm under your name — with a named General Manager accountable to your SLAs.",
+                a: "Ajil Dedicated Logistics is a ringfenced delivery operation that runs exclusively for your business. Ajil designs the network, sources the warehouse and dark store footprint, hires and manages the riders, and operates a branded delivery arm under your name, with a named General Manager accountable to your SLAs.",
               },
               {
                 q: "What is a dark store in logistics?",
-                a: "A dark store is a fulfilment hub closed to the public and optimised for rapid picking and dispatch. Ajil operates dark stores as micro-fulfilment nodes in high-density catchments — enabling 15-minute delivery SLAs for grocery, pharmacy and quick-commerce operators across Qatar and UAE.",
+                a: "A dark store is a fulfilment hub closed to the public and optimised for rapid picking and dispatch. Ajil operates dark stores as micro-fulfilment nodes in high-density catchments, enabling 15-minute delivery SLAs for grocery, pharmacy and quick-commerce operators across Qatar and UAE.",
               },
               {
                 q: "How long does it take to set up a dedicated logistics operation?",
-                a: "A standard dedicated deployment — network design, hub and dark store procurement, rider hiring and go-live — takes 8 to 12 weeks depending on geographic footprint and vehicle mix required.",
+                a: "A standard dedicated deployment covers network design, hub and dark store procurement, rider hiring and go-live. It takes 8 to 12 weeks depending on geographic footprint and vehicle mix required.",
               },
               {
                 q: "Who is accountable for the dedicated operation?",
@@ -130,7 +129,7 @@ export default function DedicatedPage() {
               },
               {
                 q: "Can Ajil white-label the operation under our brand?",
-                a: "Yes. The entire operation is white-labelled to your identity: riders wear your uniform, vehicles carry your livery, customer notifications are sent in your tone of voice, and all customer-facing touchpoints — tracking pages, SMS, email — are branded to your company.",
+                a: "Yes. The entire operation is white-labelled to your identity: riders wear your uniform, vehicles carry your livery, customer notifications are sent in your tone of voice, and all customer-facing touchpoints (tracking pages, SMS, email) are branded to your company.",
               },
             ].map((item) => (
               <div key={item.q} className="faq-item">
@@ -147,27 +146,27 @@ export default function DedicatedPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
+        .hp-section-tag { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.in { opacity: 1; transform: none; }
 
         .dd-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
         .dd-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .dd-h1 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
+        .dd-h1 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .dd-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 58ch; line-height: 1.7; }
 
         .dd-section { background: var(--paper-2); border-top: 1px solid var(--line); padding: 100px 0 140px; }
         .hp-ded-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
         @media (max-width: 980px) { .hp-ded-grid { grid-template-columns: 1fr; gap: 48px; } }
         .hp-ded-h { font-size: clamp(36px,4.5vw,60px); line-height: 1.04; letter-spacing: -.035em; font-weight: 600; margin-bottom: 24px; color: var(--ink); }
-        .hp-ded-h em { font-style: normal; font-weight: 600; color: #2D2BE0; }
+        .hp-ded-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .hp-ded-p { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 28px; max-width: 50ch; }
         .hp-ded-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
         .hp-ded-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 15px; color: var(--ink); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
         .hp-ded-list li:last-child { border-bottom: none; }
         .hp-ded-list strong { font-weight: 500; display: block; margin-bottom: 4px; color: var(--ink); }
         .hp-ded-list span { color: var(--muted); font-size: 13px; line-height: 1.55; }
-        .hp-ded-dot { flex-shrink: 0; width: 32px; height: 32px; border-radius: 6px; background: var(--paper-3); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: rgba(27,26,104,.5); font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; }
+        .hp-ded-dot { flex-shrink: 0; width: 32px; height: 32px; border-radius: 6px; background: var(--paper-3); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: rgba(27,26,104,.5); font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 15px; }
         .hp-ded-vis { border: 1px solid var(--line-strong); border-radius: 10px; background: #fff; padding: 32px; position: relative; overflow: hidden; }
         .hp-ded-label { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 18px; }
         .hp-ded-name { font-size: 18px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 24px; color: var(--ink); }
@@ -184,7 +183,7 @@ export default function DedicatedPage() {
         .dd-btn-ghost:hover { opacity: 1; }
         .faq-section { padding: 100px 0 120px; background: #fff; border-top: 1px solid var(--line); }
         .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 600; color: var(--ink); margin-top: 20px; max-width: 24ch; }
-        .faq-h2 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
+        .faq-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
         .faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; margin-top: 48px; }
         .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
         .faq-q { font-size: 17px; font-weight: 500; letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }

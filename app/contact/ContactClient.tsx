@@ -24,7 +24,7 @@ const channels = [
     ),
     label: "Sales line · Qatar & UAE",
     value: "+974 77058594",
-    href: "tel:+97477058594",
+    href: "tel:+97441404004",
   },
 ];
 
@@ -102,7 +102,7 @@ export default function ContactPage() {
             <div className="ct-rail">
               {/* Head Office */}
               <div style={{ paddingBottom: 36, borderBottom: "1px solid var(--ink-line)" }}>
-                <h4 style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 14 }}>
+                <h4 style={{ fontFamily: "var(--font-instrument), serif", fontStyle: "italic", fontWeight: 400, fontSize: 14, color: "var(--text-muted)", letterSpacing: ".01em", marginBottom: 14 }}>
                   Head Office
                 </h4>
                 <div style={{ fontSize: 18, fontWeight: 600, color: "var(--ink)", lineHeight: 1.2, letterSpacing: "-0.015em", marginBottom: 8 }}>
@@ -121,7 +121,7 @@ export default function ContactPage() {
 
               {/* Direct Channels */}
               <div style={{ paddingBottom: 36, borderBottom: "1px solid var(--ink-line)" }}>
-                <h4 style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 14 }}>
+                <h4 style={{ fontFamily: "var(--font-instrument), serif", fontStyle: "italic", fontWeight: 400, fontSize: 14, color: "var(--text-muted)", letterSpacing: ".01em", marginBottom: 14 }}>
                   Direct Channels
                 </h4>
                 {channels.map((ch) => (
@@ -139,7 +139,7 @@ export default function ContactPage() {
 
               {/* Specialist Lines */}
               <div style={{ paddingBottom: 36, borderBottom: "1px solid var(--ink-line)" }}>
-                <h4 style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 14 }}>
+                <h4 style={{ fontFamily: "var(--font-instrument), serif", fontStyle: "italic", fontWeight: 400, fontSize: 14, color: "var(--text-muted)", letterSpacing: ".01em", marginBottom: 14 }}>
                   Specialist Lines
                 </h4>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -154,7 +154,7 @@ export default function ContactPage() {
 
               {/* Regional Offices */}
               <div>
-                <h4 style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 14 }}>
+                <h4 style={{ fontFamily: "var(--font-instrument), serif", fontStyle: "italic", fontWeight: 400, fontSize: 14, color: "var(--text-muted)", letterSpacing: ".01em", marginBottom: 14 }}>
                   Regional Offices
                 </h4>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -322,9 +322,9 @@ export default function ContactPage() {
 
       <style>{`
         .ajil-container { max-width: 1380px; margin: 0 auto; padding: 0 40px; }
-        .ct-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; margin-bottom: 20px; }
+        .ct-eyebrow { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; font-size: 14px; color: rgba(27,26,104,.42); letter-spacing: .01em; margin-bottom: 20px; }
         .ct-h1 { font-size: clamp(40px,6.5vw,88px); font-weight: 700; line-height: .95; letter-spacing: -.04em; color: var(--ink); margin: 0 0 0; }
-        .ct-accent { color: #2D2BE0; }
+        .ct-accent { color: #2D2BE0; font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; }
         .ct-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; }
         .ct-rail { display: flex; flex-direction: column; gap: 36px; position: sticky; top: 96px; align-self: start; }
         .ct-row-resp { }
