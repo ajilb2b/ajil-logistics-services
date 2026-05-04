@@ -14,7 +14,7 @@ export default function Footer() {
               <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" width={140} height={46} style={{ objectFit: 'contain', objectPosition: 'left' }} />
             </div>
             <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 18, maxWidth: '34ch' }}>
-              Ajil Logistics Services is the end-to-end logistics partner for modern commerce across the GCC. Built in Doha. Deployed across Qatar, UAE, KSA, Kuwait, Bahrain and Oman.
+              Ajil Logistics Services is the end-to-end logistics partner for modern commerce. Built in Doha. Deployed across Qatar and UAE.
             </p>
             <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
               <input
@@ -115,10 +115,6 @@ export default function Footer() {
               {[
                 { label: 'Qatar', href: '/qatar' },
                 { label: 'UAE', href: '/uae' },
-                { label: 'Saudi Arabia', href: '/saudi-arabia' },
-                { label: 'Kuwait', href: '/kuwait' },
-                { label: 'Bahrain', href: '/bahrain' },
-                { label: 'Oman', href: '/oman' },
               ].map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className="foot-link">{item.label}</a>

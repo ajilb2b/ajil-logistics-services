@@ -25,8 +25,8 @@ const clients = [
 const signals = [
   { num: "23", unit: "%",      label: "Avg. Cost Reduction" },
   { num: "98", unit: ".4%",    label: "SLA Adherence" },
-  { num: "14", unit: " hubs",  label: "Across The GCC" },
-  { num: "6",  unit: " mkts",  label: "QA · UAE · KSA · KW · BH · OM" },
+  { num: "9",  unit: " hubs",  label: "Across Qatar & UAE" },
+  { num: "2",  unit: " mkts",  label: "QA · UAE" },
 ];
 
 const routeCaps = [
@@ -97,12 +97,8 @@ const whyCards = [
 ];
 
 const gccMarkets = [
-  { code: "QA", name: "Qatar",   hubs: 4, cities: "Doha · Lusail · Al Wakra",         note: "Headquarters & primary operations hub" },
-  { code: "UAE", name: "UAE",    hubs: 5, cities: "Dubai · Abu Dhabi · Sharjah",       note: "Largest fleet network in the group" },
-  { code: "KSA", name: "Saudi Arabia", hubs: 3, cities: "Riyadh · Jeddah · Dammam",   note: "Rapid expansion across major metro areas" },
-  { code: "KW",  name: "Kuwait", hubs: 1, cities: "Kuwait City · Salmiya",             note: "On-demand and dedicated capacity" },
-  { code: "BH",  name: "Bahrain", hubs: 1, cities: "Manama · Riffa",                  note: "Scheduled and same-day coverage" },
-  { code: "OM",  name: "Oman",   hubs: 1, cities: "Muscat · Seeb",                    note: "Growing network with local teams" },
+  { code: "QA", name: "Qatar", hubs: 4, cities: "Doha · Lusail · Al Wakra",     note: "Headquarters & primary operations hub" },
+  { code: "UAE", name: "UAE",  hubs: 5, cities: "Dubai · Abu Dhabi · Sharjah",  note: "Largest fleet network in the group" },
 ];
 
 /* ─── WA SVG ─── */
@@ -136,8 +132,7 @@ export default function HomePage() {
         {/* Center content */}
         <div className="hp-hero-inner">
           <div className="hp-hero-eyebrow">
-            <span className="hp-live-dot" />
-            Operating across 6 GCC markets
+            Last-mile &amp; distribution infrastructure &mdash; Qatar &amp; UAE
           </div>
           <h1 className="hp-hero-h">
             Logistics operations,<br />
@@ -145,8 +140,7 @@ export default function HomePage() {
           </h1>
           <p className="hp-hero-sub">
             Ajil delivers the dispatch intelligence, operating software, and physical
-            infrastructure that moves modern commerce across Qatar, UAE, Saudi Arabia,
-            Kuwait, Bahrain, and Oman.
+            infrastructure that moves modern commerce across Qatar and UAE.
           </p>
           <div className="hp-hero-actions">
             <a href="#cta" className="hp-btn-hero">
@@ -221,7 +215,7 @@ export default function HomePage() {
                 tag: "The Network",
                 title: "Tap Our Existing Infrastructure",
                 icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>,
-                desc: "Tap our existing riders, vehicles and warehouses across 6 GCC markets on a pay-per-delivery basis. Software included. No upfront investment.",
+                desc: "Tap our existing riders, vehicles and warehouses across Qatar and UAE on a pay-per-delivery basis. Software included. No upfront investment.",
                 points: ["Pay-per-delivery, no minimum", "Flex up during peak, scale down after", "Operational from day one"],
                 cta: "Access the network →",
                 href: "/services",
@@ -587,7 +581,7 @@ export default function HomePage() {
               </a>
               <a href="#" className="hp-drivers-link">Driver application form →</a>
             </div>
-            <p className="hp-drivers-foot">Now Hiring · Doha · Dubai · Riyadh · Kuwait</p>
+            <p className="hp-drivers-foot">Now Hiring · Doha · Dubai</p>
           </div>
         </div>
       </section>
@@ -623,8 +617,7 @@ export default function HomePage() {
         /* ── HERO ── */
         .hp-hero { background: #fff; display: flex; flex-direction: column; border-bottom: 1px solid rgba(27,26,104,.1); }
         .hp-hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 140px clamp(24px, 6vw, 120px) 80px; max-width: 900px; margin: 0 auto; width: 100%; }
-        .hp-hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: rgba(27,26,104,.45); margin-bottom: 32px; text-transform: uppercase; animation: fadeUp .5s both; }
-        .hp-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #0E9D6E; flex-shrink: 0; }
+        .hp-hero-eyebrow { display: inline-flex; align-items: center; font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; color: rgba(27,26,104,.42); margin-bottom: 28px; text-transform: uppercase; animation: fadeUp .5s both; }
         .hp-hero-h { font-size: clamp(42px, 5.5vw, 80px); line-height: 1.08; letter-spacing: -.03em; font-weight: 700; color: #1B1A68; margin: 0 0 28px; animation: fadeUp .6s .08s both; }
         .hp-hero-accent { color: #2D2BE0; }
         .hp-hero-sub { font-size: clamp(15px, 1.3vw, 18px); color: rgba(27,26,104,.55); max-width: 52ch; line-height: 1.7; font-weight: 400; margin-bottom: 44px; animation: fadeUp .6s .16s both; }
