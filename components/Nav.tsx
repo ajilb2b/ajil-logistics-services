@@ -12,7 +12,7 @@ export default function Nav() {
         <div className="ajil-nav-inner">
           {/* Logo */}
           <Link href="/" className="ajil-logo">
-            <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" height={50} width={150} style={{ objectFit: 'contain' }} priority />
+            <Image src="/ajil-logo-transparent.png" alt="Ajil Logistics Services" height={30} width={92} style={{ objectFit: 'contain' }} priority />
           </Link>
 
           {/* Center nav links */}
@@ -91,53 +91,53 @@ export default function Nav() {
       <style>{`
         .ajil-nav {
           position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-          padding: clamp(8px, 1.4vh, 18px) clamp(32px, 5vw, 80px);
+          padding: 7px clamp(24px, 4vw, 64px);
         }
         .ajil-nav-inner {
           display: flex; align-items: center; justify-content: space-between;
-          padding: clamp(1px, 0.2vh, 4px) clamp(14px, 1.5vw, 20px) clamp(1px, 0.2vh, 4px) clamp(10px, 1.2vw, 16px);
+          padding: 5px 16px 5px 12px;
           max-width: 1440px; margin: 0 auto;
-          gap: clamp(14px, 2vw, 24px);
-          background: rgba(255,255,255,.95);
+          gap: clamp(12px, 1.8vw, 20px);
+          background: rgba(255,255,255,.96);
           backdrop-filter: blur(20px) saturate(180%);
           -webkit-backdrop-filter: blur(20px) saturate(180%);
           border-radius: 999px;
-          border: 1px solid rgba(27,26,104,.08);
-          box-shadow: 0 4px 24px -6px rgba(27,26,104,.12), 0 1px 0 rgba(255,255,255,.8) inset;
+          border: 1px solid rgba(27,26,104,.09);
+          box-shadow: 0 2px 16px -4px rgba(27,26,104,.12), 0 1px 0 rgba(255,255,255,.8) inset;
           transition: box-shadow .3s ease;
         }
         .ajil-nav-inner:hover {
-          box-shadow: 0 8px 32px -6px rgba(27,26,104,.18), 0 1px 0 rgba(255,255,255,.8) inset;
+          box-shadow: 0 6px 24px -4px rgba(27,26,104,.16), 0 1px 0 rgba(255,255,255,.8) inset;
         }
         .ajil-logo {
           display: inline-flex; align-items: center;
           flex-shrink: 0;
         }
         .ajil-nav-links {
-          display: flex; gap: clamp(18px, 2.4vw, 32px); align-items: center;
-          font-size: clamp(13px, 1vw, 14px); font-weight: 500; color: var(--ink);
+          display: flex; gap: clamp(14px, 1.8vw, 26px); align-items: center;
+          font-size: 13px; font-weight: 500; color: var(--ink);
         }
-        .ajil-nav-links a { transition: opacity .2s ease; opacity: .65; }
+        .ajil-nav-links a { transition: opacity .2s ease; opacity: .62; }
         .ajil-nav-links a:hover { opacity: 1; }
-        .ajil-nav-cta { display: flex; gap: clamp(7px, 0.8vw, 10px); align-items: center; flex-shrink: 0; }
+        .ajil-nav-cta { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
         .ajil-btn-primary {
-          display: inline-flex; align-items: center; gap: 7px;
-          padding: clamp(7px, 0.9vh, 10px) clamp(14px, 1.5vw, 20px);
-          border-radius: 999px; font-size: clamp(13px, 1vw, 14px); font-weight: 600;
+          display: inline-flex; align-items: center; gap: 6px;
+          padding: 6px 14px;
+          border-radius: 999px; font-size: 13px; font-weight: 600;
           background: #1B1A68; color: #fff;
-          box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 6px 20px -8px rgba(27,26,104,.55);
-          transition: all .25s cubic-bezier(.2,.7,.2,1); white-space: nowrap;
+          box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 4px 14px -6px rgba(27,26,104,.5);
+          transition: all .2s cubic-bezier(.2,.7,.2,1); white-space: nowrap;
         }
         .ajil-btn-primary:hover {
           transform: translateY(-1px);
-          box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 12px 28px -8px rgba(27,26,104,.7);
+          box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 8px 20px -6px rgba(27,26,104,.65);
           background: #14136B;
         }
-        .ajil-btn-primary svg { transition: transform .25s ease; }
+        .ajil-btn-primary svg { transition: transform .2s ease; }
         .ajil-btn-primary:hover svg { transform: translateX(3px); }
         .ajil-menu-btn {
           display: none;
-          width: clamp(30px, 3vw, 36px); height: clamp(30px, 3vw, 36px);
+          width: 28px; height: 28px;
           border-radius: 999px; border: 1px solid var(--line-strong);
           background: transparent; cursor: pointer; color: var(--ink);
           align-items: center; justify-content: center;

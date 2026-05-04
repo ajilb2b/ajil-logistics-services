@@ -22,6 +22,13 @@ const clients = [
   { name: "Ninja",            logo: "/logos/ninja.png" },
 ];
 
+const signals = [
+  { num: "23", unit: "%",      label: "Avg. Cost Reduction" },
+  { num: "98", unit: ".4%",    label: "SLA Adherence" },
+  { num: "14", unit: " hubs",  label: "Across The GCC" },
+  { num: "6",  unit: " mkts",  label: "QA · UAE · KSA · KW · BH · OM" },
+];
+
 const routeCaps = [
   { n: "/ 01", title: "Stacking Logic",     desc: "We bundle multiple deliveries onto a single route to drive down cost per drop without breaking SLA." },
   { n: "/ 02", title: "Live Re-Routing",    desc: "Routes adjust continuously as traffic, breakdowns and new orders enter the network." },
@@ -125,111 +132,44 @@ export default function HomePage() {
           SECTION 1 · HERO
       ══════════════════════════════════════════ */}
       <header className="hp-hero">
+
+        {/* Center content */}
         <div className="hp-hero-inner">
-
-          {/* LEFT: text */}
-          <div className="hp-hero-text">
-            <span className="hp-hero-eyebrow">
-              <span className="hp-live-dot" />
-              Live Across 6 GCC Markets
-            </span>
-            <h1 className="hp-hero-h">
-              End-to-End Logistics<br />
-              Infrastructure for<br />
-              <em>Modern Commerce</em>.
-            </h1>
-            <p className="hp-hero-sub">
-              Ajil Logistics Services builds the dispatch operation, the operating software, and the
-              physical infrastructure that powers modern commerce — across Qatar, UAE, Saudi Arabia,
-              Kuwait, Bahrain and Oman.
-            </p>
-
-            {/* Stats row — above CTAs */}
-            <div className="hp-hero-stats">
-              {[
-                { val: "6",     label: "GCC Markets" },
-                { val: "14+",   label: "Active Hubs" },
-                { val: "98.4%", label: "SLA Adherence" },
-                { val: "60+",   label: "Brands Served" },
-              ].map((s) => (
-                <div className="hp-stat-item" key={s.label}>
-                  <div className="hp-stat-val">{s.val}</div>
-                  <div className="hp-stat-lbl">{s.label}</div>
-                </div>
-              ))}
-            </div>
-
-            <div className="hp-hero-actions">
-              <a href="/contact" className="hp-btn-primary">
-                Talk To Our Team
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-              </a>
-              <a href="#services" className="hp-btn-ghost">See Our Services</a>
-            </div>
+          <div className="hp-hero-eyebrow">
+            <span className="hp-live-dot" />
+            Operating across 6 GCC markets
           </div>
-
-          {/* RIGHT: GCC network visual */}
-          <div className="hp-hero-visual">
-            <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="hp-map-svg">
-              <circle cx="268" cy="120" r="80" fill="rgba(45,43,224,.05)"/>
-              <path d="M 88 228 C 150 170 215 144 268 120" stroke="rgba(27,26,104,.32)" strokeWidth="1.6" strokeDasharray="8 5"/>
-              <path d="M 268 120 C 330 104 385 126 418 158" stroke="rgba(27,26,104,.32)" strokeWidth="1.6" strokeDasharray="8 5"/>
-              <path d="M 418 158 C 436 202 440 242 432 276" stroke="rgba(27,26,104,.2)" strokeWidth="1.3" strokeDasharray="6 5"/>
-              <path d="M 88 228 C 148 250 202 262 252 268" stroke="rgba(27,26,104,.2)" strokeWidth="1.3" strokeDasharray="6 5"/>
-              <path d="M 252 268 C 312 272 365 264 402 256" stroke="rgba(27,26,104,.15)" strokeWidth="1.1" strokeDasharray="5 6"/>
-              <path d="M 178 190 C 222 158 248 136 268 120" stroke="rgba(27,26,104,.13)" strokeWidth="1" strokeDasharray="5 7"/>
-              {/* KW hub */}
-              <circle cx="88" cy="228" r="28" fill="rgba(27,26,104,.07)"/>
-              <circle cx="88" cy="228" r="11" fill="rgba(27,26,104,.22)"/>
-              <circle cx="88" cy="228" r="4.5" fill="#1B1A68"/>
-              <text x="88" y="266" textAnchor="middle" fontFamily="monospace" fontSize="9.5" fill="rgba(27,26,104,.6)" fontWeight="700" letterSpacing="0.1em">KW</text>
-              {/* KSA hub */}
-              <circle cx="252" cy="268" r="20" fill="rgba(27,26,104,.07)"/>
-              <circle cx="252" cy="268" r="8" fill="rgba(27,26,104,.24)"/>
-              <circle cx="252" cy="268" r="3.5" fill="#2D2BE0"/>
-              <text x="252" y="294" textAnchor="middle" fontFamily="monospace" fontSize="9.5" fill="rgba(27,26,104,.6)" fontWeight="700" letterSpacing="0.1em">KSA</text>
-              {/* QA hub — main */}
-              <circle cx="268" cy="120" r="42" fill="rgba(45,43,224,.08)"/>
-              <circle cx="268" cy="120" r="18" fill="rgba(45,43,224,.28)"/>
-              <circle cx="268" cy="120" r="7.5" fill="#4A49E0"/>
-              <text x="268" y="96" textAnchor="middle" fontFamily="monospace" fontSize="9.5" fill="rgba(27,26,104,.65)" fontWeight="700" letterSpacing="0.1em">QA</text>
-              {/* BH hub */}
-              <circle cx="402" cy="256" r="18" fill="rgba(27,26,104,.07)"/>
-              <circle cx="402" cy="256" r="7" fill="rgba(27,26,104,.22)"/>
-              <circle cx="402" cy="256" r="3" fill="#3230A8"/>
-              <text x="402" y="280" textAnchor="middle" fontFamily="monospace" fontSize="9.5" fill="rgba(27,26,104,.6)" fontWeight="700" letterSpacing="0.1em">BH</text>
-              {/* UAE hub */}
-              <circle cx="418" cy="158" r="36" fill="rgba(45,43,224,.07)"/>
-              <circle cx="418" cy="158" r="14" fill="rgba(45,43,224,.26)"/>
-              <circle cx="418" cy="158" r="6" fill="#5A4BFF"/>
-              <text x="418" y="134" textAnchor="middle" fontFamily="monospace" fontSize="9.5" fill="rgba(27,26,104,.65)" fontWeight="700" letterSpacing="0.1em">UAE</text>
-              {/* OM hub */}
-              <circle cx="432" cy="276" r="15" fill="rgba(27,26,104,.06)"/>
-              <circle cx="432" cy="276" r="6" fill="rgba(27,26,104,.2)"/>
-              <circle cx="432" cy="276" r="2.5" fill="#1B1A68"/>
-              <text x="432" y="298" textAnchor="middle" fontFamily="monospace" fontSize="9.5" fill="rgba(27,26,104,.55)" fontWeight="700" letterSpacing="0.1em">OM</text>
-              {/* Animated packets */}
-              <circle className="hp-pkt hp-pkt-1" r="4.5" fill="#0E9D6E"/>
-              <circle className="hp-pkt hp-pkt-2" r="4" fill="#F5A623"/>
-              <circle className="hp-pkt hp-pkt-3" r="3.5" fill="#0E9D6E"/>
-              <circle className="hp-pkt hp-pkt-4" r="3.5" fill="#E05A4A"/>
-            </svg>
-            {/* Floating metric cards */}
-            <div className="hp-intel-card" style={{top:"18%",left:"4%",animationDelay:".2s"}}>
-              <div className="hp-icard-label">Active Routes</div>
-              <div className="hp-icard-val">2,847</div>
-            </div>
-            <div className="hp-intel-card" style={{top:"32%",right:"2%",animationDelay:".35s"}}>
-              <div className="hp-icard-label">SLA Adherence</div>
-              <div className="hp-icard-val">98.4%</div>
-            </div>
-            <div className="hp-intel-card" style={{bottom:"16%",right:"6%",animationDelay:".5s"}}>
-              <div className="hp-icard-label">Cost / Drop</div>
-              <div className="hp-icard-val">−23%</div>
-            </div>
+          <h1 className="hp-hero-h">
+            Logistics operations,<br />
+            <span className="hp-hero-accent">built for the GCC.</span>
+          </h1>
+          <p className="hp-hero-sub">
+            Ajil delivers the dispatch intelligence, operating software, and physical
+            infrastructure that moves modern commerce across Qatar, UAE, Saudi Arabia,
+            Kuwait, Bahrain, and Oman.
+          </p>
+          <div className="hp-hero-actions">
+            <a href="#cta" className="hp-btn-hero">
+              Talk to a logistics architect
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/dispatch" className="hp-btn-hero2">
+              See how dispatch works
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
           </div>
-
         </div>
+
+        {/* Stats bar */}
+        <div className="hp-hero-stats">
+          {signals.map((s) => (
+            <div className="hp-stat-item" key={s.label}>
+              <div className="hp-stat-num">{s.num}<span className="hp-stat-unit">{s.unit}</span></div>
+              <div className="hp-stat-lbl">{s.label}</div>
+            </div>
+          ))}
+        </div>
+
       </header>
 
       {/* ══════════════════════════════════════════
@@ -684,47 +624,43 @@ export default function HomePage() {
         .hp-btn-ghost { background: transparent; color: var(--ink); font-weight: 500; padding: 14px 24px; border-radius: 999px; font-size: 15px; border: 1px solid var(--line-strong); display: inline-flex; align-items: center; gap: 10px; transition: all .25s ease; white-space: nowrap; }
         .hp-btn-ghost:hover { background: var(--paper-3); border-color: var(--line-dark); }
 
-        /* ════════════════════
-           SECTION 1 · HERO
-        ════════════════════ */
-        .hp-hero { position: relative; background: #fff; overflow: hidden; border-bottom: 1px solid var(--line); }
-        .hp-hero-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: 100svh; width: 100%; }
-        .hp-hero-text { padding: 160px 40px 100px clamp(28px, 8vw, 140px); }
+        /* ── HERO ── */
+        .hp-hero { background: #fff; display: flex; flex-direction: column; border-bottom: 1px solid rgba(27,26,104,.1); }
+        .hp-hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 140px clamp(24px, 6vw, 120px) 80px; max-width: 900px; margin: 0 auto; width: 100%; }
 
-        .hp-hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; animation: fadeUp .6s both; }
-        .hp-live-dot { width: 7px; height: 7px; border-radius: 50%; background: #0E9D6E; box-shadow: 0 0 12px rgba(14,157,110,.75); animation: pulse 2.5s infinite; flex-shrink: 0; }
+        .hp-hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: .08em; color: rgba(27,26,104,.45); margin-bottom: 32px; text-transform: uppercase; animation: fadeUp .5s both; }
+        .hp-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #0E9D6E; flex-shrink: 0; }
 
-        .hp-hero-h { font-size: clamp(40px, 4.6vw, 76px); line-height: .97; letter-spacing: -.045em; font-weight: 600; color: var(--ink); margin: 0 0 28px; animation: fadeUp .8s .1s both; }
-        .hp-hero-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; background: linear-gradient(115deg,#1B1A68 0%,#2D2BE0 48%,#5A4BFF 100%); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -.025em; }
+        .hp-hero-h { font-size: clamp(42px, 5.5vw, 80px); line-height: 1.08; letter-spacing: -.03em; font-weight: 700; color: #1B1A68; margin: 0 0 28px; animation: fadeUp .6s .08s both; }
+        .hp-hero-accent { color: #2D2BE0; }
 
-        .hp-hero-sub { font-size: clamp(15px, 1.2vw, 17px); color: var(--muted); max-width: 48ch; line-height: 1.7; font-weight: 400; margin-bottom: 40px; animation: fadeUp .8s .2s both; }
+        .hp-hero-sub { font-size: clamp(15px, 1.3vw, 18px); color: rgba(27,26,104,.55); max-width: 52ch; line-height: 1.7; font-weight: 400; margin-bottom: 44px; animation: fadeUp .6s .16s both; }
+        .hp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; animation: fadeUp .6s .24s both; }
 
-        /* Stats row — ABOVE the CTAs */
-        .hp-hero-stats { display: flex; gap: 0; flex-wrap: wrap; margin-bottom: 40px; animation: fadeUp .8s .28s both; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
-        .hp-stat-item { flex: 1; min-width: 100px; padding: 20px 24px; border-right: 1px solid var(--line); }
+        .hp-btn-hero { background: #1B1A68; color: #fff; font-weight: 600; padding: 13px 26px; border-radius: 8px; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; transition: background .15s ease; white-space: nowrap; }
+        .hp-btn-hero:hover { background: #2D2BE0; }
+        .hp-btn-hero2 { background: transparent; color: #1B1A68; font-weight: 500; padding: 13px 26px; border-radius: 8px; font-size: 15px; border: 1px solid rgba(27,26,104,.2); display: inline-flex; align-items: center; gap: 8px; transition: background .15s ease, border-color .15s ease; white-space: nowrap; }
+        .hp-btn-hero2:hover { background: rgba(27,26,104,.04); border-color: rgba(27,26,104,.35); }
+
+        /* Stats bar */
+        .hp-hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(27,26,104,.1); }
+        .hp-stat-item { display: flex; flex-direction: column; justify-content: center; padding: 32px 40px; border-right: 1px solid rgba(27,26,104,.1); animation: fadeUp .6s .32s both; }
         .hp-stat-item:last-child { border-right: none; }
-        .hp-stat-val { font-family: var(--font-instrument), serif; font-style: italic; font-size: 32px; line-height: 1; background: linear-gradient(115deg, var(--ink), #2D2BE0); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -.02em; }
-        .hp-stat-lbl { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .12em; margin-top: 6px; }
-        @media (max-width: 600px) { .hp-hero-stats { flex-direction: column; } .hp-stat-item { border-right: none; border-bottom: 1px solid var(--line); } .hp-stat-item:last-child { border-bottom: none; } }
+        .hp-stat-num { font-size: clamp(30px, 3.2vw, 44px); font-weight: 700; color: #1B1A68; line-height: 1; letter-spacing: -.025em; }
+        .hp-stat-unit { font-size: .5em; font-weight: 500; opacity: .5; }
+        .hp-stat-lbl { font-size: 11px; color: rgba(27,26,104,.4); margin-top: 8px; letter-spacing: .08em; font-weight: 500; text-transform: uppercase; }
 
-        .hp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp .8s .36s both; }
-
-        /* Right visual */
-        .hp-hero-visual { position: relative; height: 100%; display: flex; align-items: center; padding: 100px clamp(20px, 7vw, 120px) 60px 0; }
-        .hp-map-svg { width: 100%; height: auto; display: block; }
-        .hp-intel-card { position: absolute; z-index: 4; background: #fff; border: 1px solid rgba(27,26,104,.1); border-radius: 12px; padding: 14px 20px; min-width: 148px; animation: fadeUp .8s both; box-shadow: 0 2px 12px -2px rgba(27,26,104,.1), 0 8px 32px -8px rgba(27,26,104,.12); }
-        .hp-icard-label { font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(27,26,104,.42); margin-bottom: 6px; }
-        .hp-icard-val { font-family: var(--font-instrument), serif; font-style: italic; font-size: 30px; line-height: 1; color: var(--ink); letter-spacing: -.02em; }
-
-        /* Animated delivery packets */
-        .hp-pkt-1 { offset-path: path("M 88 228 C 150 170 215 144 268 120"); animation: pktMove 5.2s linear infinite; }
-        .hp-pkt-2 { offset-path: path("M 268 120 C 330 104 385 126 418 158"); animation: pktMove 4.1s 1.6s linear infinite; }
-        .hp-pkt-3 { offset-path: path("M 88 228 C 148 250 202 262 252 268"); animation: pktMove 6.8s 2.9s linear infinite; }
-        .hp-pkt-4 { offset-path: path("M 418 158 C 436 202 440 242 432 276"); animation: pktMove 5.6s 0.7s linear infinite; }
-        @keyframes pktMove { 0% { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
-
-        @media (max-width: 1100px) { .hp-hero-inner { grid-template-columns: 1fr; } .hp-hero-visual { min-height: 380px; padding: 20px 24px 60px; } }
-        @media (max-width: 640px) { .hp-hero-text { padding: 120px 20px 60px 20px; } }
+        @media (max-width: 860px) {
+          .hp-hero-inner { padding-top: 110px; padding-bottom: 60px; }
+          .hp-hero-stats { grid-template-columns: repeat(2, 1fr); }
+          .hp-stat-item:nth-child(2) { border-right: none; }
+          .hp-stat-item:nth-child(3) { border-top: 1px solid rgba(27,26,104,.1); }
+          .hp-stat-item:nth-child(4) { border-top: 1px solid rgba(27,26,104,.1); border-right: none; }
+        }
+        @media (max-width: 520px) {
+          .hp-hero-inner { padding-top: 90px; padding-bottom: 48px; }
+          .hp-stat-item { padding: 24px 20px; }
+        }
 
         /* ════════════════════════
            SECTION 2 · TRUST BAR
