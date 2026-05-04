@@ -378,24 +378,23 @@ export default function ProductsPage() {
 
         /* Hero */
         .pp-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
-        .pp-eyebrow { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--indigo); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; }
-        .pp-eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--indigo); }
+        .pp-eyebrow { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(27,26,104,.42); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; }
         .pp-h1 { font-size: clamp(44px, 5.5vw, 84px); line-height: .95; letter-spacing: -.045em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
-        .pp-h1 em, .pp-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; background: linear-gradient(115deg, #1B1A68, #5A4BFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .pp-h1 em, .pp-h2 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
         .pp-h2 { font-size: clamp(32px, 3.5vw, 56px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 20px; }
         .pp-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 54ch; line-height: 1.7; margin-bottom: 48px; }
         .pp-hero-stats { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
         .pp-stat { display: flex; align-items: baseline; gap: 8px; }
-        .pp-stat-n { font-family: var(--font-instrument), serif; font-style: italic; font-size: 36px; color: var(--ink); letter-spacing: -.03em; line-height: 1; }
+        .pp-stat-n { font-size: 36px; font-weight: 700; color: var(--ink); letter-spacing: -.03em; line-height: 1; }
         .pp-stat-l { font-size: 13px; color: var(--muted); }
         .pp-stat-div { width: 1px; height: 28px; background: var(--line-strong); flex-shrink: 0; }
 
         /* Sections */
         .pp-section { padding: 96px 0; background: #fff; border-bottom: 1px solid var(--line); }
         .pp-section-alt { background: var(--paper-2); }
-        .pp-section-label { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 40px; }
-        .pp-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-        .pp-dot-live { background: #0E9D6E; box-shadow: 0 0 8px rgba(14,157,110,.5); }
+        .pp-section-label { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(27,26,104,.42); margin-bottom: 40px; }
+        .pp-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+        .pp-dot-live { background: #0E9D6E; }
         .pp-dot-soon { background: var(--muted-2); }
 
         /* ── Live product showcase cards ── */
@@ -411,14 +410,14 @@ export default function ProductsPage() {
           min-height: 620px;
           transition: box-shadow .3s ease, border-color .3s ease;
         }
-        .pp-product-card:hover { border-color: rgba(90,75,255,.22); box-shadow: 0 28px 64px -24px rgba(27,26,104,.16); }
+        .pp-product-card:hover { border-color: rgba(27,26,104,.22); }
 
         /* Content column */
         .pp-card-content { padding: 52px 48px 48px; display: flex; flex-direction: column; }
         .pp-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
         .pp-card-num { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; color: var(--muted-2); letter-spacing: .1em; }
-        .pp-card-tag { font-family: var(--font-geist-mono), monospace; font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 999px; }
-        .pp-badge-live { font-family: var(--font-geist-mono), monospace; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: rgba(14,157,110,.1); color: #0E9D6E; border: 1px solid rgba(14,157,110,.25); padding: 3px 9px; border-radius: 999px; }
+        .pp-card-tag { font-family: var(--font-jetbrains), monospace; font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 4px; }
+        .pp-badge-live { font-family: var(--font-jetbrains), monospace; font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: rgba(14,157,110,.08); color: #0E9D6E; border: 1px solid rgba(14,157,110,.2); padding: 3px 9px; border-radius: 4px; }
 
         .pp-card-name { font-size: clamp(24px, 2.4vw, 36px); font-weight: 600; letter-spacing: -.035em; color: var(--ink); margin-bottom: 10px; }
         .pp-card-headline { font-size: clamp(14px, 1.1vw, 17px); font-weight: 500; color: var(--ink); margin-bottom: 14px; opacity: .7; line-height: 1.45; }
@@ -429,14 +428,14 @@ export default function ProductsPage() {
         .pp-feature-list svg { flex-shrink: 0; margin-top: 2px; color: var(--indigo); }
 
         .pp-card-footer { margin-top: auto; }
-        .pp-card-cta { display: inline-flex; align-items: center; gap: 9px; background: var(--ink); color: #fff; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 999px; transition: all .25s cubic-bezier(.2,.7,.2,1); box-shadow: 0 8px 24px -10px rgba(27,26,104,.45); }
-        .pp-card-cta:hover { background: var(--indigo); transform: translateY(-1px); }
-        .pp-card-cta-muted { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--muted-2); padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px; letter-spacing: .06em; }
+        .pp-card-cta { display: inline-flex; align-items: center; gap: 9px; background: var(--ink); color: #fff; font-weight: 600; font-size: 14px; padding: 11px 20px; border-radius: 8px; transition: background .2s ease; }
+        .pp-card-cta:hover { background: #14136B; }
+        .pp-card-cta-muted { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-jetbrains), monospace; font-size: 11px; color: var(--muted-2); padding: 10px 18px; border: 1px solid var(--line); border-radius: 8px; letter-spacing: .06em; }
         .pp-card-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
         .pp-card-cta-item { display: flex; flex-direction: column; gap: 6px; }
-        .pp-card-cta-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--ink); font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 999px; border: 1px solid var(--line-strong); transition: all .25s ease; white-space: nowrap; }
-        .pp-card-cta-outline:hover { background: var(--paper-3); border-color: rgba(27,26,104,.35); }
-        .pp-cta-note { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted-2); letter-spacing: .06em; padding-left: 4px; }
+        .pp-card-cta-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--ink); font-weight: 600; font-size: 14px; padding: 11px 20px; border-radius: 8px; border: 1px solid var(--line-strong); transition: background .2s ease, border-color .2s ease; white-space: nowrap; }
+        .pp-card-cta-outline:hover { background: var(--paper-3); border-color: rgba(27,26,104,.3); }
+        .pp-cta-note { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted-2); letter-spacing: .06em; padding-left: 4px; }
 
         /* Screenshot visual column */
         .pp-card-visual {
@@ -584,9 +583,9 @@ export default function ProductsPage() {
 
         /* Coming soon cards */
         .pp-soon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
-        .pp-soon-card { border: 1px dashed var(--line-strong); border-radius: 20px; padding: 36px 32px; display: flex; flex-direction: column; gap: 16px; background: rgba(255,255,255,.5); min-height: 180px; justify-content: space-between; }
-        .pp-soon-num { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; color: var(--muted-2); letter-spacing: .1em; }
-        .pp-soon-lock { width: 38px; height: 38px; border-radius: 12px; border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--muted-2); background: var(--paper); }
+        .pp-soon-card { border: 1px solid var(--line); border-radius: 10px; padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; background: #fff; min-height: 180px; justify-content: space-between; }
+        .pp-soon-num { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; color: var(--muted-2); letter-spacing: .1em; }
+        .pp-soon-lock { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--muted-2); background: var(--paper-2); }
         .pp-soon-label { font-size: 13px; color: var(--muted-2); line-height: 1.6; }
         .pp-soon-note { font-size: 14px; color: var(--muted-2); }
         .pp-soon-link { color: var(--indigo); font-weight: 500; }
@@ -594,19 +593,19 @@ export default function ProductsPage() {
 
         /* Pricing */
         .pp-pricing-head { max-width: 640px; margin-bottom: 64px; }
-        .pp-plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
-        .pp-plan { background: #fff; border: 1px solid var(--line-strong); border-radius: 20px; padding: 36px 32px; display: flex; flex-direction: column; position: relative; }
+        .pp-plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+        .pp-plan { background: #fff; border: 1px solid var(--line-strong); border-radius: 10px; padding: 36px 32px; display: flex; flex-direction: column; position: relative; }
         .pp-plan-hi { background: var(--ink); border-color: var(--ink); color: #fff; box-shadow: 0 24px 60px -20px rgba(27,26,104,.5); }
-        .pp-plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-family: var(--font-geist-mono), monospace; font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: var(--indigo); color: #fff; padding: 4px 14px; border-radius: 999px; white-space: nowrap; }
-        .pp-plan-name { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+        .pp-plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-family: var(--font-jetbrains), monospace; font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; background: var(--indigo); color: #fff; padding: 4px 14px; border-radius: 4px; white-space: nowrap; }
+        .pp-plan-name { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
         .pp-plan-hi .pp-plan-name { color: rgba(255,255,255,.5); }
-        .pp-plan-price { font-family: var(--font-instrument), serif; font-style: italic; font-size: 46px; line-height: 1; letter-spacing: -.03em; color: var(--ink); margin-bottom: 8px; }
+        .pp-plan-price { font-size: 44px; font-weight: 700; line-height: 1; letter-spacing: -.03em; color: var(--ink); margin-bottom: 8px; }
         .pp-plan-hi .pp-plan-price { color: #fff; }
-        .pp-plan-period { font-family: var(--font-geist-mono), monospace; font-style: normal; font-size: 13px; color: var(--muted); margin-left: 4px; }
+        .pp-plan-period { font-family: var(--font-jetbrains), monospace; font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 4px; }
         .pp-plan-hi .pp-plan-period { color: rgba(255,255,255,.45); }
         .pp-plan-desc { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
         .pp-plan-hi .pp-plan-desc { color: rgba(255,255,255,.55); }
-        .pp-plan-limit { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--indigo); background: rgba(27,26,104,.06); border: 1px solid rgba(27,26,104,.12); padding: 5px 12px; border-radius: 999px; display: inline-block; margin-bottom: 24px; letter-spacing: .05em; line-height: 1.5; }
+        .pp-plan-limit { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: rgba(27,26,104,.55); background: rgba(27,26,104,.05); border: 1px solid rgba(27,26,104,.1); padding: 5px 10px; border-radius: 4px; display: inline-block; margin-bottom: 24px; letter-spacing: .05em; line-height: 1.5; }
         .pp-plan-hi .pp-plan-limit { color: rgba(255,255,255,.7); background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.15); }
         .pp-plan-features { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--line); padding-top: 20px; flex: 1; }
         .pp-plan-hi .pp-plan-features { border-color: rgba(255,255,255,.1); }
@@ -614,9 +613,9 @@ export default function ProductsPage() {
         .pp-plan-hi .pp-plan-features li { color: rgba(255,255,255,.85); }
         .pp-plan-features svg { flex-shrink: 0; margin-top: 2px; color: var(--indigo); }
         .pp-plan-hi .pp-plan-features svg { color: rgba(255,255,255,.55); }
-        .pp-plan-cta-solid { display: block; text-align: center; background: #fff; color: var(--ink); font-weight: 600; font-size: 14px; padding: 13px 20px; border-radius: 999px; transition: all .25s ease; }
+        .pp-plan-cta-solid { display: block; text-align: center; background: #fff; color: var(--ink); font-weight: 600; font-size: 14px; padding: 12px 20px; border-radius: 8px; transition: background .2s ease; }
         .pp-plan-cta-solid:hover { background: rgba(255,255,255,.88); }
-        .pp-plan-cta-outline { display: block; text-align: center; background: transparent; color: var(--ink); font-weight: 600; font-size: 14px; padding: 13px 20px; border-radius: 999px; border: 1px solid var(--line-strong); transition: all .25s ease; }
+        .pp-plan-cta-outline { display: block; text-align: center; background: transparent; color: var(--ink); font-weight: 600; font-size: 14px; padding: 12px 20px; border-radius: 8px; border: 1px solid var(--line-strong); transition: background .2s ease, border-color .2s ease; }
         .pp-plan-cta-outline:hover { background: var(--paper-3); border-color: var(--line-dark); }
         .pp-pricing-note { text-align: center; margin-top: 36px; font-size: 13px; color: var(--muted-2); }
 
