@@ -19,16 +19,20 @@ export default function Nav() {
           {/* Center nav links */}
           <div className="ajil-nav-links">
             <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
             <Link href="/dispatch">Dispatch</Link>
             <Link href="/products">Products</Link>
             <Link href="/services">Service Models</Link>
             <Link href="/dedicated">Dedicated Logistics</Link>
-            <Link href="/about">About</Link>
             <Link href="/join">Join Us</Link>
           </div>
 
           {/* CTA */}
           <div className="ajil-nav-cta">
+            <Link href="/track" className="ajil-btn-track">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              Track
+            </Link>
             <Link href="/contact" className="ajil-btn-primary">
               Talk to us
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
@@ -70,12 +74,13 @@ export default function Nav() {
             <div className="ajil-mobile-links">
               {[
                 { href: '/', label: 'Home' },
+                { href: '/about', label: 'About' },
                 { href: '/dispatch', label: 'Dispatch' },
                 { href: '/products', label: 'Products' },
                 { href: '/services', label: 'Service Models' },
                 { href: '/dedicated', label: 'Dedicated Logistics' },
-                { href: '/about', label: 'About' },
                 { href: '/join', label: 'Join Us' },
+                { href: '/track', label: 'Track Delivery' },
               ].map((item) => (
                 <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="ajil-mobile-link">
                   {item.label}
@@ -121,6 +126,15 @@ export default function Nav() {
         .ajil-nav-links a { transition: opacity .2s ease; opacity: .62; }
         .ajil-nav-links a:hover { opacity: 1; }
         .ajil-nav-cta { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+        .ajil-btn-track {
+          display: inline-flex; align-items: center; gap: 5px;
+          padding: 6px 13px;
+          border-radius: 999px; font-size: 13px; font-weight: 500;
+          border: 1px solid var(--line-strong);
+          color: var(--ink); background: transparent;
+          transition: all .2s ease; white-space: nowrap;
+        }
+        .ajil-btn-track:hover { border-color: #2D2BE0; color: #2D2BE0; }
         .ajil-btn-primary {
           display: inline-flex; align-items: center; gap: 6px;
           padding: 6px 14px;

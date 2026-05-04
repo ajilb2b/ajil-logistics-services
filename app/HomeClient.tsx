@@ -167,6 +167,54 @@ export default function HomePage() {
       </header>
 
       {/* ══════════════════════════════════════════
+          TRACKING TEASER
+      ══════════════════════════════════════════ */}
+      <section className="hp-track-teaser">
+        <div className="hp-container">
+          <div className="hp-track-tinner">
+            <div className="hp-track-tleft">
+              <span className="hp-section-tag">Live Tracking</span>
+              <h2 className="hp-track-th">Know exactly where <em>your order is</em><span style={{color:'#2D2BE0'}}>.</span></h2>
+              <p className="hp-track-tp">Real-time delivery updates for every order on the Ajil network. Share a tracking link with your customers and let them follow their delivery live.</p>
+              <a href="/track" className="hp-track-tcta">
+                Track a delivery
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div className="hp-track-tright">
+              <div className="hp-track-mockcard">
+                <div className="hp-tmock-top">
+                  <div>
+                    <div className="hp-tmock-tn">AJL-20481</div>
+                    <div className="hp-tmock-brand">via Ajil Logistics</div>
+                  </div>
+                  <div className="hp-tmock-badge">
+                    <span className="hp-tmock-pulse" />
+                    Out for Delivery
+                  </div>
+                </div>
+                <div className="hp-tmock-steps">
+                  {["Received","Picked Up","In Transit","Out for Delivery","Delivered"].map((s, i) => (
+                    <div key={s} className={`hp-tmock-step ${i < 4 ? "hp-tmock-done" : ""} ${i === 3 ? "hp-tmock-active" : ""}`}>
+                      <div className="hp-tmock-circle">
+                        {i < 3 && <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>}
+                      </div>
+                      {i < 4 && <div className={`hp-tmock-line ${i < 3 ? "hp-tmock-line-done" : ""}`} />}
+                      <span>{s}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="hp-tmock-eta">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  Estimated delivery today by 3:00 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
           SECTION 2 · TRUST BAR
       ══════════════════════════════════════════ */}
       <section className="hp-clients">
@@ -636,6 +684,33 @@ export default function HomePage() {
         @media (max-width: 520px) { .hp-hero-inner { padding-top: 90px; padding-bottom: 48px; } .hp-stat-item { padding: 24px 20px; } }
 
         /* ── TRUST BAR ── */
+        .hp-track-teaser { padding: 100px 0; background: #fff; border-top: 1px solid var(--line); }
+        .hp-track-tinner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        @media (max-width: 900px) { .hp-track-tinner { grid-template-columns: 1fr; gap: 48px; } }
+        .hp-track-th { font-size: clamp(28px, 3.5vw, 48px); font-weight: 600; line-height: 1.05; letter-spacing: -.035em; color: var(--ink); margin: 0 0 18px; }
+        .hp-track-th em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: #2D2BE0; }
+        .hp-track-tp { font-size: 16px; color: var(--muted); line-height: 1.65; max-width: 46ch; margin-bottom: 28px; }
+        .hp-track-tcta { display: inline-flex; align-items: center; gap: 8px; background: #1B1A68; color: #fff; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 8px; transition: background .2s; }
+        .hp-track-tcta:hover { background: #14136B; }
+        .hp-track-mockcard { background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: 14px; padding: 28px; position: relative; overflow: hidden; }
+        .hp-track-mockcard::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 0%, rgba(45,43,224,.05) 0%, transparent 60%); pointer-events: none; }
+        .hp-tmock-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; gap: 12px; }
+        .hp-tmock-tn { font-family: var(--font-jetbrains), monospace; font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: .08em; margin-bottom: 4px; }
+        .hp-tmock-brand { font-size: 12px; color: var(--muted); }
+        .hp-tmock-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(251,146,60,.1); color: #c2620a; font-family: var(--font-jetbrains), monospace; font-size: 10px; font-weight: 600; padding: 5px 11px; border-radius: 999px; text-transform: uppercase; letter-spacing: .07em; white-space: nowrap; }
+        .hp-tmock-pulse { width: 7px; height: 7px; border-radius: 50%; background: #f97316; flex-shrink: 0; animation: hp-pulse 1.8s ease-in-out infinite; }
+        @keyframes hp-pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(1.4); } }
+        .hp-tmock-steps { display: flex; align-items: flex-start; gap: 0; margin-bottom: 24px; }
+        .hp-tmock-step { display: flex; flex-direction: column; align-items: center; flex: 1; position: relative; gap: 6px; }
+        .hp-tmock-step span { font-size: 9px; color: var(--muted-2); text-align: center; line-height: 1.3; }
+        .hp-tmock-done span { color: var(--ink); }
+        .hp-tmock-active span { color: #2D2BE0; font-weight: 600; }
+        .hp-tmock-circle { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--line-strong); background: var(--paper); display: flex; align-items: center; justify-content: center; color: var(--muted-2); z-index: 1; flex-shrink: 0; }
+        .hp-tmock-done .hp-tmock-circle { background: #0e9d6e; border-color: #0e9d6e; color: #fff; }
+        .hp-tmock-active .hp-tmock-circle { background: #2D2BE0; border-color: #2D2BE0; color: #fff; box-shadow: 0 0 0 4px rgba(45,43,224,.15); }
+        .hp-tmock-line { position: absolute; top: 14px; left: calc(50% + 14px); right: calc(-50% + 14px); height: 2px; background: var(--line-strong); z-index: 0; }
+        .hp-tmock-line-done { background: #0e9d6e; }
+        .hp-tmock-eta { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
         .hp-clients { padding: 60px 0 72px; background: #fff; border-top: 1px solid rgba(27,26,104,.08); border-bottom: 1px solid rgba(27,26,104,.08); }
         .hp-clients-label { text-align: center; font-size: 11px; color: rgba(27,26,104,.38); text-transform: uppercase; letter-spacing: .16em; margin-bottom: 40px; font-weight: 500; }
         .hp-marquee { position: relative; width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
