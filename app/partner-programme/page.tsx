@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PartnerClient from "./PartnerClient";
 
 export const metadata: Metadata = {
-  title: "Partner Programme — Ajil Logistics GCC",
+  title: "Partner Programme",
   description:
     "Join the Ajil partner network as a technology partner, reseller or logistics operator. API access, white-label options and revenue share across Qatar, UAE, KSA, Kuwait, Bahrain and Oman.",
   alternates: { canonical: "https://ajilb2b.com/partner-programme" },

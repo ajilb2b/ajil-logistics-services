@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Ajil Logistics Services — GCC Delivery & Dispatch",
+  title: "Ajil Logistics Services",
   description:
     "End-to-end logistics for modern commerce across 6 GCC markets. Delivery management software, on-demand network, dedicated fleet and fully managed operations. Headquartered in Doha, Qatar.",
   alternates: { canonical: "https://ajilb2b.com" },

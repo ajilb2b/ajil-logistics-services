@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Dedicated Logistics Service — Branded Fleet, Dark Stores & Named GM",
+  title: "Dedicated Logistics",
   description:
     "Ajil's dedicated service model: branded riders, ringfenced fleet, dedicated warehouse zones, dark-store hubs and a named General Manager. SLA-bound, custom KPIs, across the GCC.",
   alternates: { canonical: "https://ajilb2b.com/services/dedicated" },

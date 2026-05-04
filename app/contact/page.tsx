@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact Ajil Logistics Services — Doha, Qatar HQ",
+  title: "Contact",
   description:
     "Talk to our team in Doha. Sales & partnerships: hello@ajilb2b.com · +974 77058594. Serving Qatar, UAE, KSA, Kuwait, Bahrain and Oman. Reply within one business day.",
   alternates: { canonical: "https://ajilb2b.com/contact" },
@@ -44,7 +44,7 @@ const localBusinessSchema = {
     },
   ],
   "description":
-    "End-to-end logistics services for modern commerce in the GCC. 2,800 riders, 14 hubs across 6 markets.",
+    "End-to-end logistics services for modern commerce in Qatar and UAE. 600+ riders, 9 hubs.",
   "areaServed": [
     { "@type": "Country", "name": "Qatar" },
     { "@type": "Country", "name": "United Arab Emirates" },

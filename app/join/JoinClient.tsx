@@ -26,8 +26,8 @@ export default function JoinPage() {
       <header className="jn-hero">
         <div className="hp-container">
           <span className="hp-section-tag">05 · Join Us</span>
-          <h1 className="jn-h1">Two Paths, <em>One Network</em>.</h1>
-          <p className="jn-lead">Whether you move goods or have goods to move — Ajil is hiring, partnering and onboarding every week across 6 GCC markets.</p>
+          <h1 className="jn-h1">Two Paths, <span className="jn-accent">One Network</span>.</h1>
+          <p className="jn-lead">Whether you move goods or have goods to move — Ajil is hiring, partnering and onboarding every week across Qatar &amp; UAE.</p>
         </div>
       </header>
 
@@ -41,11 +41,11 @@ export default function JoinPage() {
                 <div className="hp-join-icon hp-join-icon-driver">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-9 4 4h4M14 6l4 11"/></svg>
                 </div>
-                <span className="hp-join-eyebrow" style={{ color: "var(--indigo)" }}>For Riders &amp; Drivers</span>
-                <h3 className="hp-join-title">Drive With Ajil.<br /><em style={{ fontFamily: "var(--font-instrument),serif", fontStyle: "italic", background: "linear-gradient(110deg,#1B1A68,#5A4BFF)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Earn Every Day.</em></h3>
+                <span className="hp-join-eyebrow">For Riders &amp; Drivers</span>
+                <h3 className="hp-join-title">Drive With Ajil.<br /><span className="jn-accent">Earn Every Day.</span></h3>
                 <p className="hp-join-desc">Bikes, cars and vans — owned or rented. Daily routes, weekly payouts, performance bonuses, and a network big enough to keep you moving every shift.</p>
                 <ul className="hp-join-perks">
-                  {["Weekly Payouts In QAR / AED / SAR", "Daily Stacked Routes — Earn More Per Hour", "Bike, Vehicle & Fuel Support", "Health Insurance & Visa Support", "Performance Bonuses Every Month"].map((perk) => (
+                  {["Weekly Payouts In QAR / AED", "Daily Stacked Routes — Earn More Per Hour", "Bike, Vehicle & Fuel Support", "Health Insurance & Visa Support", "Performance Bonuses Every Month"].map((perk) => (
                     <li key={perk}><span className="hp-perk-dot" />{perk}</li>
                   ))}
                 </ul>
@@ -54,12 +54,12 @@ export default function JoinPage() {
                     <WaSvg />
                     <span><small>WhatsApp Us</small><strong>Apply In 60 Seconds</strong></span>
                   </a>
-                  <a href="#" className="hp-join-btn hp-btn-form">
+                  <a href="/driver-application" className="hp-join-btn hp-btn-form">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                     Driver Application Form
                   </a>
                 </div>
-                <p className="hp-join-foot">Now Hiring · Doha · Dubai · Riyadh · Kuwait</p>
+                <p className="hp-join-foot">Now Hiring · Doha · Dubai</p>
               </div>
             </div>
 
@@ -70,11 +70,11 @@ export default function JoinPage() {
                 <div className="hp-join-icon hp-join-icon-client">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21V12h6v9"/></svg>
                 </div>
-                <span className="hp-join-eyebrow" style={{ color: "var(--indigo)" }}>For Businesses</span>
-                <h3 className="hp-join-title">Move Your Goods.<br /><em style={{ fontFamily: "var(--font-instrument),serif", fontStyle: "italic", background: "linear-gradient(110deg,#0F1A3D,#5A4BFF)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>Move Faster.</em></h3>
+                <span className="hp-join-eyebrow">For Businesses</span>
+                <h3 className="hp-join-title">Move Your Goods.<br /><span className="jn-accent">Move Faster.</span></h3>
                 <p className="hp-join-desc">Whether you ship 100 or 100,000 deliveries a month — book a working session with our logistics team. We&apos;ll show you which service model fits and what it would cost against your real numbers.</p>
                 <ul className="hp-join-perks">
-                  {["Same-Day & Scheduled Coverage Across The GCC", "Pricing Built Around Your Volume", "Onboarded In 14 Days Or Less", "Live Visibility & Branded Tracking Pages", "Named Account Manager From Day One"].map((perk) => (
+                  {["Same-Day & Scheduled Coverage · Qatar & UAE", "Pricing Built Around Your Volume", "Onboarded In 14 Days Or Less", "Live Visibility & Branded Tracking Pages", "Named Account Manager From Day One"].map((perk) => (
                     <li key={perk}><span className="hp-perk-dot hp-perk-dot-client" />{perk}</li>
                   ))}
                 </ul>
@@ -88,7 +88,7 @@ export default function JoinPage() {
                     Request Working Session
                   </a>
                 </div>
-                <p className="hp-join-foot">Trusted By 60+ Brands Across 6 Markets</p>
+                <p className="hp-join-foot">Trusted By 60+ Brands Across Qatar &amp; UAE</p>
               </div>
             </div>
           </div>
@@ -100,48 +100,45 @@ export default function JoinPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--indigo); text-transform: uppercase; letter-spacing: .18em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
-        .hp-section-tag::before { content: ""; width: 24px; height: 1px; background: var(--indigo); }
+        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.in { opacity: 1; transform: none; }
 
         .jn-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
-        .jn-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 500; color: var(--ink); margin: 0 0 28px; }
-        .jn-h1 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .jn-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
+        .jn-accent { color: #2D2BE0; }
         .jn-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 54ch; line-height: 1.7; }
 
-        .jn-section { background: linear-gradient(180deg,var(--paper-2),var(--paper)); border-top: 1px solid var(--line); padding: 100px 0 140px; }
-        .hp-join-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .jn-section { background: var(--paper-2); border-top: 1px solid var(--line); padding: 100px 0 140px; }
+        .hp-join-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         @media (max-width: 900px) { .hp-join-grid { grid-template-columns: 1fr; } }
-        .hp-join-card { position: relative; border-radius: 32px; overflow: hidden; border: 1px solid var(--line-strong); min-height: 600px; transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
-        .hp-join-card:hover { transform: translateY(-6px); border-color: rgba(90,75,255,.22); box-shadow: 0 30px 60px -24px rgba(45,43,224,.2); }
-        .hp-join-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
-        .hp-join-bg-driver { background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(90,75,255,.1), transparent 65%), radial-gradient(ellipse 60% 80% at 0% 100%, rgba(27,26,104,.07), transparent 65%), linear-gradient(150deg,#FAFBFF 0%,#F4F5FF 50%,#ECEFFE 100%); }
-        .hp-join-bg-client { background: radial-gradient(ellipse 80% 60% at 20% 20%, rgba(45,43,224,.12), transparent 65%), radial-gradient(ellipse 60% 80% at 100% 100%, rgba(123,107,255,.10), transparent 65%), linear-gradient(150deg,#FAFBFF 0%,#F0F2FE 50%,#E5E7FB 100%); }
-        .hp-join-inner { position: relative; z-index: 1; padding: 48px 44px; display: flex; flex-direction: column; height: 100%; min-height: 600px; color: var(--ink); }
-        @media (max-width: 680px) { .hp-join-inner { padding: 36px 28px; min-height: auto; } }
-        .hp-join-icon { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-        .hp-join-icon-driver { background: linear-gradient(135deg, #EEF0FF, rgba(238,240,255,.4)); border: 1px solid rgba(90,75,255,.22); color: var(--indigo); }
-        .hp-join-icon-client { background: linear-gradient(135deg, rgba(27,26,104,.08), rgba(27,26,104,.04)); border: 1px solid rgba(27,26,104,.12); color: var(--ink); }
-        .hp-join-eyebrow { font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
-        .hp-join-title { font-size: clamp(28px, 3.5vw, 44px); font-weight: 500; line-height: 1.1; letter-spacing: -.03em; margin-bottom: 16px; color: var(--ink); }
+        .hp-join-card { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--line-strong); min-height: 600px; background: #fff; transition: border-color .2s ease; }
+        .hp-join-card:hover { border-color: rgba(27,26,104,.22); }
+        .hp-join-bg { display: none; }
+        .hp-join-inner { position: relative; padding: 44px 40px; display: flex; flex-direction: column; height: 100%; min-height: 600px; color: var(--ink); }
+        @media (max-width: 680px) { .hp-join-inner { padding: 32px 24px; min-height: auto; } }
+        .hp-join-icon { width: 44px; height: 44px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; background: var(--paper-3); border: 1px solid var(--line-strong); color: var(--ink); }
+        .hp-join-icon-driver { color: var(--ink); }
+        .hp-join-icon-client { color: var(--ink); }
+        .hp-join-eyebrow { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; color: rgba(27,26,104,.42); }
+        .hp-join-title { font-size: clamp(26px, 3.5vw, 40px); font-weight: 600; line-height: 1.1; letter-spacing: -.03em; margin-bottom: 16px; color: var(--ink); }
         .hp-join-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 24px; max-width: 44ch; }
-        .hp-join-perks { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+        .hp-join-perks { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; border-top: 1px solid var(--line); padding-top: 20px; }
         .hp-join-perks li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink); }
-        .hp-perk-dot { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, #5A4BFF, #2D2BE0); box-shadow: 0 0 8px rgba(90,75,255,.35); display: inline-block; }
-        .hp-perk-dot-client { background: linear-gradient(135deg, #1B1A68, #2D2BE0); box-shadow: 0 0 8px rgba(27,26,104,.35); }
+        .hp-perk-dot { flex-shrink: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--ink); opacity: .35; display: inline-block; }
+        .hp-perk-dot-client { background: var(--ink); }
         .hp-join-actions { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
-        .hp-join-btn { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 14px; font-size: 14px; font-weight: 500; transition: all .25s ease; text-decoration: none; }
+        .hp-join-btn { display: flex; align-items: center; gap: 12px; padding: 13px 18px; border-radius: 8px; font-size: 14px; font-weight: 500; transition: background .2s ease; text-decoration: none; }
         .hp-btn-wa { background: var(--ink); color: #fff; }
-        .hp-btn-wa:hover { background: var(--indigo); transform: translateY(-1px); }
+        .hp-btn-wa:hover { background: #14136B; }
         .hp-btn-wa span { display: flex; flex-direction: column; }
-        .hp-btn-wa small { font-size: 10px; font-family: var(--font-geist-mono), monospace; letter-spacing: .08em; opacity: .6; text-transform: uppercase; }
+        .hp-btn-wa small { font-size: 10px; font-family: var(--font-jetbrains), monospace; letter-spacing: .08em; opacity: .6; text-transform: uppercase; }
         .hp-btn-wa strong { font-size: 14px; font-weight: 600; }
-        .hp-btn-form { background: rgba(27,26,104,.06); color: var(--ink); border: 1px solid rgba(27,26,104,.12); }
-        .hp-btn-form:hover { background: rgba(27,26,104,.1); }
-        .hp-btn-form-alt { background: rgba(27,26,104,.06); color: var(--ink); border: 1px solid rgba(27,26,104,.12); }
-        .hp-btn-form-alt:hover { background: rgba(27,26,104,.1); }
-        .hp-join-foot { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted-2); letter-spacing: .08em; text-transform: uppercase; margin-top: 20px; }
+        .hp-btn-form { background: var(--paper-3); color: var(--ink); border: 1px solid var(--line-strong); }
+        .hp-btn-form:hover { background: var(--paper-4); }
+        .hp-btn-form-alt { background: var(--paper-3); color: var(--ink); border: 1px solid var(--line-strong); }
+        .hp-btn-form-alt:hover { background: var(--paper-4); }
+        .hp-join-foot { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted-2); letter-spacing: .08em; text-transform: uppercase; margin-top: 20px; }
       `}</style>
     </>
   );

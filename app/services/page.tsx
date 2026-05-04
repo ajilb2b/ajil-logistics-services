@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicesClient from "./ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Logistics Service Models — Software, On-Demand, Dedicated & Managed",
+  title: "Services",
   description:
     "Four ways to partner with Ajil: license our TMS/WMS software, use our on-demand network, build dedicated capacity, or outsource fully. One contract across all 6 GCC markets.",
   alternates: { canonical: "https://ajilb2b.com/services" },
@@ -119,7 +119,7 @@ const servicesFaqSchema = {
     {
       "@type": "Question",
       "name": "Does Ajil operate its own riders and vehicles?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 2,800 Ajil riders are directly employed — not gig workers or sub-contractors. Every vehicle is managed by a dedicated fleet operations team. This is how Ajil Logistics Services can offer guaranteed SLAs and consistent service quality across Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All 600+ Ajil riders are directly employed — not gig workers or sub-contractors. Every vehicle is managed by a dedicated fleet operations team. This is how Ajil Logistics Services can offer guaranteed SLAs and consistent service quality across Qatar and UAE." },
     },
     {
       "@type": "Question",

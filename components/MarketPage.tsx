@@ -37,10 +37,10 @@ export default function MarketPage(p: MarketPageProps) {
       {/* Hero */}
       <header style={{ padding: "80px 0", borderBottom: "1px solid var(--ink-line)" }}>
         <div className="mkt-container">
-          <span className="mkt-eyebrow">GCC Markets · {p.country}</span>
+          <span className="mkt-eyebrow">Markets · {p.country}</span>
           <h1 className="mkt-h1">
             {p.heroMain}<br />
-            <span className="mkt-it">{p.heroItalic}</span>
+            <span className="mkt-accent">{p.heroItalic}</span>
           </h1>
           <p className="mkt-lede">{p.lede}</p>
           <div className="mkt-stats">
@@ -59,7 +59,7 @@ export default function MarketPage(p: MarketPageProps) {
         <div className="mkt-container">
           <span className="mkt-section-tag">Coverage</span>
           <h2 className="mkt-h2">
-            {p.country} coverage zones &amp; <span className="mkt-it">delivery corridors</span>.
+            {p.country} coverage zones &amp; <span className="mkt-accent">delivery corridors</span>.
           </h2>
           <p style={{ fontSize: 15, color: "var(--text-soft)", lineHeight: 1.7, maxWidth: "68ch", marginBottom: 40 }}>
             {p.coverageIntro}
@@ -80,7 +80,7 @@ export default function MarketPage(p: MarketPageProps) {
         <div className="mkt-container">
           <span className="mkt-section-tag">Services in {p.country}</span>
           <h2 className="mkt-h2">
-            All four service models <span className="mkt-it">available in {p.country}</span>.
+            All four service models <span className="mkt-accent">available in {p.country}</span>.
           </h2>
           <div className="mkt-services">
             {p.services.map((s) => (
@@ -98,7 +98,7 @@ export default function MarketPage(p: MarketPageProps) {
       <section style={{ padding: "100px 0", textAlign: "center" }}>
         <div style={{ maxWidth: 640, margin: "0 auto", padding: "0 40px" }}>
           <h2 className="mkt-h2" style={{ marginBottom: 16 }}>
-            {p.ctaLine.split(" in ")[0]} in <span className="mkt-it">{p.ctaLine.split(" in ")[1]}</span>
+            {p.ctaLine.split(" in ")[0]} in <span className="mkt-accent">{p.ctaLine.split(" in ")[1]}</span>
           </h2>
           <p style={{ fontSize: 15, color: "var(--text-soft)", lineHeight: 1.7, marginBottom: 36 }}>
             {p.ctaBody}
@@ -117,30 +117,30 @@ export default function MarketPage(p: MarketPageProps) {
 
       <style>{`
         .mkt-container { max-width: 1380px; margin: 0 auto; padding: 0 40px; }
-        .mkt-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: var(--violet); text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 20px; display: block; }
-        .mkt-it { font-family: var(--font-fraunces),Georgia,serif; font-style: italic; font-weight: 300; }
-        .mkt-h1 { font-size: clamp(38px,6.5vw,88px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 500; color: var(--ink); margin-bottom: 24px; }
-        .mkt-lede { font-size: clamp(15px,1.3vw,18px); color: var(--text-soft); max-width: 62ch; line-height: 1.7; margin-bottom: 40px; }
-        .mkt-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid var(--ink-line); }
-        .mkt-stat-num { font-family: var(--font-fraunces),Georgia,serif; font-size: 28px; font-weight: 300; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
-        .mkt-stat-lbl { font-family: var(--font-jetbrains),monospace; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
-        .mkt-section-tag { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 12px; display: block; }
-        .mkt-h2 { font-size: clamp(24px,3.2vw,40px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 500; color: var(--ink); margin-bottom: 24px; }
-        .mkt-zones { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--ink-line); border: 1px solid var(--ink-line); border-radius: 14px; overflow: hidden; }
-        .mkt-zone { background: var(--paper); padding: 20px 22px; }
-        .mkt-zone-city { font-family: var(--font-jetbrains),monospace; font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 5px; }
-        .mkt-zone-name { font-size: 15px; font-weight: 500; color: var(--text); }
+        .mkt-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 20px; display: block; }
+        .mkt-accent { color: #2D2BE0; font-style: normal; font-weight: 600; }
+        .mkt-h1 { font-size: clamp(38px,6.5vw,88px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 600; color: var(--ink); margin-bottom: 24px; }
+        .mkt-lede { font-size: clamp(15px,1.3vw,18px); color: var(--muted); max-width: 62ch; line-height: 1.7; margin-bottom: 40px; }
+        .mkt-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid var(--line); }
+        .mkt-stat-num { font-size: 28px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; line-height: 1; }
+        .mkt-stat-lbl { font-family: var(--font-jetbrains),monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
+        .mkt-section-tag { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px; display: block; }
+        .mkt-h2 { font-size: clamp(24px,3.2vw,40px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 600; color: var(--ink); margin-bottom: 24px; }
+        .mkt-zones { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line-strong); border-radius: 10px; overflow: hidden; }
+        .mkt-zone { background: #fff; padding: 20px 22px; }
+        .mkt-zone-city { font-family: var(--font-jetbrains),monospace; font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 5px; }
+        .mkt-zone-name { font-size: 15px; font-weight: 500; color: var(--ink); }
         .mkt-services { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
-        .mkt-svc-card { padding: 28px 32px; border: 1px solid var(--ink-line); border-radius: 14px; background: var(--paper); transition: all .25s ease; display: block; }
-        .mkt-svc-card:hover { border-color: rgba(90,75,255,.22); transform: translateY(-2px); box-shadow: 0 12px 30px -12px rgba(10,14,31,.14); }
-        .mkt-svc-num { font-family: var(--font-jetbrains),monospace; font-size: 10px; color: var(--indigo); letter-spacing: 0.1em; margin-bottom: 10px; }
-        .mkt-svc-name { font-size: 17px; font-weight: 500; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
-        .mkt-svc-desc { font-size: 13.5px; color: var(--text-soft); line-height: 1.65; }
-        .mkt-bc-link:hover { color: var(--text) !important; }
-        .mkt-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-size: 14.5px; font-weight: 600; background: var(--ink); color: var(--paper); box-shadow: 0 8px 24px -8px rgba(10,14,31,.4); transition: all .25s ease; }
-        .mkt-btn-primary:hover { background: #0A1838; transform: translateY(-1px); }
-        .mkt-btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--ink-line-strong); color: var(--text); transition: all .25s ease; }
-        .mkt-btn-ghost:hover { background: rgba(10,14,31,.04); }
+        .mkt-svc-card { padding: 28px 32px; border: 1px solid var(--line-strong); border-radius: 10px; background: #fff; transition: border-color .2s ease; display: block; }
+        .mkt-svc-card:hover { border-color: rgba(27,26,104,.22); }
+        .mkt-svc-num { font-family: var(--font-jetbrains),monospace; font-size: 10px; color: rgba(27,26,104,.42); letter-spacing: 0.1em; margin-bottom: 10px; }
+        .mkt-svc-name { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.02em; }
+        .mkt-svc-desc { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+        .mkt-bc-link:hover { color: var(--ink) !important; }
+        .mkt-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; background: #1B1A68; color: #fff; transition: background .2s ease; }
+        .mkt-btn-primary:hover { background: #14136B; }
+        .mkt-btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 1px solid var(--line-strong); color: var(--ink); transition: background .2s ease; }
+        .mkt-btn-ghost:hover { background: var(--paper-2); }
         @media (max-width: 900px) {
           .mkt-zones { grid-template-columns: repeat(2,1fr) !important; }
           .mkt-services { grid-template-columns: 1fr !important; }

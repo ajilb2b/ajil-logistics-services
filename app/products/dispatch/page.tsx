@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ajil Dispatch — Delivery Management Software for the GCC",
+  title: "Ajil Dispatch",
   description:
     "Command centre for your entire delivery operation. Auto-routing with stacking logic, live operations map, shift management, client portals and brand integrations. Built for GCC roads.",
   alternates: { canonical: "https://ajilb2b.com/products/dispatch" },

@@ -22,7 +22,7 @@ const channels = [
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
       </svg>
     ),
-    label: "Sales line · GCC",
+    label: "Sales line · Qatar & UAE",
     value: "+974 77058594",
     href: "tel:+97477058594",
   },
@@ -87,9 +87,9 @@ export default function ContactPage() {
       {/* Hero */}
       <header style={{ padding: "80px 0 60px", borderBottom: "1px solid var(--ink-line)" }}>
         <div className="ajil-container">
-          <div className="page-eyebrow">Contact · Get in Touch</div>
-          <h1 className="display-xl" style={{ fontSize: "clamp(40px,6.5vw,96px)", marginTop: 18 }}>
-            Let&apos;s talk<br /><span className="it">logistics</span>.
+          <div className="ct-eyebrow">Contact · Get in Touch</div>
+          <h1 className="ct-h1">
+            Let&apos;s talk<br /><span className="ct-accent">logistics</span>.
           </h1>
         </div>
       </header>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 <h4 style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 14 }}>
                   Head Office
                 </h4>
-                <div style={{ fontFamily: "var(--font-fraunces),Georgia,serif", fontWeight: 400, fontSize: 22, color: "var(--text)", lineHeight: 1.2, letterSpacing: "-0.015em", fontVariationSettings: '"opsz" 72,"SOFT" 40', marginBottom: 8 }}>
+                <div style={{ fontSize: 18, fontWeight: 600, color: "var(--ink)", lineHeight: 1.2, letterSpacing: "-0.015em", marginBottom: 8 }}>
                   Ajil Logistics HQ
                 </div>
                 <p style={{ fontSize: 14, color: "var(--text-soft)", lineHeight: 1.65 }}>
@@ -126,12 +126,12 @@ export default function ContactPage() {
                 </h4>
                 {channels.map((ch) => (
                   <div key={ch.label} style={{ display: "flex", alignItems: "flex-start", gap: 14, marginTop: 14 }}>
-                    <div style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0, background: "rgba(36,100,232,.06)", border: "1px solid rgba(36,100,232,.14)", color: "var(--indigo-2)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 36, height: 36, borderRadius: 6, flexShrink: 0, background: "var(--paper-3)", border: "1px solid var(--line-strong)", color: "var(--ink)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       {ch.icon}
                     </div>
                     <div>
                       <strong style={{ display: "block", fontSize: 14, fontWeight: 500, color: "var(--text)", marginBottom: 2 }}>{ch.label}</strong>
-                      <a href={ch.href} style={{ fontSize: 14, color: "var(--indigo-2)", fontWeight: 500, borderBottom: "1px solid currentColor" }}>{ch.value}</a>
+                      <a href={ch.href} style={{ fontSize: 14, color: "var(--ink)", fontWeight: 500, borderBottom: "1px solid var(--line-strong)" }}>{ch.value}</a>
                     </div>
                   </div>
                 ))}
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   {specialistLines.map((s) => (
                     <div key={s.label}>
                       <strong style={{ fontSize: 13, fontWeight: 500, color: "var(--text)", display: "block" }}>{s.label}</strong>
-                      <a href={`mailto:${s.email}`} style={{ fontSize: 13, color: "var(--indigo-2)", borderBottom: "1px solid currentColor" }}>{s.email}</a>
+                      <a href={`mailto:${s.email}`} style={{ fontSize: 13, color: "var(--ink)", borderBottom: "1px solid var(--line-strong)" }}>{s.email}</a>
                     </div>
                   ))}
                 </div>
@@ -161,10 +161,6 @@ export default function ContactPage() {
                   {[
                     { country: "Qatar", detail: "Doha, Almuntazah Trading Center", href: "/qatar" },
                     { country: "UAE", detail: "Dubai, UAE", href: "/uae" },
-                    { country: "Saudi Arabia", detail: "Riyadh, KSA", href: "/saudi-arabia" },
-                    { country: "Kuwait", detail: "Kuwait City", href: "/kuwait" },
-                    { country: "Bahrain", detail: "Manama, Bahrain", href: "/bahrain" },
-                    { country: "Oman", detail: "Muscat, Oman", href: "/oman" },
                   ].map((office) => (
                     <p key={office.country} style={{ fontSize: 13.5, color: "var(--text-soft)", lineHeight: 1.7, margin: 0 }}>
                       <Link href={office.href} style={{ color: "var(--text)", fontWeight: 500 }}>{office.country}</Link>
@@ -178,9 +174,9 @@ export default function ContactPage() {
 
             {/* Right — form */}
             <div>
-              <div style={{ background: "var(--paper)", border: "1px solid var(--ink-line)", borderRadius: 18, overflow: "hidden" }}>
+              <div style={{ background: "var(--paper)", border: "1px solid var(--ink-line)", borderRadius: 10, overflow: "hidden" }}>
                 <div style={{ padding: "32px 40px", borderBottom: "1px solid var(--ink-line)", background: "var(--paper-2)" }}>
-                  <h3 style={{ fontFamily: "var(--font-fraunces),Georgia,serif", fontWeight: 400, fontSize: 24, letterSpacing: "-0.015em", fontVariationSettings: '"opsz" 72,"SOFT" 40', color: "var(--text)" }}>
+                  <h3 style={{ fontSize: 20, fontWeight: 600, letterSpacing: "-0.015em", color: "var(--ink)" }}>
                     Tell us about your operation
                   </h3>
                   <p style={{ fontSize: 14, color: "var(--text-soft)", marginTop: 6 }}>
@@ -191,10 +187,10 @@ export default function ContactPage() {
                 <div style={{ padding: 40 }} className="ct-form-padding">
                   {submitted ? (
                     <div style={{ padding: "48px 0", textAlign: "center" }}>
-                      <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(16,165,112,.1)", border: "1px solid rgba(16,165,112,.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", color: "#10A570" }}>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
+                      <div style={{ width: 48, height: 48, borderRadius: 8, background: "rgba(14,157,110,.08)", border: "1px solid rgba(14,157,110,.2)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", color: "#0E9D6E" }}>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
                       </div>
-                      <h3 style={{ fontFamily: "var(--font-fraunces),Georgia,serif", fontWeight: 400, fontSize: 24, color: "var(--text)", marginBottom: 12 }}>Message sent.</h3>
+                      <h3 style={{ fontSize: 22, fontWeight: 600, color: "var(--ink)", marginBottom: 12 }}>Message sent.</h3>
                       <p style={{ fontSize: 15, color: "var(--text-soft)" }}>We&apos;ll get back to you within one business day.</p>
                     </div>
                   ) : (
@@ -211,7 +207,7 @@ export default function ContactPage() {
                               required
                               value={form[field as keyof typeof form]}
                               onChange={(e) => setForm((f) => ({ ...f, [field]: e.target.value }))}
-                              style={{ background: "var(--paper)", border: "1px solid var(--ink-line-strong)", borderRadius: 10, padding: "12px 14px", fontFamily: "inherit", fontSize: 14, color: "var(--text)", outline: "none" }}
+                              style={{ background: "var(--paper)", border: "1px solid var(--ink-line-strong)", borderRadius: 6, padding: "12px 14px", fontFamily: "inherit", fontSize: 14, color: "var(--ink)", outline: "none" }}
                             />
                           </div>
                         ))}
@@ -232,7 +228,7 @@ export default function ContactPage() {
                               type={key === "email" ? "email" : "text"}
                               value={form[key as keyof typeof form]}
                               onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
-                              style={{ background: "var(--paper)", border: "1px solid var(--ink-line-strong)", borderRadius: 10, padding: "12px 14px", fontFamily: "inherit", fontSize: 14, color: "var(--text)", outline: "none" }}
+                              style={{ background: "var(--paper)", border: "1px solid var(--ink-line-strong)", borderRadius: 6, padding: "12px 14px", fontFamily: "inherit", fontSize: 14, color: "var(--ink)", outline: "none" }}
                             />
                           </div>
                         ))}
@@ -253,13 +249,13 @@ export default function ContactPage() {
                                 onClick={() => toggleInterest(interest)}
                                 style={{
                                   display: "inline-flex", alignItems: "center", gap: 8,
-                                  padding: "8px 14px", borderRadius: 999,
-                                  border: `1px solid ${selected ? "var(--indigo-2)" : "var(--ink-line-strong)"}`,
-                                  background: selected ? "rgba(36,100,232,.06)" : "var(--paper)",
-                                  color: selected ? "var(--indigo-2)" : "var(--text-soft)",
+                                  padding: "7px 13px", borderRadius: 6,
+                                  border: `1px solid ${selected ? "var(--ink)" : "var(--ink-line-strong)"}`,
+                                  background: selected ? "var(--ink)" : "var(--paper)",
+                                  color: selected ? "#fff" : "var(--muted)",
                                   fontWeight: selected ? 500 : 400,
                                   fontSize: 13, cursor: "pointer",
-                                  transition: "all .2s ease",
+                                  transition: "all .15s ease",
                                 }}
                               >
                                 {interest}
@@ -301,11 +297,10 @@ export default function ContactPage() {
                             disabled={submitting}
                             style={{
                               display: "inline-flex", alignItems: "center", gap: 8,
-                              padding: "14px 24px", borderRadius: 999, fontSize: 14, fontWeight: 600,
-                              background: submitting ? "var(--muted)" : "var(--ink)", color: "var(--paper)", border: "none",
+                              padding: "12px 22px", borderRadius: 8, fontSize: 14, fontWeight: 600,
+                              background: submitting ? "var(--muted)" : "var(--ink)", color: "#fff", border: "none",
                               cursor: submitting ? "not-allowed" : "pointer",
-                              boxShadow: "0 1px 0 rgba(255,255,255,.05) inset, 0 8px 24px -8px rgba(10,14,31,.4)",
-                              transition: "all .25s ease",
+                              transition: "background .2s ease",
                               opacity: submitting ? 0.7 : 1,
                             }}
                           >
@@ -327,13 +322,16 @@ export default function ContactPage() {
 
       <style>{`
         .ajil-container { max-width: 1380px; margin: 0 auto; padding: 0 40px; }
+        .ct-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; margin-bottom: 20px; }
+        .ct-h1 { font-size: clamp(40px,6.5vw,88px); font-weight: 700; line-height: .95; letter-spacing: -.04em; color: var(--ink); margin: 0 0 0; }
+        .ct-accent { color: #2D2BE0; }
         .ct-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; }
         .ct-rail { display: flex; flex-direction: column; gap: 36px; position: sticky; top: 96px; align-self: start; }
         .ct-row-resp { }
         .bc-link:hover { color: var(--text) !important; }
         input:focus, textarea:focus, select:focus {
-          border-color: var(--indigo-2) !important;
-          box-shadow: 0 0 0 3px rgba(36,100,232,.08) !important;
+          border-color: rgba(27,26,104,.4) !important;
+          box-shadow: 0 0 0 2px rgba(27,26,104,.06) !important;
         }
         input::placeholder, textarea::placeholder { color: var(--text-faint); }
         @media (max-width: 980px) {

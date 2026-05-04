@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import DispatchClient from "./DispatchClient";
 
 export const metadata: Metadata = {
-  title: "Dispatch & Route Optimization — GCC Logistics",
+  title: "Dispatch",
   description:
     "24/7 dispatch management and route optimization built for the GCC. Stacking logic, live re-routing, prayer-time awareness and demand planning. Doha operations centre serving 6 markets.",
   alternates: { canonical: "https://ajilb2b.com/dispatch" },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ProductsClient from "./ProductsClient";
 
 export const metadata: Metadata = {
-  title: "Logistics Products — Dispatch, Rider App, Track & WMS",
+  title: "Products",
   description:
     "The Ajil platform: Dispatch console, Rider App (iOS & Android), customer tracking, WMS and control tower. TMS software for GCC logistics operations. Multi-tenant, white-label, API-first.",
   alternates: { canonical: "https://ajilb2b.com/products" },

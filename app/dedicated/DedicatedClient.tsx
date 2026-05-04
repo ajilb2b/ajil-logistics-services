@@ -118,11 +118,11 @@ export default function DedicatedPage() {
               },
               {
                 q: "What is a dark store in logistics?",
-                a: "A dark store is a fulfilment hub closed to the public and optimised for rapid picking and dispatch. Ajil operates dark stores as micro-fulfilment nodes in high-density catchments — enabling 15-minute delivery SLAs for grocery, pharmacy and quick-commerce operators across the GCC.",
+                a: "A dark store is a fulfilment hub closed to the public and optimised for rapid picking and dispatch. Ajil operates dark stores as micro-fulfilment nodes in high-density catchments — enabling 15-minute delivery SLAs for grocery, pharmacy and quick-commerce operators across Qatar and UAE.",
               },
               {
                 q: "How long does it take to set up a dedicated logistics operation?",
-                a: "A standard dedicated deployment — network design, hub and dark store procurement, rider hiring and go-live — takes 8 to 12 weeks depending on geographic footprint and vehicle mix required. Enterprise deployments covering multiple GCC markets may require additional lead time.",
+                a: "A standard dedicated deployment — network design, hub and dark store procurement, rider hiring and go-live — takes 8 to 12 weeks depending on geographic footprint and vehicle mix required.",
               },
               {
                 q: "Who is accountable for the dedicated operation?",
@@ -147,45 +147,44 @@ export default function DedicatedPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--indigo); text-transform: uppercase; letter-spacing: .18em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
-        .hp-section-tag::before { content: ""; width: 24px; height: 1px; background: var(--indigo); }
+        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
         .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.in { opacity: 1; transform: none; }
 
         .dd-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
-        .dd-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 500; color: var(--ink); margin: 0 0 28px; }
-        .dd-h1 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .dd-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
+        .dd-h1 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
         .dd-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 58ch; line-height: 1.7; }
 
-        .dd-section { background: linear-gradient(180deg, var(--paper-2), var(--paper)); border-top: 1px solid var(--line); padding: 100px 0 140px; }
+        .dd-section { background: var(--paper-2); border-top: 1px solid var(--line); padding: 100px 0 140px; }
         .hp-ded-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
         @media (max-width: 980px) { .hp-ded-grid { grid-template-columns: 1fr; gap: 48px; } }
-        .hp-ded-h { font-size: clamp(36px,4.5vw,60px); line-height: 1.04; letter-spacing: -.035em; font-weight: 500; margin-bottom: 24px; color: var(--ink); }
-        .hp-ded-h em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .hp-ded-h { font-size: clamp(36px,4.5vw,60px); line-height: 1.04; letter-spacing: -.035em; font-weight: 600; margin-bottom: 24px; color: var(--ink); }
+        .hp-ded-h em { font-style: normal; font-weight: 600; color: #2D2BE0; }
         .hp-ded-p { font-size: 17px; color: var(--muted); line-height: 1.65; margin-bottom: 28px; max-width: 50ch; }
         .hp-ded-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
         .hp-ded-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 15px; color: var(--ink); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
         .hp-ded-list li:last-child { border-bottom: none; }
         .hp-ded-list strong { font-weight: 500; display: block; margin-bottom: 4px; color: var(--ink); }
         .hp-ded-list span { color: var(--muted); font-size: 13px; line-height: 1.55; }
-        .hp-ded-dot { flex-shrink: 0; width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--violet-soft), rgba(238,240,255,.4)); border: 1px solid rgba(90,75,255,.22); display: flex; align-items: center; justify-content: center; color: var(--indigo); font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; }
-        .hp-ded-vis { border: 1px solid var(--line-strong); border-radius: 24px; background: linear-gradient(180deg,#FCFDFF 0%,#F4F6FC 100%); padding: 32px; position: relative; overflow: hidden; box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 24px 60px -20px rgba(45,43,224,.14); }
-        .hp-ded-label { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 18px; }
-        .hp-ded-name { font-size: 20px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 24px; color: var(--ink); }
-        .hp-ded-spec { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-bottom: 20px; }
+        .hp-ded-dot { flex-shrink: 0; width: 32px; height: 32px; border-radius: 6px; background: var(--paper-3); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: rgba(27,26,104,.5); font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; }
+        .hp-ded-vis { border: 1px solid var(--line-strong); border-radius: 10px; background: #fff; padding: 32px; position: relative; overflow: hidden; }
+        .hp-ded-label { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 18px; }
+        .hp-ded-name { font-size: 18px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 24px; color: var(--ink); }
+        .hp-ded-spec { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
         .hp-spec { background: var(--paper); padding: 18px; }
-        .hp-spec-lbl { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .08em; }
-        .hp-spec-val { font-size: 24px; font-weight: 500; letter-spacing: -.02em; margin-top: 4px; font-family: var(--font-instrument), serif; font-style: italic; color: var(--ink); }
-        .hp-spec-sub { font-family: var(--font-geist-mono), monospace; font-size: 10px; color: var(--muted); margin-top: 4px; }
-        .hp-blueprint { height: 240px; border: 1px dashed var(--line-strong); border-radius: 14px; overflow: hidden; background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(45,43,224,.05), transparent); }
+        .hp-spec-lbl { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted-2); text-transform: uppercase; letter-spacing: .08em; }
+        .hp-spec-val { font-size: 22px; font-weight: 700; letter-spacing: -.02em; margin-top: 4px; color: var(--ink); }
+        .hp-spec-sub { font-family: var(--font-jetbrains), monospace; font-size: 10px; color: var(--muted); margin-top: 4px; }
+        .hp-blueprint { height: 240px; border: 1px solid var(--line-strong); border-radius: 8px; overflow: hidden; background: var(--paper-2); }
         .dd-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 80px; padding-top: 64px; border-top: 1px solid var(--line); }
-        .dd-btn-primary { background: #1B1A68; color: #fff; font-weight: 600; padding: 14px 26px; border-radius: 999px; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: all .25s ease; box-shadow: 0 10px 28px -10px rgba(27,26,104,.5); }
-        .dd-btn-primary:hover { background: var(--indigo); transform: translateY(-1px); }
-        .dd-btn-ghost { color: var(--indigo); font-weight: 500; font-size: 15px; }
-        .dd-btn-ghost:hover { text-decoration: underline; }
-        .faq-section { padding: 100px 0 120px; background: var(--paper-2); border-top: 1px solid var(--line); }
-        .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 500; color: var(--ink); margin-top: 20px; max-width: 24ch; }
-        .faq-h2 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .dd-btn-primary { background: #1B1A68; color: #fff; font-weight: 600; padding: 13px 24px; border-radius: 8px; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: background .2s ease; }
+        .dd-btn-primary:hover { background: #14136B; }
+        .dd-btn-ghost { color: var(--ink); font-weight: 500; font-size: 15px; opacity: .6; }
+        .dd-btn-ghost:hover { opacity: 1; }
+        .faq-section { padding: 100px 0 120px; background: #fff; border-top: 1px solid var(--line); }
+        .faq-h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.05; letter-spacing: -.035em; font-weight: 600; color: var(--ink); margin-top: 20px; max-width: 24ch; }
+        .faq-h2 em { font-style: normal; font-weight: 600; color: #2D2BE0; }
         .faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 820px; margin-top: 48px; }
         .faq-item { padding: 28px 0; border-bottom: 1px solid var(--line); }
         .faq-q { font-size: 17px; font-weight: 500; letter-spacing: -.02em; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import DedicatedClient from "./DedicatedClient";
 
 export const metadata: Metadata = {
-  title: "Dedicated Logistics — Branded Fleet & Warehouse Across the GCC",
+  title: "Dedicated Logistics",
   description:
     "Ringfenced fleet, branded riders, dedicated dark stores and a named GM — capacity that operates exclusively for your brand across 6 GCC markets. Same Ajil platform, your colours.",
   alternates: { canonical: "https://ajilb2b.com/dedicated" },

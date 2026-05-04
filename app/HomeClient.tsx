@@ -23,10 +23,10 @@ const clients = [
 ];
 
 const signals = [
-  { num: "23", unit: "%",      label: "Avg. Cost Reduction" },
-  { num: "98", unit: ".4%",    label: "SLA Adherence" },
-  { num: "9",  unit: " hubs",  label: "Across Qatar & UAE" },
-  { num: "2",  unit: " mkts",  label: "QA · UAE" },
+  { num: "600", unit: "+",      label: "Riders in Qatar" },
+  { num: "98",  unit: ".4%",   label: "SLA Adherence" },
+  { num: "9",   unit: " hubs", label: "Across Qatar & UAE" },
+  { num: "2",   unit: " mkts", label: "QA · UAE" },
 ];
 
 const routeCaps = [
@@ -135,7 +135,7 @@ export default function HomePage() {
             Last-mile &amp; distribution infrastructure &mdash; Qatar &amp; UAE
           </div>
           <h1 className="hp-hero-h">
-            Logistics operations,<br />
+            <span style={{ whiteSpace: 'nowrap' }}>Logistics operations,</span><br />
             <span className="hp-hero-accent">built for the GCC.</span>
           </h1>
           <p className="hp-hero-sub">

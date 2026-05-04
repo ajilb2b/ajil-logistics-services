@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import MarketPage from "@/components/MarketPage";
 
 export const metadata: Metadata = {
-  title: "Logistics Services in UAE — Ajil Logistics Services",
+  title: "UAE",
   description:
     "Ajil Logistics Services operates across Dubai, Abu Dhabi and Sharjah. Last-mile delivery, route optimization, dedicated fleet and fully managed logistics for UAE commerce operators.",
   alternates: { canonical: "https://ajilb2b.com/uae" },

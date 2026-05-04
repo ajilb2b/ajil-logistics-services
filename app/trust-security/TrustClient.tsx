@@ -43,8 +43,8 @@ export default function TrustSecurityPage() {
       <header className="ts-hero">
         <div className="hp-container">
           <span className="hp-section-tag">Trust & Security</span>
-          <h1 className="ts-h1">Built To Be<br /><em>Trusted</em>.</h1>
-          <p className="ts-lead">Ajil handles sensitive operational data for over 60 brands across 6 markets. Security and reliability are not features — they are the foundation everything else runs on.</p>
+          <h1 className="ts-h1">Built To Be<br /><span className="ts-accent">Trusted</span>.</h1>
+          <p className="ts-lead">Ajil handles sensitive operational data for over 60 brands across Qatar &amp; UAE. Security and reliability are not features — they are the foundation everything else runs on.</p>
         </div>
       </header>
 
@@ -76,29 +76,28 @@ export default function TrustSecurityPage() {
       <style>{`
         .hp-container { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 88px); }
         @media (max-width: 760px) { .hp-container { padding: 0 20px; } }
-        .hp-section-tag { font-family: var(--font-geist-mono), monospace; font-size: 11px; color: var(--indigo); text-transform: uppercase; letter-spacing: .18em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
-        .hp-section-tag::before { content: ""; width: 24px; height: 1px; background: var(--indigo); }
+        .hp-section-tag { font-family: var(--font-jetbrains), monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; display: flex; align-items: center; gap: 10px; font-weight: 500; margin-bottom: 24px; }
 
         .ts-hero { padding: 160px 0 96px; background: #fff; border-bottom: 1px solid var(--line); }
-        .ts-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 500; color: var(--ink); margin: 0 0 28px; }
-        .ts-h1 em { font-family: var(--font-instrument), serif; font-style: italic; font-weight: 400; color: var(--indigo); }
+        .ts-h1 { font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -.04em; font-weight: 600; color: var(--ink); margin: 0 0 28px; }
+        .ts-accent { color: #2D2BE0; font-style: normal; font-weight: 600; }
         .ts-lead { font-size: clamp(15px, 1.2vw, 18px); color: var(--muted); max-width: 56ch; line-height: 1.7; }
 
-        .ts-section { padding: 96px 0 140px; background: var(--paper); }
+        .ts-section { padding: 96px 0 140px; background: var(--paper-2); }
         .ts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
         @media (max-width: 900px) { .ts-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 560px) { .ts-grid { grid-template-columns: 1fr; } }
-        .ts-card { border: 1px solid var(--line-strong); border-radius: 18px; padding: 36px 30px; background: #fff; transition: box-shadow .25s ease, border-color .25s ease; }
-        .ts-card:hover { border-color: rgba(27,26,104,.2); box-shadow: 0 12px 36px -14px rgba(27,26,104,.12); }
-        .ts-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--paper-2); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--indigo); margin-bottom: 18px; }
-        .ts-card-title { font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: -.015em; margin-bottom: 10px; }
-        .ts-card-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+        .ts-card { border: 1px solid var(--line-strong); border-radius: 10px; padding: 32px 28px; background: #fff; transition: border-color .2s ease; }
+        .ts-card:hover { border-color: rgba(27,26,104,.22); }
+        .ts-icon { width: 44px; height: 44px; border-radius: 8px; background: var(--paper-3); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; color: var(--ink); margin-bottom: 18px; }
+        .ts-card-title { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: -.015em; margin-bottom: 10px; }
+        .ts-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
 
-        .ts-contact { background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: 20px; padding: 48px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-        .ts-contact-h { font-size: clamp(22px, 2.5vw, 36px); font-weight: 500; letter-spacing: -.03em; color: var(--ink); }
+        .ts-contact { background: #fff; border: 1px solid var(--line-strong); border-radius: 10px; padding: 44px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+        .ts-contact-h { font-size: clamp(22px, 2.5vw, 36px); font-weight: 600; letter-spacing: -.03em; color: var(--ink); }
         .ts-contact-p { font-size: 15px; color: var(--muted); line-height: 1.6; max-width: 52ch; }
-        .ts-btn-primary { background: #1B1A68; color: #fff; font-weight: 600; padding: 13px 24px; border-radius: 999px; font-size: 14px; display: inline-flex; align-items: center; gap: 9px; transition: all .25s ease; box-shadow: 0 8px 24px -8px rgba(27,26,104,.45); }
-        .ts-btn-primary:hover { background: var(--indigo); transform: translateY(-1px); }
+        .ts-btn-primary { background: #1B1A68; color: #fff; font-weight: 600; padding: 12px 22px; border-radius: 8px; font-size: 14px; display: inline-flex; align-items: center; gap: 9px; transition: background .2s ease; }
+        .ts-btn-primary:hover { background: #14136B; }
       `}</style>
     </>
   );

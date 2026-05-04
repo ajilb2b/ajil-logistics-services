@@ -98,7 +98,6 @@ export default function Footer() {
               {[
                 { label: 'About', href: '/about' },
                 { label: 'Why Ajil', href: '/why' },
-                { label: 'Careers', href: '/careers' },
                 { label: 'Trust & Security', href: '/trust-security' },
               ].map((item) => (
                 <li key={item.label}>
@@ -129,6 +128,10 @@ export default function Footer() {
           <p style={{ fontFamily: 'var(--font-geist-mono), monospace', fontSize: 11, color: 'var(--muted-2)', textTransform: 'uppercase', letterSpacing: '.08em' }}>
             © 2026 Ajil Logistics Services · Doha, Qatar · Efficiency in Motion
           </p>
+          <div style={{ display: 'flex', gap: 20 }}>
+            <a href="/terms" style={{ fontFamily: 'var(--font-geist-mono), monospace', fontSize: 11, color: 'var(--muted-2)', textTransform: 'uppercase', letterSpacing: '.08em', transition: 'color .2s ease' }} className="foot-legal-link">Terms</a>
+            <a href="/privacy" style={{ fontFamily: 'var(--font-geist-mono), monospace', fontSize: 11, color: 'var(--muted-2)', textTransform: 'uppercase', letterSpacing: '.08em', transition: 'color .2s ease' }} className="foot-legal-link">Privacy</a>
+          </div>
           <div className="foot-social">
             {/* LinkedIn */}
             <a href="#" aria-label="LinkedIn" className="foot-social-link">
@@ -175,6 +178,7 @@ export default function Footer() {
           color: var(--muted); transition: all .2s ease;
         }
         .foot-social-link:hover { border-color: var(--indigo); color: var(--indigo); background: var(--violet-soft); }
+        .foot-legal-link:hover { color: var(--ink) !important; }
         @media (max-width: 900px) {
           .foot-grid { grid-template-columns: 1fr 1fr !important; gap: 36px !important; }
         }

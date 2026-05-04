@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Ajil — GCC Logistics Built From the Inside Out",
+  title: "About",
   description:
-    "Founded in Doha in 2019. 2,800 riders, 14 hubs, 6 GCC markets. Ajil Logistics Services started as an in-house logistics operation and became the operating platform for GCC commerce.",
+    "Founded in Doha in 2019. 600+ riders, 9 hubs across Qatar & UAE. Ajil Logistics Services started as an in-house logistics operation and became the operating platform for modern commerce.",
   alternates: { canonical: "https://ajilb2b.com/about" },
   openGraph: {
     title: "About Ajil Logistics Services",
     description:
-      "Founded in Doha in 2019. 2,800 riders, 14 hubs, 6 GCC markets. We run logistics before we sell it.",
+      "Founded in Doha in 2019. 600+ riders, 14 hubs, 6 GCC markets. We run logistics before we sell it.",
     url: "https://ajilb2b.com/about",
   },
 };
@@ -22,7 +23,7 @@ const aboutSchema = {
   "name": "About Ajil Logistics Services",
   "url": "https://ajilb2b.com/about",
   "description":
-    "Ajil Logistics Services was founded in Doha in 2019 as the in-house logistics arm of a holding group. Now serving 6 GCC markets with 2,800 riders, 14 hubs and a 24/7 dispatch operation.",
+    "Ajil Logistics Services was founded in Doha in 2019 as the in-house logistics arm of a holding group. Now serving 6 GCC markets with 600+ riders, 14 hubs and a 24/7 dispatch operation.",
   "about": { "@id": "https://ajilb2b.com/#organization" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -43,10 +44,10 @@ const leadershipSchema = {
       "position": 1,
       "item": {
         "@type": "Person",
-        "name": "Khalid Al-Ansari",
+        "name": "Umair Naseem Khan",
         "jobTitle": "Chief Executive Officer",
         "worksFor": { "@id": "https://ajilb2b.com/#organization" },
-        "description": "Chief Executive Officer of Ajil Logistics Services, leading the company's expansion across 6 GCC markets.",
+        "description": "Chief Executive Officer of Ajil Logistics Services, leading the company's operations across Qatar and UAE.",
       },
     },
     {
@@ -54,10 +55,10 @@ const leadershipSchema = {
       "position": 2,
       "item": {
         "@type": "Person",
-        "name": "Layla Al-Rashidi",
-        "jobTitle": "Chief Operations Officer",
+        "name": "Kalam Rabbani",
+        "jobTitle": "Operations Incharge",
         "worksFor": { "@id": "https://ajilb2b.com/#organization" },
-        "description": "Chief Operations Officer overseeing fleet, warehouse and dispatch operations for Ajil Logistics Services across Qatar, UAE, Saudi Arabia, Kuwait, Bahrain and Oman.",
+        "description": "Operations Incharge overseeing fleet, warehouse and dispatch operations for Ajil Logistics Services across Qatar and UAE.",
       },
     },
     {
@@ -65,21 +66,10 @@ const leadershipSchema = {
       "position": 3,
       "item": {
         "@type": "Person",
-        "name": "Mohammed Hassan",
-        "jobTitle": "Chief Technology Officer",
+        "name": "Abdullah Rao",
+        "jobTitle": "Operations Specialist",
         "worksFor": { "@id": "https://ajilb2b.com/#organization" },
-        "description": "Chief Technology Officer leading the development of Ajil Dispatch, Ajil Rider and the Ajil logistics platform.",
-      },
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "Person",
-        "name": "Sara Al-Farsi",
-        "jobTitle": "VP Commercial",
-        "worksFor": { "@id": "https://ajilb2b.com/#organization" },
-        "description": "VP Commercial driving client acquisition and partnerships for Ajil Logistics Services across the GCC.",
+        "description": "Operations Specialist at Ajil Logistics Services.",
       },
     },
   ],
@@ -87,14 +77,14 @@ const leadershipSchema = {
 
 const pillars = [
   {
-    num: "2,800",
+    num: "600+",
     title: "Our people, not contractors.",
-    desc: "Every Ajil rider is on our payroll — trained, insured, and managed by a dedicated fleet ops team. No gig-worker risk, no quality variance.",
+    desc: "600+ Ajil riders are on our payroll — trained, insured, and managed by a dedicated fleet ops team. No gig-worker risk, no quality variance.",
   },
   {
-    num: "14",
+    num: "9",
     title: "Real warehouses. Real teams.",
-    desc: "14 logistics hubs and 8 dark stores under direct Ajil management. Ambient, chilled, frozen and bonded zones. Full pick-pack-ship operations staffed and supervised by our teams.",
+    desc: "9 logistics hubs and dark stores under direct Ajil management across Qatar and UAE. Ambient, chilled, frozen and bonded zones. Full pick-pack-ship operations staffed and supervised by our teams.",
   },
   {
     num: "24/7",
@@ -104,21 +94,15 @@ const pillars = [
 ];
 
 const timeline = [
-  { year: "2019", event: "Founded as the in-house logistics arm of a Doha-based holding group." },
-  { year: "2020", event: "First external customer onboarded during the regional e-commerce surge." },
-  { year: "2021", event: "Launched Ajil Dispatch — the software that runs our own operations — as a standalone product." },
-  { year: "2022", event: "Expanded network to UAE, KSA, Kuwait and Bahrain. Crossed 1M deliveries." },
-  { year: "2023", event: "Ajil Rider and Ajil Track reach general availability. Dedicated service launched." },
-  { year: "2024", event: "Fully Managed Operations live for enterprise customers. Warehouse footprint doubles." },
-  { year: "2025", event: "Series A funding. 2,800 riders, 14 hubs, 6 GCC markets." },
-  { year: "2026", event: "Ajil Insights in development. Continuing to expand the platform." },
+  { year: "2024", event: "Ajil Logistics Services founded in Doha, Qatar." },
+  { year: "2025", event: "Launched Ajil Dispatch — the platform powering our own operations. First external clients onboarded." },
+  { year: "2026", event: "Expanding across Qatar & UAE. Building the network, growing the team." },
 ];
 
 const leadership = [
-  { initials: "KA", name: "Khalid Al-Ansari", role: "Chief Executive Officer", bg: "linear-gradient(135deg,#0B2258,#1A52D0)" },
-  { initials: "LA", name: "Layla Al-Rashidi", role: "Chief Operations Officer", bg: "linear-gradient(135deg,#2464E8,#1A52D0)" },
-  { initials: "MH", name: "Mohammed Hassan", role: "Chief Technology Officer", bg: "linear-gradient(135deg,#070D1E,#18284A)" },
-  { initials: "SA", name: "Sara Al-Farsi", role: "VP Commercial", bg: "linear-gradient(135deg,#0B2258,#2464E8)" },
+  { initials: "UN", name: "Umair Naseem Khan", role: "Chief Executive Officer", bg: "" },
+  { initials: "KR", name: "Kalam Rabbani", role: "Operations Incharge", bg: "" },
+  { initials: "AR", name: "Abdullah Rao", role: "Operations Specialist", bg: "" },
 ];
 
 export default function AboutPage() {
@@ -148,9 +132,9 @@ export default function AboutPage() {
         <div className="ajil-container">
           <div className="page-header-grid">
             <div>
-              <div className="page-eyebrow">About · Inside Ajil</div>
-              <h1 className="display-xl" style={{ fontSize: "clamp(40px,6.5vw,96px)" }}>
-                Logistics built<br />from the <span className="it">inside out</span>.
+              <div className="ab-eyebrow">About · Inside Ajil</div>
+              <h1 className="ab-h1">
+                Logistics built<br />from the <span className="ab-accent">inside out</span>.
               </h1>
             </div>
             <div>
@@ -170,9 +154,9 @@ export default function AboutPage() {
         <div className="ajil-container">
           <div className="section-head-grid" style={{ marginBottom: 64 }}>
             <div>
-              <div className="meta-rule">Inside Ajil</div>
-              <h2 className="display-l" style={{ marginTop: 18 }}>
-                We run logistics<br /><span className="it">before we sell it</span>.
+              <div className="ab-section-tag">Inside Ajil</div>
+              <h2 className="ab-h2" style={{ marginTop: 18 }}>
+                We run logistics<br /><span className="ab-accent">before we sell it</span>.
               </h2>
             </div>
             <p className="lede">
@@ -184,25 +168,21 @@ export default function AboutPage() {
 
           <div className="pillars-grid">
             {pillars.map((p) => (
-              <div key={p.num} style={{ padding: 40, background: "var(--paper-2)", border: "1px solid var(--ink-line)", borderRadius: 14 }}>
+              <div key={p.num} style={{ padding: 36, background: "#fff", border: "1px solid var(--ink-line)", borderRadius: 10 }}>
                 <div style={{
-                  fontFamily: "var(--font-fraunces),Georgia,serif",
-                  fontStyle: "italic", fontWeight: 300,
-                  fontVariationSettings: '"opsz" 96,"SOFT" 80',
-                  fontSize: 56, lineHeight: 1, color: "var(--ink)",
+                  fontSize: 48, lineHeight: 1, fontWeight: 700,
+                  letterSpacing: "-0.03em", color: "var(--ink)",
                   marginBottom: 20,
                 }}>
                   {p.num}
                 </div>
                 <h3 style={{
-                  fontFamily: "var(--font-fraunces),Georgia,serif",
-                  fontWeight: 400, fontVariationSettings: '"opsz" 72,"SOFT" 40',
-                  fontSize: 22, letterSpacing: "-0.015em", color: "var(--text)",
-                  marginBottom: 12,
+                  fontSize: 18, fontWeight: 600, letterSpacing: "-0.015em",
+                  color: "var(--ink)", marginBottom: 10,
                 }}>
                   {p.title}
                 </h3>
-                <p style={{ fontSize: 14.5, lineHeight: 1.65, color: "var(--text-soft)" }}>{p.desc}</p>
+                <p style={{ fontSize: 14, lineHeight: 1.65, color: "var(--muted)" }}>{p.desc}</p>
               </div>
             ))}
           </div>
@@ -214,9 +194,9 @@ export default function AboutPage() {
         <div className="ajil-container">
           <div className="section-head-grid" style={{ marginBottom: 64 }}>
             <div>
-              <div className="meta-rule">Story</div>
-              <h2 className="display-l" style={{ marginTop: 18 }}>
-                From in-house function<br />to <span className="it">regional platform</span>.
+              <div className="ab-section-tag">Story</div>
+              <h2 className="ab-h2" style={{ marginTop: 18 }}>
+                From in-house function<br />to <span className="ab-accent">regional platform</span>.
               </h2>
             </div>
             <p className="lede">
@@ -248,9 +228,9 @@ export default function AboutPage() {
         <div className="ajil-container">
           <div className="section-head-grid" style={{ marginBottom: 64 }}>
             <div>
-              <div className="meta-rule">Leadership</div>
-              <h2 className="display-l" style={{ marginTop: 18 }}>
-                The people<br /><span className="it">accountable</span>.
+              <div className="ab-section-tag">Leadership</div>
+              <h2 className="ab-h2" style={{ marginTop: 18 }}>
+                The people<br /><span className="ab-accent">accountable</span>.
               </h2>
             </div>
             <p className="lede">
@@ -258,15 +238,37 @@ export default function AboutPage() {
               markets in the GCC. Named, accountable, and reachable.
             </p>
           </div>
-          <div className="leadership-grid">
-            {leadership.map((l) => (
-              <div key={l.name} style={{ display: "flex", alignItems: "center", gap: 20, padding: 28, border: "1px solid var(--ink-line)", borderRadius: 12 }}>
-                <div style={{ width: 56, height: 56, borderRadius: "50%", background: l.bg, display: "flex", alignItems: "center", justifyContent: "center", color: "var(--paper)", fontWeight: 600, fontSize: 16, flexShrink: 0 }}>
+          {/* CEO — featured card */}
+          <Link href="/team/umair-naseem-khan" className="ab-ceo-card">
+            <div className="ab-ceo-photo-wrap">
+              <Image src="/ceo.png" alt="Umair Naseem Khan" fill style={{ objectFit: "cover", objectPosition: "center top" }} />
+            </div>
+            <div className="ab-ceo-body">
+              <div className="ab-ceo-tag">Founder &amp; Chief Executive Officer</div>
+              <h3 className="ab-ceo-name">Umair Naseem Khan</h3>
+              <p className="ab-ceo-bio">8+ years building and scaling logistics operations across GCC — from talabat country head to founding Ajil.</p>
+              <div className="ab-ceo-track">
+                {["talabat · 5+ yrs", "Baladi Express · COO", "Fetchr · Ops Leader", "PepsiCo · Supply Chain"].map((t) => (
+                  <span key={t} className="ab-ceo-chip">{t}</span>
+                ))}
+              </div>
+              <div className="ab-ceo-link">
+                View full profile
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </Link>
+
+          {/* Rest of leadership */}
+          <div className="leadership-grid" style={{ marginTop: 16 }}>
+            {leadership.filter((l) => l.name !== "Umair Naseem Khan").map((l) => (
+              <div key={l.name} style={{ display: "flex", alignItems: "center", gap: 16, padding: 24, border: "1px solid var(--ink-line)", borderRadius: 8 }}>
+                <div style={{ width: 44, height: 44, borderRadius: 8, background: "var(--ink)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: 13, flexShrink: 0, fontFamily: "var(--font-jetbrains),monospace", letterSpacing: "0.05em" }}>
                   {l.initials}
                 </div>
                 <div>
-                  <div style={{ fontSize: 16, fontWeight: 600, color: "var(--text)", marginBottom: 4 }}>{l.name}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>{l.role}</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, color: "var(--ink)", marginBottom: 4 }}>{l.name}</div>
+                  <div style={{ fontFamily: "var(--font-jetbrains),monospace", fontSize: 10, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>{l.role}</div>
                 </div>
               </div>
             ))}
@@ -277,9 +279,9 @@ export default function AboutPage() {
       {/* CTA */}
       <section style={{ padding: "140px 0", textAlign: "center", borderBottom: "1px solid var(--ink-line)" }}>
         <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 40px" }}>
-          <div className="meta-rule" style={{ justifyContent: "center" }}>Get in touch</div>
-          <h2 className="display-l" style={{ marginTop: 18 }}>
-            Want to <span className="it">learn more</span>?
+          <div className="ab-section-tag" style={{ justifyContent: "center" }}>Get in touch</div>
+          <h2 className="ab-h2" style={{ marginTop: 18 }}>
+            Want to <span className="ab-accent">learn more</span>?
           </h2>
           <p className="lede" style={{ margin: "24px auto 36px", textAlign: "center" }}>
             Talk to our team — about a brief, a partnership, a press enquiry, or just to understand how we work.
@@ -298,16 +300,31 @@ export default function AboutPage() {
         .page-header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; }
         .section-head-grid { display: grid; grid-template-columns: .45fr .55fr; gap: 80px; align-items: end; }
         .pillars-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+        .ab-ceo-card { display: flex; gap: 0; border: 1px solid var(--ink-line); border-radius: 10px; overflow: hidden; background: #fff; transition: border-color .2s ease; text-decoration: none; color: inherit; }
+        .ab-ceo-card:hover { border-color: rgba(27,26,104,.3); }
+        .ab-ceo-photo-wrap { position: relative; width: 220px; flex-shrink: 0; min-height: 280px; background: var(--paper-2); }
+        .ab-ceo-body { padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; gap: 0; }
+        .ab-ceo-tag { font-family: var(--font-jetbrains),monospace; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: rgba(27,26,104,.42); margin-bottom: 10px; }
+        .ab-ceo-name { font-size: clamp(22px, 2.5vw, 32px); font-weight: 700; letter-spacing: -.03em; color: var(--ink); margin-bottom: 12px; line-height: 1.1; }
+        .ab-ceo-bio { font-size: 15px; color: var(--muted); line-height: 1.65; max-width: 48ch; margin-bottom: 20px; }
+        .ab-ceo-track { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+        .ab-ceo-chip { font-family: var(--font-jetbrains),monospace; font-size: 10px; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--ink-line); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+        .ab-ceo-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #2D2BE0; }
+        @media (max-width: 640px) { .ab-ceo-card { flex-direction: column; } .ab-ceo-photo-wrap { width: 100%; min-height: 240px; } .ab-ceo-body { padding: 28px 24px; } }
         .leadership-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
         .bc-link:hover { color: var(--text) !important; }
+        .ab-eyebrow { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; margin-bottom: 20px; }
+        .ab-h1 { font-size: clamp(40px,6.5vw,88px); font-weight: 700; line-height: .95; letter-spacing: -.04em; color: var(--ink); margin: 0 0 28px; }
+        .ab-h2 { font-size: clamp(32px,4.5vw,60px); font-weight: 700; line-height: 1; letter-spacing: -.035em; color: var(--ink); margin: 0 0 24px; }
+        .ab-accent { color: #2D2BE0; }
+        .ab-section-tag { font-family: var(--font-jetbrains),monospace; font-size: 11px; color: rgba(27,26,104,.42); text-transform: uppercase; letter-spacing: .14em; font-weight: 500; display: flex; align-items: center; gap: 10px; }
         .ajil-btn-primary-lg {
           display: inline-flex; align-items: center; gap: 8px;
-          padding: 14px 22px; border-radius: 999px; font-size: 14.5px; font-weight: 600;
+          padding: 13px 22px; border-radius: 8px; font-size: 14.5px; font-weight: 600;
           background: var(--ink); color: var(--paper);
-          box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 8px 24px -8px rgba(10,14,31,.4);
-          transition: all .25s ease;
+          transition: background .2s ease;
         }
-        .ajil-btn-primary-lg:hover { transform: translateY(-1px); background: #0A1838; }
+        .ajil-btn-primary-lg:hover { background: #14136B; }
         @media (max-width: 880px) {
           .page-header-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           .section-head-grid { grid-template-columns: 1fr !important; gap: 24px !important; }

@@ -34,8 +34,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ajil Logistics Services — GCC Delivery & Dispatch",
-    template: "%s | Ajil Logistics Services",
+    default: "Ajil Logistics Services",
+    template: "%s",
   },
   description:
     "Ajil Logistics Services is the end-to-end logistics partner for modern commerce in the GCC. Four service models — software, network, dedicated, fully managed — backed by GCC-built dispatch management. Headquartered in Doha, Qatar.",
@@ -87,7 +87,7 @@ const orgSchema = {
   "telephone": "+97477058594",
   "email": "hello@ajilb2b.com",
   "foundingDate": "2019",
-  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2800 },
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": 600 },
   "areaServed": [
     { "@type": "Country", "name": "Qatar" },
     { "@type": "Country", "name": "United Arab Emirates" },

@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import MarketPage from "@/components/MarketPage";
 
 export const metadata: Metadata = {
-  title: "Logistics Services in Qatar — Ajil Logistics Services",
+  title: "Qatar",
   description:
-    "Ajil Logistics Services is headquartered in Doha, Qatar. 14 hubs, 24/7 dispatch command centre. Delivery management software, on-demand network, dedicated fleet and fully managed logistics for Qatar's commerce operators.",
+    "Ajil Logistics Services is headquartered in Doha, Qatar. 9 hubs, 24/7 dispatch command centre. Delivery management software, on-demand network, dedicated fleet and fully managed logistics for Qatar's commerce operators.",
   alternates: { canonical: "https://ajilb2b.com/qatar" },
   openGraph: {
     title: "Logistics Services in Qatar | Ajil Logistics Services",
     description:
-      "Doha-headquartered, GCC-deployed. 14 hubs, 24/7 dispatch command centre. Four logistics service models for Qatar's modern commerce operators.",
+      "Doha-headquartered, Qatar & UAE deployed. 9 hubs, 24/7 dispatch command centre. Four logistics service models for Qatar's modern commerce operators.",
     url: "https://ajilb2b.com/qatar",
   },
 };
@@ -55,7 +55,7 @@ export default function Page() {
         lede="Ajil Logistics Services is headquartered in Doha — the command centre for all GCC markets. From Almuntazah Trading Center, our 24/7 dispatch operation plans and monitors every route across Qatar's major catchments, gated compounds and delivery corridors."
         stats={[
           { num: "2019", lbl: "Founded in Doha" },
-          { num: "14", lbl: "Logistics hubs" },
+          { num: "9", lbl: "Logistics hubs" },
           { num: "24/7", lbl: "Dispatch command centre" },
           { num: "15 min", lbl: "SLA in prime Doha zones" },
         ]}

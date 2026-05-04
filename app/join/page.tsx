@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import JoinClient from "./JoinClient";
 
 export const metadata: Metadata = {
-  title: "Drive With Ajil — Rider & Driver Jobs Across the GCC",
+  title: "Join Us",
   description:
     "Earn weekly in QAR, AED or SAR. Bikes, cars and vans. Performance bonuses, health insurance and visa support for riders and drivers across Qatar, UAE, KSA, Kuwait, Bahrain and Oman.",
   alternates: { canonical: "https://ajilb2b.com/join" },
