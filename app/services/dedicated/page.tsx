@@ -7,19 +7,19 @@ export const metadata: Metadata = {
   title: "Dedicated Logistics",
   description:
     "Ajil's dedicated service model: branded riders, ringfenced fleet, dedicated warehouse zones, dark-store hubs and a named General Manager. SLA-bound, custom KPIs, across the GCC.",
-  alternates: { canonical: "https://ajilb2b.com/services/dedicated" },
+  alternates: { canonical: "https://ajilb2b.com/dedicated" },
   openGraph: {
     title: "Dedicated Logistics Service | Ajil Logistics Services",
     description:
       "Branded riders, ringfenced fleet, dedicated warehouses and a named GM. SLA-bound dedicated logistics across the GCC.",
-    url: "https://ajilb2b.com/services/dedicated",
+    url: "https://ajilb2b.com/dedicated",
   },
 };
 
 const dedicatedServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://ajilb2b.com/services/dedicated",
+  "@id": "https://ajilb2b.com/dedicated",
   "name": "Dedicated Logistics Service",
   "serviceType": "Dedicated Last-Mile Delivery",
   "description":
@@ -41,7 +41,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ajilb2b.com" },
     { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://ajilb2b.com/services" },
-    { "@type": "ListItem", "position": 3, "name": "Dedicated Logistics", "item": "https://ajilb2b.com/services/dedicated" },
+    { "@type": "ListItem", "position": 3, "name": "Dedicated Logistics", "item": "https://ajilb2b.com/dedicated" },
   ],
 };
 

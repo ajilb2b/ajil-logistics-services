@@ -23,14 +23,6 @@ const webSiteSchema = {
   "description":
     "End-to-end logistics infrastructure for modern commerce across 6 GCC markets.",
   "publisher": { "@id": "https://ajilb2b.com/#organization" },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://ajilb2b.com/?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const homePageSchema = {
