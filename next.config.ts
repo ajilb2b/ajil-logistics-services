@@ -17,17 +17,6 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   compress: true,
 
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.ajilb2b.com" }],
-        destination: "https://ajilb2b.com/:path*",
-        permanent: true,
-      },
-    ];
-  },
-
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // 1 year
