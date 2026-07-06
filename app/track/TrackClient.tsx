@@ -4,17 +4,48 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const STEPS = [
-  { key: "pending",          label: "Order Received",   sub: "Your order has been logged in the system" },
-  { key: "picked_up",        label: "Picked Up",        sub: "Collected from sender" },
-  { key: "in_transit",       label: "In Transit",       sub: "Moving through the network" },
-  { key: "out_for_delivery", label: "Out for Delivery", sub: "Your rider is on the way" },
-  { key: "delivered",        label: "Delivered",        sub: "Order successfully delivered" },
+  { key: "order_received",     label: "Order Received",      sub: "We've received your order details" },
+  { key: "received",           label: "Received at Facility", sub: "Your parcel is in our facility" },
+  { key: "processing",         label: "Processing",          sub: "Sorted and prepared for dispatch" },
+  { key: "ready_for_delivery", label: "Ready for Delivery",  sub: "Waiting for a rider to collect it" },
+  { key: "picked_up",          label: "Picked Up",           sub: "A rider has collected your parcel" },
+  { key: "out_for_delivery",   label: "Out for Delivery",    sub: "Your rider is on the way" },
+  { key: "delivered",          label: "Delivered",           sub: "Order successfully delivered" },
 ];
-const STATUS_ORDER = ["pending", "picked_up", "in_transit", "out_for_delivery", "delivered"];
+const STATUS_ORDER = [
+  "order_received",
+  "received",
+  "processing",
+  "ready_for_delivery",
+  "picked_up",
+  "out_for_delivery",
+  "delivered",
+];
+
+// Off-track statuses — rendered as a banner instead of a step.
+const EXCEPTION_META: Record<string, { label: string; desc: string }> = {
+  failed: {
+    label: "Delivery Failed",
+    desc: "We were unable to complete this delivery. We'll retry, or reach out to arrange redelivery.",
+  },
+  returned: {
+    label: "Returned to Sender",
+    desc: "This parcel is on its way back to the sender.",
+  },
+  exception: {
+    label: "On Hold",
+    desc: "There's an issue with this shipment. Please contact support for details.",
+  },
+  cancelled: {
+    label: "Cancelled",
+    desc: "This order was cancelled.",
+  },
+};
 
 type DeliveryEvent = { label: string; timestamp: string; note?: string };
 type Delivery = {
   tracking_number: string;
+  order_id?: string;
   status: string;
   recipient_area?: string;
   estimated_delivery?: string;
@@ -59,9 +90,11 @@ export default function TrackClient({ initialId }: { initialId?: string }) {
 
   const d = result?.delivery;
   const stepIndex = d ? STATUS_ORDER.indexOf(d.status) : -1;
-  const isFailed = d?.status === "failed";
+  const exc = d ? EXCEPTION_META[d.status] : undefined;
+  const isException = !!exc;
   const isDelivered = d?.status === "delivered";
-  const isActive = d && !isFailed && !isDelivered;
+  const isActive = !!d && !isException && !isDelivered;
+  const stepMeta = d ? STEPS.find((s) => s.key === d.status) : undefined;
 
   return (
     <>
@@ -146,20 +179,18 @@ export default function TrackClient({ initialId }: { initialId?: string }) {
             <div className="tr-found">
 
               {/* Status banner */}
-              <div className={`tr-banner tr-banner-${isFailed ? "failed" : isDelivered ? "delivered" : "active"}`}>
+              <div className={`tr-banner tr-banner-${isException ? "failed" : isDelivered ? "delivered" : "active"}`}>
                 <div className="tr-banner-left">
                   <div className="tr-banner-status">
                     {isActive && <span className="tr-live-dot" />}
-                    {isFailed ? "Delivery Failed" : STEPS.find(s => s.key === d.status)?.label}
+                    {exc ? exc.label : stepMeta?.label}
                   </div>
                   <div className="tr-banner-sub">
-                    {isFailed
-                      ? "We were unable to complete this delivery. Contact the sender to rearrange."
-                      : STEPS.find(s => s.key === d.status)?.sub}
+                    {exc ? exc.desc : stepMeta?.sub}
                   </div>
                 </div>
                 <div className="tr-banner-right">
-                  {d.estimated_delivery && !isDelivered && !isFailed && (
+                  {d.estimated_delivery && !isDelivered && !isException && (
                     <div className="tr-eta-block">
                       <div className="tr-eta-lbl">Estimated arrival</div>
                       <div className="tr-eta-date">{fmtDate(d.estimated_delivery)}</div>
@@ -185,15 +216,16 @@ export default function TrackClient({ initialId }: { initialId?: string }) {
                     <div>
                       <div className="tr-card-lbl">Tracking number</div>
                       <div className="tr-tn">{d.tracking_number}</div>
+                      {d.order_id && <div className="tr-brand">Order {d.order_id}</div>}
                       {d.brand_name && <div className="tr-brand">Shipped via {d.brand_name}</div>}
                     </div>
-                    <div className={`tr-status-pill tr-pill-${isFailed ? "failed" : d.status}`}>
-                      {isFailed ? "Failed" : STEPS.find(s => s.key === d.status)?.label}
+                    <div className={`tr-status-pill tr-pill-${isException ? "failed" : d.status}`}>
+                      {exc ? exc.label : stepMeta?.label}
                     </div>
                   </div>
 
                   {/* Progress stepper */}
-                  {!isFailed && (
+                  {!isException && (
                     <div className="tr-card tr-card-steps">
                       <div className="tr-card-lbl" style={{ marginBottom: 28 }}>Shipment progress</div>
                       <div className="tr-stepper">
@@ -353,8 +385,8 @@ export default function TrackClient({ initialId }: { initialId?: string }) {
         .tr-tn { font-family: var(--font-jetbrains), monospace; font-size: 20px; font-weight: 700; color: var(--ink); letter-spacing: .08em; margin: 6px 0 4px; }
         .tr-brand { font-size: 13px; color: var(--muted); }
         .tr-status-pill { font-family: var(--font-jetbrains), monospace; font-size: 11px; font-weight: 600; padding: 5px 13px; border-radius: 999px; text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; align-self: flex-start; }
-        .tr-pill-pending { background: rgba(27,26,104,.07); color: #1B1A68; }
-        .tr-pill-picked_up,.tr-pill-in_transit { background: rgba(45,43,224,.08); color: #2D2BE0; }
+        .tr-pill-order_received,.tr-pill-received,.tr-pill-processing,.tr-pill-ready_for_delivery { background: rgba(27,26,104,.07); color: #1B1A68; }
+        .tr-pill-picked_up { background: rgba(45,43,224,.08); color: #2D2BE0; }
         .tr-pill-out_for_delivery { background: rgba(251,146,60,.12); color: #c2620a; }
         .tr-pill-delivered { background: rgba(14,157,110,.1); color: #0e7a57; }
         .tr-pill-failed { background: rgba(194,52,42,.1); color: #c2342a; }
