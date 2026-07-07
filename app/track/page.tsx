@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: "Enter your tracking number to get live status updates on your Ajil delivery across Qatar and UAE.",
 };
 
-export default function TrackPage({ searchParams }: { searchParams: { id?: string } }) {
-  return <TrackClient initialId={searchParams.id} />;
+export default async function TrackPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ id?: string }>;
+}) {
+  const { id } = await searchParams;
+  return <TrackClient initialId={id} />;
 }
