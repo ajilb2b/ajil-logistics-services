@@ -79,7 +79,7 @@ export default function JoinPage() {
                   ))}
                 </ul>
                 <div className="hp-join-actions">
-                  <a href="https://wa.me/97441404004?text=Hi%20Ajil%20-%20I'd%20like%20to%20discuss%20logistics%20for%20my%20business" className="hp-join-btn hp-btn-wa">
+                  <a href="https://wa.me/97471510274?text=Hi%20Ajil%20-%20I'd%20like%20to%20discuss%20logistics%20for%20my%20business" className="hp-join-btn hp-btn-wa">
                     <WaSvg />
                     <span><small>WhatsApp Sales</small><strong>Get A Quote Today</strong></span>
                   </a>
