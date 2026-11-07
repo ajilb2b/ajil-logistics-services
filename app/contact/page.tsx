@@ -4,12 +4,12 @@ import ContactClient from "./ContactClient";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to our team in Doha. Sales & partnerships: hello@ajilb2b.com · +974 77058594. Serving Qatar, UAE, KSA, Kuwait, Bahrain and Oman. Reply within one business day.",
+    "Talk to our team in Doha. Sales & partnerships: sonam@ajilb2b.com · +974 71510274. Serving Qatar, UAE, KSA, Kuwait, Bahrain and Oman. Reply within one business day.",
   alternates: { canonical: "https://ajilb2b.com/contact" },
   openGraph: {
     title: "Contact Ajil Logistics Services",
     description:
-      "Talk to our team in Doha. Sales: hello@ajilb2b.com · +974 77058594. Serving Qatar, UAE, KSA, Kuwait, Bahrain and Oman.",
+      "Talk to our team in Doha. Sales: sonam@ajilb2b.com · +974 71510274. Serving Qatar, UAE, KSA, Kuwait, Bahrain and Oman.",
     url: "https://ajilb2b.com/contact",
   },
 };

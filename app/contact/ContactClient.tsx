@@ -13,8 +13,8 @@ const channels = [
       </svg>
     ),
     label: "Sales & partnerships",
-    value: "hello@ajilb2b.com",
-    href: "mailto:hello@ajilb2b.com",
+    value: "sonam@ajilb2b.com",
+    href: "mailto:sonam@ajilb2b.com",
   },
   {
     icon: (
@@ -23,8 +23,8 @@ const channels = [
       </svg>
     ),
     label: "Sales line · Qatar & UAE",
-    value: "+974 77058594",
-    href: "tel:+97441404004",
+    value: "+974 71510274",
+    href: "tel:+97471510274",
   },
 ];
 

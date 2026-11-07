@@ -50,7 +50,7 @@ export default function Nav() {
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/97477058594"
+        href="https://wa.me/97471510274"
         target="_blank"
         rel="noopener noreferrer"
         className="ajil-wa-fab"
